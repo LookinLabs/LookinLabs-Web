@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  httpd:
+  site:
     image: httpd:latest
     ports:
       - "8888:80"
