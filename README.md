@@ -41,7 +41,7 @@ Please read [CONTRIBUTE.md](CONTRIBUTE.md) for details on our code of conduct, a
 
 ## License
 
-This project is licensed under the [GPL License](LICENSE.md). By contributing to this project, you agree to license your contributions under the same license.
+This project is licensed under the [GPL License](LICENSE). By contributing to this project, you agree to license your contributions under the same license.
 
 # Authors
 
