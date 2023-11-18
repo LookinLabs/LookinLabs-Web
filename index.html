@@ -10,19 +10,23 @@
     <link rel="stylesheet" href="resources/css/main.css" />
 
     <!-- Load Fonts Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- https://tailwindcss.com/docs/installation/play-cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tailwind Elements -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js" defer></script>
-    <script src="resources/js/index.js" defer></script>
 
+    <!-- Tailwind Elements -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"
+      defer
+    ></script>
+    <script src="resources/js/index.js" defer></script>
   </head>
   <body class="lookinlabs-body-bg">
-    <div class="container mx-auto my-auto">
-    <header>
+    <header class="container mx-auto">
       <nav class="flex justify-end">
         <ul class="flex justify-end list-none">
           <li
@@ -48,18 +52,24 @@
         </ul>
       </nav>
     </header>
-    <main class="w-full mx-auto my-auto">
-      <section id="about" class="flex flex-wrap space-y-64">
-        <div class="w-full columns-lg">
+    <main class="container mx-auto">
+      <section id="about" class="flex flex-wrap">
+        <div class="md:w-1/2">
           <h1 class="text-2xl font-bold my-3">About</h1>
-          <p class="">
-            LookinLabs is an organization dedicated
-            to the development of diverse applications,
-            utilizing best programming practices depending on application needs.
-            Our primary focus is on providing self-development opportunities
-            for individuals and assisting customers in elevating their infrastructure to a higher level
+          <p>
+            LookinLabs is an organization dedicated to the development of
+            diverse applications, utilizing best programming practices depending
+            on application needs. Our primary focus is on providing
+            self-development opportunities for individuals and assisting
+            customers in elevating their infrastructure to a higher level
           </p>
-          <img class="object-scale-down h-3/4 w-96" src="resources/img/startup.jpg" alt="Image description">
+        </div>
+        <div class="md:w-1/2">
+          <img
+            class="w-full h-auto object-scale-down"
+            src="resources/img/startup.jpg"
+            alt="Startup"
+          />
         </div>
       </section>
       <section>
@@ -114,11 +124,12 @@
       </section>
       <section class="my-16">
         <h1 class="text-2xl font-bold my-3">Our Projects</h1>
-
       </section>
       <section class="flex flex-wrap my-96">
         <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
-          <h2 class="text-2xl font-bold mb-2">Software Development / Delivery</h2>
+          <h2 class="text-2xl font-bold mb-2">
+            Software Development / Delivery
+          </h2>
           <ul class="list-disc pl-4">
             <li>Web / Application development</li>
             <li>software delivery</li>
@@ -126,7 +137,9 @@
           </ul>
         </div>
         <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
-          <h2 class="text-2xl font-bold mb-2 ">Infrastructure / containerization / cloudOps</h2>
+          <h2 class="text-2xl font-bold mb-2">
+            Infrastructure / containerization / cloudOps
+          </h2>
           <ul class="list-disc pl-4">
             <li>Migrations pre-steps</li>
             <li>Kubernetes / Nomad & other orchestration solutions</li>
@@ -139,22 +152,29 @@
       </section>
     </main>
     <div class="my-32 flex justify-center">
-      <footer style="text-align: center;">
+      <footer style="text-align: center">
         <div class="h-12 text-4xl font-bold">LookinLabs</div>
         <div class="text-s">info@lookinlabs.net</div>
-        <div class="h-10 flex justify-center space-x-4 text-s">+ 372 5686 9540</div>
+        <div class="h-10 flex justify-center space-x-4 text-s">
+          + 372 5686 9540
+        </div>
         <div class="h-12 flex justify-center space-x-4">
           <a href="https://github.com/LookinLabs" target="_blank">
-            <i class="fab fa-github fa-2x text-gray-700 hover:text-gray-900"></i>
+            <i
+              class="fab fa-github fa-2x text-gray-700 hover:text-gray-900"
+            ></i>
           </a>
           <a href="https://www.linkedin.com/company/lookinlabs" target="_blank">
-            <i class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"></i>
+            <i
+              class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"
+            ></i>
           </a>
         </div>
-        <div class="h-14 flex justify-center space-x-4 text-lg"><p>&copy; All rights reserved</p></div>
+        <div class="h-14 flex justify-center space-x-4 text-lg">
+          <p>&copy; All rights reserved</p>
+        </div>
       </footer>
     </div>
-    <div>
     <script src="" async defer></script>
   </body>
 </html>
