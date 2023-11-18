@@ -14,7 +14,7 @@
     <!-- https://tailwindcss.com/docs/installation/play-cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="lookinlabs-body-bg">
+  <body class="lookinlabs-body-bg px-6">
     <div class="container mx-auto">
     <header>
       <nav class="flex justify-end">
@@ -42,10 +42,10 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="w-full">
       <section id="about" class="flex flex-wrap space-y-64">
         <div class="w-full md:w-1/2">
-          <h1><b>About</b></h1>
+          <h1 class="text-2xl font-bold my-3">About</h1>
           <p class="">
             LookinLabs is an organization dedicated
             to the development of diverse applications,
@@ -59,40 +59,47 @@
         </div>
       </section>
       <section>
-        <h1><b>Why Us?</b></h1>
+        <h1 class="text-2xl font-bold my-3">Why Us?</h1>
         <div class="flex flex-wrap -mx-2">
           <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
-            <div class="bg-gray-400 p-4">
+            <div class="bg-transparent-400 p-4">
               <h2 class="font-bold mb-2">Performance</h2>
-                <p>Lighting speed Code</p>
-                <p>Effitient Resource utilization</p>
-                <p>Scalability</p>
-                <p>Reliability</p>
+              <ul class="list-disc pl-4">
+                <li>Lighting speed Code</li>
+                <li>Efficient Resource utilization</li>
+                <li>Scalability</li>
+                <li>Reliability</li>
+              </ul>
             </div>
           </div>
           <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
-            <div class="bg-gray-400 p-4">
+            <div class="bg-transparent-400 p-4">
               <h2 class="font-bold mb-2">Quality</h2>
-                <p>Strigent testing</p>
-                <p>Robust security</p>
-                <p>Compliance and best practices</p>
-                <p>Comprehensive documentation</p>
+              <ul class="list-disc pl-4">
+                <li>Strigent testing</li>
+                <li>Robust security</li>
+                <li>Compliance and best practices</li>
+                <li>Comprehensive documentation</li>
+              </ul>
             </div>
           </div>
           <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
-            <div class="bg-gray-400 p-4">
+            <div class="bg-transparent-400 p-4">
               <h2 class="font-bold mb-2">Technologies and principals</h2>
-                <p>Infrastructure as code (IaC)</p>
-                <p>GitOps & DevOps</p>
-                <p>Kubernetes (Management included)</p>
-                <p>Efficient Frameworks</p>
-                <p>Cloud Solution (AWS, GCP, VMWare)</p>
+              <ul class="list-disc pl-4">
+                <li>Infrastructure as code (IaC)</li>
+                <li>GitOps & DevOps</li>
+                <li>Kubernetes (Management included)</li>
+                <li>Efficient Frameworks</li>
+                <li>Cloud Solution (AWS, GCP, VMWare)</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section>
-        <h1><b>What DO We Offer?</b></h1>
-        <p>
+      <section class="w-full sm:w-1/2 md:w1/3 lg:w-1/4 xl:-w-1/4">
+        <h1 class="text-2xl font-bold my-3">What Do We Offer?</h1>
+        <p class="w-full mx-5">
           LookinLabs offers a range of services spanning from basic software
           development to extensive microservices and infrastructure migrations.
           These services come with varying Service Level Agreements (SLAs) that
@@ -101,38 +108,36 @@
           job.
         </p>
       </section>
-      <section>
-        <h1><b>Our Projects</b></h1>
+      <section class="h-12 my-16">
+        <h1 class="text-2xl font-bold my-3">Our Projects</h1>
       </section>
-      <section>
-        <div>
-          <h2>Software Development / Delivery</h2>
-          <ul>
+      <section class="flex flex-wrap -mx-2">
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
+          <h2 class="font-bold mb-2">Software Development / Delivery</h2>
+          <ul class="list-disc pl-4">
             <li>Web / Application development</li>
             <li>software delivery</li>
             <li>code analysis</li>
           </ul>
         </div>
-        <div>
-          <h2>Infrastructure / containerization / cloudOps</h2>
-          <ul>
-            <li>Migrations</li>
-            <li>kubernetes / Nomad & other orchestrations solutions</li>
-            <li>cloud solutions</li>
-            <li>backup</li>
-            <li>disaster recovery</li>
-            <li>observability (monitoring & logging)</li>
-            <li>security scan</li>
-            <li>automation</li>
+        <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 px-2">
+          <h2 class="font-bold mb-2 ">Infrastructure / containerization / cloudOps</h2>
+          <ul class="list-disc pl-4">
+            <li>Migrations pre-steps</li>
+            <li>Kubernetes / Nomad & other orchestration solutions</li>
+            <li>Cloud Solutions</li>
+            <li>Backup & disaster Recovery</li>
+            <li>Observability (monitoring & logging)</li>
+            <li>Automation</li>
           </ul>
         </div>
       </section>
     </main>
-    <div class="flex justify-center">
+    <div class="my-32 flex justify-center">
       <footer style="text-align: center;">
-        <div class="h-12 text-2xl font-bold">LookinLabs</div>
-        <div class="text-xs">info@lookinlabs.net</div>
-        <div class="h-10 flex justify-center space-x-4 text-xs">+ 372 5686 9540</div>
+        <div class="h-12 text-4xl font-bold">LookinLabs</div>
+        <div class="text-s">info@lookinlabs.net</div>
+        <div class="h-10 flex justify-center space-x-4 text-s">+ 372 5686 9540</div>
         <div class="h-12 flex justify-center space-x-4">
           <a href="https://github.com/LookinLabs" target="_blank">
             <i class="fab fa-github fa-2x text-gray-700 hover:text-gray-900"></i>
@@ -141,7 +146,7 @@
             <i class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"></i>
           </a>
         </div>
-        <div class="h-14 flex justify-center space-x-4 text-s"><p>&copy; All rights reserved</p></div>
+        <div class="h-14 flex justify-center space-x-4 text-lg"><p>&copy; All rights reserved</p></div>
       </footer>
     </div>
     <div>
