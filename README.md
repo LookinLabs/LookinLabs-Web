@@ -10,13 +10,15 @@ An static website of LookinLabs organization built on TailwindCSS, JS & HTML
 | `resources/css`    | Self-Managed CSS Classes |
 | `resources/js`     | Self-Managed JS Scripts |
 | `resources/images` | Images |
+| `.github/workflows`| GitHub Actions Workflows |
 
 ## External Resources
 
-| Framework/CDN | Version |
+| Framework | Version |
 | ------------- | ------- |
-| [TailwindCSS](https://tailwindcss.com/) | 2.2.7 |
-| [Font-Awesome](https://fontawesome.com/) | 5.15.4 |
+| [TailwindCSS](https://tailwindcss.com/) | 2.2.7 (CDN) |
+| [TW-Elements](https://tw-elements.com) | 1.0.0 (CDN) |
+| [Font-Awesome](https://fontawesome.com/) | 5.15.4 (CDN) |
 
 ## Development Environment Setup
 
