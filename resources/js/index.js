@@ -25,3 +25,7 @@ rightCarouselButton.onclick = function () {
     behavior: "smooth",
   });
 };
+
+window.onload = function () {
+  carousel.scrollLeft = 0;
+};
