@@ -1,17 +1,31 @@
 .lookinlabs-body-bg {
-    height: 100%;
-    margin: 0;
-    background: linear-gradient(156deg, #02181D 13.54%, #000312 36.46%, rgba(23, 1, 37, 1) 68.23%);
-    background-blend-mode: darken;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(
+    156deg,
+    #02181d 13.54%,
+    #000312 36.46%,
+    rgba(23, 1, 37, 1) 68.23%
+  );
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @media screen and (min-width: 768px) {
-    #nav-toggle {
-      display: none;
-    }
-    #nav-menu {
-      display: flex;
-    }
+  #nav-toggle {
+    display: none;
   }
+  #nav-menu {
+    display: flex;
+  }
+}
+
+#carousel::-webkit-scrollbar {
+  display: none;
+}
+
+#carousel {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
