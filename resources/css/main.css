@@ -28,4 +28,33 @@
 #carousel {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  position: relative;
+  padding: 0 80px; /* Adjust this value to control the width of the fading effect */
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px; /* This should match the padding value above */
+  height: 100%;
+  pointer-events: none;
+}
+
+.carousel-container::before {
+  z-index: 1;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.carousel-container::after {
+  z-index: 1;
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
