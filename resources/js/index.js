@@ -29,3 +29,41 @@ rightCarouselButton.onclick = function () {
 window.onload = function () {
   carousel.scrollLeft = 0;
 };
+
+// Make the carousel scrollable by itself
+var scrollAmount = 0;
+var scrollTimer = setInterval(function () {
+  carousel.scrollLeft += 1;
+  scrollAmount += 1;
+}, 20);
+
+// Assuming carousel and buttons are defined
+carousel.addEventListener("mouseover", function () {
+  clearInterval(scrollTimer);
+});
+
+carousel.addEventListener("mouseout", function () {
+  scrollTimer = setInterval(function () {
+    carousel.scrollLeft += 1;
+    scrollAmount += 1;
+  }, 20);
+});
+
+// Assuming buttons is an array of button elements
+var buttons = [leftCarouselButton, rightCarouselButton];
+buttons.forEach(function (button) {
+  button.addEventListener("mouseover", function () {
+    clearInterval(scrollTimer);
+  });
+
+  button.addEventListener("mouseout", function () {
+    scrollTimer = setInterval(function () {
+      carousel.scrollLeft += 1;
+      scrollAmount += 1;
+    }, 20);
+  });
+
+  button.addEventListener("click", function () {
+    clearInterval(scrollTimer);
+  });
+});
