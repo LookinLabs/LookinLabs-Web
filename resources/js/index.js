@@ -31,11 +31,7 @@ window.onload = function () {
 };
 
 // Make the carousel scrollable by itself
-var scrollAmount = 0;
-var scrollTimer = setInterval(function () {
-  carousel.scrollLeft += 1;
-  scrollAmount += 1;
-}, 20);
+setCarouselScrollTimer();
 
 // Assuming carousel and buttons are defined
 carousel.addEventListener("mouseover", function () {
@@ -43,10 +39,7 @@ carousel.addEventListener("mouseover", function () {
 });
 
 carousel.addEventListener("mouseout", function () {
-  scrollTimer = setInterval(function () {
-    carousel.scrollLeft += 1;
-    scrollAmount += 1;
-  }, 20);
+  setCarouselScrollTimer();
 });
 
 // Assuming buttons is an array of button elements
@@ -57,13 +50,22 @@ buttons.forEach(function (button) {
   });
 
   button.addEventListener("mouseout", function () {
-    scrollTimer = setInterval(function () {
-      carousel.scrollLeft += 1;
-      scrollAmount += 1;
-    }, 20);
+    setCarouselScrollTimer();
   });
 
   button.addEventListener("click", function () {
     clearInterval(scrollTimer);
   });
 });
+
+var scrollAmount = 0;
+function setCarouselScrollTimer() {
+  scrollTimer = setInterval(function () {
+    carousel.scrollLeft += 1;
+    scrollAmount += 1;
+
+    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+      carousel.scrollLeft = 0;
+    }
+  }, 20);
+}
