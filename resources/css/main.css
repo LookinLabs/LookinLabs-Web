@@ -28,4 +28,44 @@
 #carousel {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  position: relative;
+  padding: 0 50px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(23, 1, 37, 1),
+    #000312,
+    rgba(23, 1, 37, 0)
+  );
+}
+
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    rgba(23, 1, 37, 1),
+    #000312,
+    rgba(23, 1, 37, 0)
+  );
 }
