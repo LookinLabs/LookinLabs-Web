@@ -69,3 +69,47 @@ function setCarouselScrollTimer() {
     }
   }, 20);
 }
+
+fetch('projects.json')
+    .then(response => response.json())
+    .then(data => {
+        const carousel = document.getElementById('carousel');
+
+        data.forEach(project => {
+            const carouselItem = document.createElement('div');
+            carouselItem.className = 'max-w-xs flex-shrink-0 mr-8 text-center';
+
+            const link = document.createElement('a');
+            link.className = 'group block h-full';
+            link.href = '#';
+
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'relative w-full h-72 mb-3';
+
+            const hoverImageContainer = document.createElement('div');
+            hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
+
+            const hoverImage = document.createElement('img');
+            hoverImage.src = project.image;
+            hoverImageContainer.appendChild(hoverImage);
+
+            const image = document.createElement('img');
+            image.className = 'block w-full h-full';
+            image.src = project.image;
+
+            imageContainer.appendChild(hoverImageContainer);
+            imageContainer.appendChild(image);
+
+            const projectName = document.createElement('span');
+            projectName.className = 'text-sm text-black';
+            projectName.textContent = project.name;
+
+            link.appendChild(imageContainer);
+            link.appendChild(projectName);
+
+            carouselItem.appendChild(link);
+
+            carousel.appendChild(carouselItem);
+        });
+    })
+    .catch(error => console.error('Error:', error));
