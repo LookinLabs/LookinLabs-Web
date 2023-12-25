@@ -45,12 +45,6 @@
   width: 10%;
   z-index: 2;
   pointer-events: none;
-  background: linear-gradient(
-    to right,
-    rgba(23, 1, 37, 1),
-    #000312,
-    rgba(23, 1, 37, 0)
-  );
 }
 
 .carousel-container::after {
@@ -62,10 +56,4 @@
   width: 10%;
   z-index: 2;
   pointer-events: none;
-  background: linear-gradient(
-    to left,
-    rgba(23, 1, 37, 1),
-    #000312,
-    rgba(23, 1, 37, 0)
-  );
 }

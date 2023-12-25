@@ -81,27 +81,31 @@ fetch('projects.json')
 
             const link = document.createElement('a');
             link.className = 'group block h-full';
-            link.href = '#';
+            link.href = project.url;
 
             const imageContainer = document.createElement('div');
             imageContainer.className = 'relative w-full h-72 mb-3';
 
-            const hoverImageContainer = document.createElement('div');
-            hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
+            // Only add hover animation if project name is not "LookinLabs Website"
+            if (project.name !== "LookinLabs Website") {
+                const hoverImageContainer = document.createElement('div');
+                hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
 
-            const hoverImage = document.createElement('img');
-            hoverImage.src = project.image;
-            hoverImageContainer.appendChild(hoverImage);
+                const hoverImage = document.createElement('img');
+                hoverImage.src = project.picture;
+                hoverImageContainer.appendChild(hoverImage);
+
+                imageContainer.appendChild(hoverImageContainer);
+            }
 
             const image = document.createElement('img');
             image.className = 'block w-full h-full';
-            image.src = project.image;
+            image.src = project.picture;
 
-            imageContainer.appendChild(hoverImageContainer);
             imageContainer.appendChild(image);
 
             const projectName = document.createElement('span');
-            projectName.className = 'text-sm text-black';
+            projectName.className = 'text-sm';
             projectName.textContent = project.name;
 
             link.appendChild(imageContainer);
@@ -113,3 +117,41 @@ fetch('projects.json')
         });
     })
     .catch(error => console.error('Error:', error));
+
+    window.onload = function() {
+      // Get the body's computed background color
+      var bodyStyle = window.getComputedStyle(document.body);
+      var bodyBackgroundColor = bodyStyle.backgroundColor;
+    
+      // Create a new style element
+      var style = document.createElement('style');
+    
+      // Set the CSS text
+      style.innerHTML = `
+          .carousel-container::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              width: 10%;
+              background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+              z-index: 2;
+              pointer-events: none;
+          }
+          .carousel-container::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              width: 10%;
+              background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+              z-index: 2;
+              pointer-events: none;
+          }
+      `;
+    
+      // Append the style element to the head of the document
+      document.head.appendChild(style);
+    };

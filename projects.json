@@ -1,34 +1,22 @@
-[ 
+[
     {
-        "name" : "Project1", 
-        "image" : "https://picsum.photos/300/400" 
-    }, 
-    { 
-        "name" : "Project2",
-        "image" : "https://picsum.photos/300/400"
+        "name": "Digital Service Book",
+        "url": "https://github.com/LookinLabs/DSB",
+        "picture": "./resources/img/projects/dsb.png"
     },
-    { 
-        "name" : "Project3", 
-        "image" : "https://picsum.photos/300/400"
+    {
+        "name": "Travelis",
+        "url": "https://github.com/LookinLabs/Travelis-Frontend",
+        "picture": "./resources/img/projects/Travelis.png"
     },
-    { 
-        "name" : "Project4", 
-        "image" : "https://picsum.photos/300/400" 
+    {
+        "name": "LookinLabs Website",
+        "url": "https://github.com/LookinLabs/LookinLabs-Web",
+        "picture": "./resources/img/design.jpg"
     },
-    { 
-        "name" : "Project5", 
-        "image" : "https://picsum.photos/300/400" 
-    },
-    { 
-        "name" : "Project6", 
-        "image" : "https://picsum.photos/300/400" 
-    },
-    { 
-        "name" : "Project7", 
-        "image" : "https://picsum.photos/300/400" 
-    },
-    { 
-        "name" : "Project8", 
-        "image" : "https://picsum.photos/300/400" 
+    {
+        "name": "KostLinux Portfolio",
+        "url": "https://github.com/KostLinux/Portfolio",
+        "picture": "https://kostlinux.github.io/Portfolio/assets/img/main.jpg"
     }
 ]
