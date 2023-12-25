@@ -17,6 +17,6 @@
     {
         "name": "KostLinux Portfolio",
         "url": "https://github.com/KostLinux/Portfolio",
-        "picture": "https://kostlinux.github.io/Portfolio/assets/img/main.jpg"
+        "picture": "./resources/img/projects/portfolio.jpg"
     }
 ]

@@ -1,151 +1,145 @@
-document.getElementById("nav-toggle").addEventListener("click", function () {
-  var navMenu = document.getElementById("nav-menu");
-  if (navMenu.style.display === "none") {
-    navMenu.style.display = "flex";
-  } else {
-    navMenu.style.display = "none";
-  }
+// DOM Elements
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+const leftCarouselButton = document.getElementById("left-carousel-button");
+const rightCarouselButton = document.getElementById("right-carousel-button");
+const carousel = document.getElementById("carousel");
+const buttons = [leftCarouselButton, rightCarouselButton];
+
+// Event Listeners
+navToggle.addEventListener("click", toggleNavMenu);
+leftCarouselButton.addEventListener("click", scrollCarouselLeft);
+rightCarouselButton.addEventListener("click", scrollCarouselRight);
+carousel.addEventListener("mouseover", stopCarouselScroll);
+carousel.addEventListener("mouseout", startCarouselScroll);
+buttons.forEach(button => {
+  button.addEventListener("mouseover", stopCarouselScroll);
+  button.addEventListener("mouseout", startCarouselScroll);
+  button.addEventListener("click", stopCarouselScroll);
 });
 
-// Carousel buttons click event
-var leftCarouselButton = document.getElementById("left-carousel-button");
-var rightCarouselButton = document.getElementById("right-carousel-button");
-var carousel = document.getElementById("carousel");
+window.onload = function () {
+  carousel.scrollLeft = 0;
+  setCarouselScrollTimer();
+  setCarouselGradient();
+};
 
-leftCarouselButton.onclick = function () {
+// Functions
+function toggleNavMenu() {
+  navMenu.style.display = navMenu.style.display === "none" ? "flex" : "none";
+}
+
+function scrollCarouselLeft() {
   carousel.scrollTo({
     left: carousel.scrollLeft - carousel.clientWidth,
     behavior: "smooth",
   });
-};
+}
 
-rightCarouselButton.onclick = function () {
+function scrollCarouselRight() {
   carousel.scrollTo({
     left: carousel.scrollLeft + carousel.clientWidth,
     behavior: "smooth",
   });
-};
+}
 
-window.onload = function () {
-  carousel.scrollLeft = 0;
-};
-
-// Make the carousel scrollable by itself
-setCarouselScrollTimer();
-
-// Assuming carousel and buttons are defined
-carousel.addEventListener("mouseover", function () {
-  clearInterval(scrollTimer);
-});
-
-carousel.addEventListener("mouseout", function () {
-  setCarouselScrollTimer();
-});
-
-// Assuming buttons is an array of button elements
-var buttons = [leftCarouselButton, rightCarouselButton];
-buttons.forEach(function (button) {
-  button.addEventListener("mouseover", function () {
-    clearInterval(scrollTimer);
-  });
-
-  button.addEventListener("mouseout", function () {
-    setCarouselScrollTimer();
-  });
-
-  button.addEventListener("click", function () {
-    clearInterval(scrollTimer);
-  });
-});
-
-var scrollAmount = 0;
+let scrollTimer;
 function setCarouselScrollTimer() {
-  scrollTimer = setInterval(function () {
+  scrollTimer = setInterval(() => {
     carousel.scrollLeft += 1;
-    scrollAmount += 1;
-
     if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
       carousel.scrollLeft = 0;
     }
   }, 20);
 }
 
+function stopCarouselScroll() {
+  clearInterval(scrollTimer);
+}
+
+function startCarouselScroll() {
+  setCarouselScrollTimer();
+}
+
+function setCarouselGradient() {
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .carousel-container::before {
+      position: absolute;
+      width: 20%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .carousel-container::after {
+      position: absolute;
+      width: 20%;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+      z-index: 2;
+      pointer-events: none;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Fetch and populate carousel
 fetch('projects.json')
-    .then(response => response.json())
-    .then(data => {
-        const carousel = document.getElementById('carousel');
+  .then(response => response.json())
+  .then(data => populateCarousel(data))
+  .catch(error => console.error('Error:', error));
 
-        data.forEach(project => {
-            const carouselItem = document.createElement('div');
-            carouselItem.className = 'max-w-xs flex-shrink-0 mr-8 text-center';
+function populateCarousel(data) {
+  data.forEach(project => {
+    const carouselItem = createCarouselItem(project);
+    carousel.appendChild(carouselItem);
+  });
+}
 
-            const link = document.createElement('a');
-            link.className = 'group block h-full';
-            link.href = project.url;
+function createCarouselItem(project) {
+  const carouselItem = document.createElement('div');
+  carouselItem.className = 'max-w-xs flex-shrink-0 mr-8 text-center';
 
-            const imageContainer = document.createElement('div');
-            imageContainer.className = 'relative w-full h-72 mb-3';
+  const link = document.createElement('a');
+  link.className = 'group block h-full';
+  link.href = project.url;
 
-            // Only add hover animation if project name is not "LookinLabs Website"
-            if (project.name !== "LookinLabs Website") {
-                const hoverImageContainer = document.createElement('div');
-                hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
+  const imageContainer = document.createElement('div');
+  imageContainer.className = 'relative w-full h-72 mb-3';
 
-                const hoverImage = document.createElement('img');
-                hoverImage.src = project.picture;
-                hoverImage.style.width = '100%'; // Set the width to 100%
-                hoverImage.style.height = '100%'; // Set the height to 100%
-                hoverImageContainer.appendChild(hoverImage);
+  const hoverImageContainer = createHoverImageContainer(project);
+  imageContainer.appendChild(hoverImageContainer);
 
-                imageContainer.appendChild(hoverImageContainer);
-            }
+  const image = createImage(project);
+  imageContainer.appendChild(image);
 
-            const image = document.createElement('img');
-            image.className = 'block w-full h-full';
-            image.src = project.picture;
+  const projectName = document.createElement('span');
+  projectName.className = 'text-sm';
+  projectName.textContent = project.name;
 
-            imageContainer.appendChild(image);
+  link.appendChild(imageContainer);
+  link.appendChild(projectName);
 
-            const projectName = document.createElement('span');
-            projectName.className = 'text-sm';
-            projectName.textContent = project.name;
+  carouselItem.appendChild(link);
 
-            link.appendChild(imageContainer);
-            link.appendChild(projectName);
+  return carouselItem;
+}
 
-            carouselItem.appendChild(link);
+function createHoverImageContainer(project) {
+  const hoverImageContainer = document.createElement('div');
+  hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
 
-            carousel.appendChild(carouselItem);
-        });
-    })
-    .catch(error => console.error('Error:', error));
+  const hoverImage = createImage(project);
+  hoverImageContainer.appendChild(hoverImage);
 
-    window.onload = function() {
-      // Get the body's computed background color
-      var bodyStyle = window.getComputedStyle(document.body);
-      var bodyBackgroundColor = bodyStyle.backgroundColor;
-    
-      // Create a new style element
-      var style = document.createElement('style');
-    
-      // Set the CSS text
-      style.innerHTML = `
-          .carousel-container::before {
-              position: absolute;
-              width: 25%;
-              background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
-              z-index: 2;
-              pointer-events: none;
-          }
-          .carousel-container::after {
-              position: absolute;
-              width: 25%;
-              background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
-              z-index: 2;
-              pointer-events: none;
-          }
-      `;
-    
-      // Append the style element to the head of the document
-      document.head.appendChild(style);
-    };
+  return hoverImageContainer;
+}
+
+function createImage(project) {
+  const image = document.createElement('img');
+  image.className = 'block w-full h-full';
+  image.src = project.picture;
+  image.style.width = '300px';
+  image.style.height = '400px';
+
+  return image;
+}
