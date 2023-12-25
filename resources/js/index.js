@@ -93,6 +93,8 @@ fetch('projects.json')
 
                 const hoverImage = document.createElement('img');
                 hoverImage.src = project.picture;
+                hoverImage.style.width = '100%'; // Set the width to 100%
+                hoverImage.style.height = '100%'; // Set the height to 100%
                 hoverImageContainer.appendChild(hoverImage);
 
                 imageContainer.appendChild(hoverImageContainer);
@@ -129,23 +131,15 @@ fetch('projects.json')
       // Set the CSS text
       style.innerHTML = `
           .carousel-container::before {
-              content: "";
               position: absolute;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              width: 10%;
+              width: 25%;
               background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
               z-index: 2;
               pointer-events: none;
           }
           .carousel-container::after {
-              content: "";
               position: absolute;
-              top: 0;
-              bottom: 0;
-              right: 0;
-              width: 10%;
+              width: 25%;
               background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
               z-index: 2;
               pointer-events: none;
