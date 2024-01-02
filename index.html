@@ -32,18 +32,18 @@
           <i class="material-icons">menu</i>
         </button>
         <ul id="nav-menu" class="hidden md:flex justify-end list-none">
-          <a href="#projects">
-            <li
-              class="bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
-            >
-              Our Projects
-            </li>
-          </a>
           <a href="#about">
             <li
               class="bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
             >
               About
+            </li>
+          </a>
+          <a href="#who-are-we">
+            <li
+              class="bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+            >
+              Who we are?
             </li>
           </a>
           <a href="#why-us">
@@ -58,6 +58,13 @@
               class="bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
             >
               What Do We Offer?
+            </li>
+          </a>
+          <a href="#projects">
+            <li
+              class="bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+            >
+              Our Projects
             </li>
           </a>
         </ul>
@@ -117,8 +124,8 @@
           </div>
         </div>
       </section>
-      <section id="offer" class="sm:w-auto md:w-auto lg:w-auto xl:w-auto">
-        <h1 class="text-2xl font-bold my-6 underline">What Do We Offer?</h1>
+      <section id="offer" class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex flex-wrap">
+        <h1 class="text-2xl font-bold my-6 underline w-full">What Do We Offer?</h1>
         <p class="w-full text-justify leading-6">
           LookinLabs offers a range of services spanning from basic software
           development to extensive cloud infrastructure setups.
@@ -127,6 +134,28 @@
           SLA for each service is determined by the size and complexity of the
           job.
         </p>
+          <div class="w-full sm:w-1/2 pt-16">
+            <h2 class="text-2xl font-bold mb-6 underline">
+              Software Development / Delivery
+            </h2>
+            <ul class="list-disc pl-4 leading-4.5">
+              <li class="mb-1">Web / Application Development</li>
+              <li class="mb-1">Software delivery</li>
+              <li class="mb-1">Code analysis</li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 pt-16">
+            <h2 class="text-2xl font-bold mb-6 underline">
+              Infrastructure / Containerization / CloudOps
+            </h2>
+            <ul class="list-disc pl-4 leading-4.5">
+              <li class="mb-1">Kubernetes</li>
+              <li class="mb-1">Cloud Solutions</li>
+              <li class="mb-1">Backup & disaster Recovery</li>
+              <li class="mb-1">Observability (monitoring & logging)</li>
+              <li class="mb-1">Automation</li>
+            </ul>
+          </div>
       </section>
       <section id="projects" class="my-16 relative overflow-hidden">
         <h1 class="text-2xl font-bold mb-10 underline">Our Projects</h1>
@@ -152,28 +181,15 @@
           </div>
         </div>
       </section>
-      <section class="flex flex-wrap my-20">
-        <div class="w-full sm:w-1/2">
-          <h2 class="text-2xl font-bold mb-6 underline">
-            Software Development / Delivery
-          </h2>
-          <ul class="list-disc pl-4 leading-4.5">
-            <li class="mb-1">Web / Application Development</li>
-            <li class="mb-1">Software delivery</li>
-            <li class="mb-1">Code analysis</li>
-          </ul>
-        </div>
-        <div class="w-full sm:w-1/2">
-          <h2 class="text-2xl font-bold mb-6 underline">
-            Infrastructure / Containerization / CloudOps
-          </h2>
-          <ul class="list-disc pl-4 leading-4.5">
-            <li class="mb-1">Kubernetes</li>
-            <li class="mb-1">Cloud Solutions</li>
-            <li class="mb-1">Backup & disaster Recovery</li>
-            <li class="mb-1">Observability (monitoring & logging)</li>
-            <li class="mb-1">Automation</li>
-          </ul>
+      <section id="who-we-are" class="flex flex-wrap">
+        <h1 class="text-2xl font-bold my-6 underline w-full">Who We Are</h1>
+        <p class="w-full text-justify leading-6 mb-8">
+          At LookinLabs, we take pride in the quality of our services. Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services. 
+        
+          Our customers are our top priority, and we strive to provide them with the best possible experience. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our customers and work tirelessly to meet their needs and exceed their expectations.
+        </p>
+        <div id="team-members" class="w-full flex flex-wrap justify-center mt-8">
+          <!-- Team members will be inserted here -->
         </div>
       </section>
     </main>
