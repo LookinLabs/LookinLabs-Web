@@ -47,12 +47,15 @@ let scrollTimer;
 function setCarouselScrollTimer() {
   scrollTimer = setInterval(() => {
     carousel.scrollLeft += 1;
-    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
-      carousel.scrollLeft = 0;
+    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1) {
+      carousel.classList.add('fade-out');
+      setTimeout(() => {
+        carousel.scrollLeft = 0;
+        carousel.classList.remove('fade-out');
+      }, 250);
     }
   }, 20);
 }
-
 function stopCarouselScroll() {
   clearInterval(scrollTimer);
 }
@@ -93,6 +96,10 @@ function populateCarousel(data) {
     const carouselItem = createCarouselItem(project);
     carousel.appendChild(carouselItem);
   });
+
+  // Duplicate the first image and append it to the end of the carousel
+  const firstCarouselItem = createCarouselItem(data[0]);
+  carousel.appendChild(firstCarouselItem);
 }
 
 function createCarouselItem(project) {
@@ -126,7 +133,7 @@ function createCarouselItem(project) {
 
 function createHoverImageContainer(project) {
   const hoverImageContainer = document.createElement('div');
-  hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-40';
+  hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80';
 
   const hoverImage = createImage(project);
   hoverImageContainer.appendChild(hoverImage);
