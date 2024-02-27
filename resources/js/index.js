@@ -5,6 +5,7 @@ const carousel = document.getElementById("carousel");
 const buttons = [leftCarouselButton, rightCarouselButton];
 
 // Event Listeners
+document.getElementById('nav-toggle').addEventListener('click', toggleMenu);
 leftCarouselButton.addEventListener("click", scrollCarouselLeft);
 rightCarouselButton.addEventListener("click", scrollCarouselRight);
 carousel.addEventListener("mouseover", stopCarouselScroll);
@@ -22,7 +23,7 @@ window.onload = function () {
 };
 
 // Functions
-document.getElementById('nav-toggle').addEventListener('click', function() {
+function toggleMenu() {
   var menuItemsContainer = document.getElementById('menu-items');
   menuItemsContainer.classList.toggle('hidden');
   if (!menuItemsContainer.classList.contains('hidden')) {
@@ -44,6 +45,35 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
           menuItem.classList.remove('translate-y-0');
       });
   }
+}
+
+var menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function(event) {
+        // Remove active class from all menu items
+        menuItems.forEach(function(otherMenuItem) {
+            otherMenuItem.classList.remove('active');
+        });
+
+        // Add active class to clicked menu item
+        event.target.classList.add('active');
+
+        // Close the navbar
+        toggleMenu();
+    });
+});
+
+var menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function(event) {
+        // Remove active class from all menu items
+        menuItems.forEach(function(otherMenuItem) {
+            otherMenuItem.classList.remove('active');
+        });
+
+        // Add active class to clicked menu item
+        event.target.classList.add('active');
+    });
 });
 
 function scrollCarouselLeft() {

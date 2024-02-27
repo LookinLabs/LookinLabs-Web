@@ -29,14 +29,14 @@
   <header class="relative mx-auto mb-8">
     <div class="container">
         <nav>
-            <div class="px-8 pl-0 md:px-16 lg:px-36 lg:pr-4">
-                <div class="flex justify-between items-center bg-gray-900 bg-opacity-10">
-                    <img src="./resources/img/logo.png" alt="Logo" class="lg:w-64 lg:h-64 w-40 h-36 md:w-48 md:h-48 sm:w-32 sm:h-32" />
-                    <div class="relative">
-                        <button id="nav-toggle">
-                            <i class="material-icons text-white lg:hidden">menu</i>
-                        </button>
-                        <ul id="nav-menu" class="hidden md:flex justify-end list-none">
+          <div class="px-4 sm:px-8 md:px-16 lg:px-36 lg:pr-4">
+              <div class="flex justify-between items-center bg-gray-900 bg-opacity-10">
+                  <img src="./resources/img/logo.png" alt="Logo" class="lg:w-64 lg:h-64 w-48 h-52 md:w-48 md:h-48" />
+                  <div class="relative pr-10 pt-6">
+                      <button id="nav-toggle">
+                          <i class="material-icons text-white lg:hidden">menu</i>
+                      </button>
+                          <ul id="nav-menu" class="hidden md:flex justify-end list-none">
                             <li><a href="#about" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">About</a></li>
                             <li><a href="#who-we-are" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Who we are?</a></li>
                             <li><a href="#why-us" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Why Us?</a></li>
@@ -47,39 +47,39 @@
                         </ul>
                     </div>
                 </div>
-              <div id="menu-items" class="hidden transition-all duration-300 ease-in-out lg:hidden w-full text-right flex-col pt-0 bg-gray-950 bg-opacity-10 pl-10 list-none">
-              <li><a href="#about" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">About</a></li>
-              <li><a href="#who-we-are" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Who we are?</a></li>
-              <li><a href="#why-us" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Why Us?</a></li>
-              <li><a href="#offer" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">What Do We Offer?</a></li>
-              <li><a href="#projects" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Projects</a></li>
-              <li><a href="#prices" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Prices</a></li>
-              <li><a href="#contact" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Contact Us</a></li>
+            <div id="menu-items" class="hidden transition-all duration-300 ease-in-out lg:hidden w-full text-right flex-col pr-10 pt-0 bg-gray-950 bg-opacity-10 pl-10 list-none">
+              <li id="about-item"><a href="#about" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">About</a></li>
+              <li id="wwa-item"><a href="#who-we-are" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Who we are?</a></li>
+              <li id="wu-item"><a href="#why-us" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Why Us?</a></li>
+              <li id="offer-item"><a href="#offer" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">What Do We Offer?</a></li>
+              <li id="projects-item"><a href="#projects" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Projects</a></li>
+              <li id="prices-item"><a href="#prices" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Prices</a></li>
+              <li id="contact-item"><a href="#contact" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Contact Us</a></li>
             </div>
           </div>
         </nav>
     </div>
   </header>
   <main class="container mx-auto px-8 md:px-16 lg:px-32 text-white">
-    <section id="about" class="flex">
-      <div class="w-1/2 mr-16">
-        <h1 class="text-2xl font-bold mb-10 underline">About</h1>
-        <p class="text-justify leading-6">
-          LookinLabs is an organization dedicated to the development of
-          diverse applications, utilizing best programming practices depending
-          on application needs. Our primary focus is on providing
-          self-development opportunities for individuals and assisting
-          customers in elevating their infrastructure to a higher level.
-        </p>
+    <section id="about" class="flex flex-col sm:flex-row">
+      <div class="w-full sm:w-1/2 mr-16">
+          <h1 class="text-2xl font-bold mb-10 underline">About</h1>
+          <p class="text-justify leading-6">
+              LookinLabs is an organization dedicated to the development of
+              diverse applications, utilizing best programming practices depending
+              on application needs. Our primary focus is on providing
+              self-development opportunities for individuals and assisting
+              customers in elevating their infrastructure to a higher level.
+          </p>
       </div>
-      <div class="w-1/2 flex justify-center items-center">
-        <img class="object-contain" src="resources/img/startup.jpg" alt="Startup"
-          style="box-shadow: 0px 0px 8px 0px #b5d200bf" />
+      <div class="w-full sm:w-1/2 flex justify-center items-center mt-4 sm:mt-0">
+          <img class="object-contain" src="resources/img/startup.jpg" alt="Startup"
+              style="box-shadow: 0px 0px 8px 0px #b5d200bf" />
       </div>
-    </section>
+  </section>
     <section id="why-us">
       <h1 class="text-2xl font-bold my-4 underline">Why Us?</h1>
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="bg-transparent-400 p-4">
           <h2 class="font-bold mb-5">Performance</h2>
           <ul class="list-disc pl-4">
@@ -103,7 +103,7 @@
           <ul class="list-disc pl-4">
             <li class="mb-1">Infrastructure as code (IaC)</li>
             <li class="mb-1">GitOps & DevOps</li>
-            <li class="mb-1">Kubernetes (Management included)</li>
+            <li class="mb-1">Containerisation (Management included)</li>
             <li class="mb-1">Efficient Frameworks</li>
             <li class="mb-1">Cloud Solution (AWS, GCP, VMWare)</li>
           </ul>
