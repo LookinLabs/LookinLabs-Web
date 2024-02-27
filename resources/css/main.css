@@ -12,6 +12,29 @@
   background-attachment: fixed;
 }
 
+.button-gradient {
+  background: linear-gradient(
+    156deg,
+    #02181d 13.54%,
+    #000312 36.46%,
+    rgba(23, 1, 37, 1) 68.23%
+  );
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: 2px solid white;
+  transition: background 0.3s ease-in-out;
+}
+
+.button-gradient:hover {
+  background: linear-gradient(
+    156deg,
+    #02181d 33.54%,
+    #000312 56.46%,
+    rgba(23, 1, 37, 1) 88.23%
+  );
+}
+
 @media screen and (min-width: 768px) {
   #nav-toggle {
     display: none;
