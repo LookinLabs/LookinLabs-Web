@@ -1,13 +1,11 @@
 // DOM Elements
-const navToggle = document.getElementById("nav-toggle");
-const navMenu = document.getElementById("nav-menu");
 const leftCarouselButton = document.getElementById("left-carousel-button");
 const rightCarouselButton = document.getElementById("right-carousel-button");
 const carousel = document.getElementById("carousel");
 const buttons = [leftCarouselButton, rightCarouselButton];
 
 // Event Listeners
-navToggle.addEventListener("click", toggleNavMenu);
+document.getElementById('nav-toggle').addEventListener('click', toggleMenu);
 leftCarouselButton.addEventListener("click", scrollCarouselLeft);
 rightCarouselButton.addEventListener("click", scrollCarouselRight);
 carousel.addEventListener("mouseover", stopCarouselScroll);
@@ -25,9 +23,58 @@ window.onload = function () {
 };
 
 // Functions
-function toggleNavMenu() {
-  navMenu.style.display = navMenu.style.display === "none" ? "flex" : "none";
+function toggleMenu() {
+  var menuItemsContainer = document.getElementById('menu-items');
+  menuItemsContainer.classList.toggle('hidden');
+  if (!menuItemsContainer.classList.contains('hidden')) {
+      var menuItems = document.querySelectorAll('#menu-items .menu-item');
+      menuItems.forEach(function(menuItem, index) {
+          setTimeout(function() {
+              menuItem.classList.remove('opacity-0');
+              menuItem.classList.remove('translate-y-3');
+              menuItem.classList.add('opacity-100');
+              menuItem.classList.add('translate-y-0');
+          }, index * 70); // 100ms delay between each item
+      });
+  } else {
+      var menuItems = document.querySelectorAll('#menu-items .menu-item');
+      menuItems.forEach(function(menuItem, index) {
+          menuItem.classList.add('opacity-0');
+          menuItem.classList.add('translate-y-3');
+          menuItem.classList.remove('opacity-100');
+          menuItem.classList.remove('translate-y-0');
+      });
+  }
 }
+
+var menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function(event) {
+        // Remove active class from all menu items
+        menuItems.forEach(function(otherMenuItem) {
+            otherMenuItem.classList.remove('active');
+        });
+
+        // Add active class to clicked menu item
+        event.target.classList.add('active');
+
+        // Close the navbar
+        toggleMenu();
+    });
+});
+
+var menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(function(menuItem) {
+    menuItem.addEventListener('click', function(event) {
+        // Remove active class from all menu items
+        menuItems.forEach(function(otherMenuItem) {
+            otherMenuItem.classList.remove('active');
+        });
+
+        // Add active class to clicked menu item
+        event.target.classList.add('active');
+    });
+});
 
 function scrollCarouselLeft() {
   carousel.scrollTo({

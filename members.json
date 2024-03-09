@@ -2,21 +2,21 @@
     {
         "name": "Christofher Köst",
         "profession": "CEO, Site Reliability Engineer",
-        "email": "christofher.kost@gmail.com",
+        "email": "christofher.kost@lookinlabs.com",
         "portfolio": "https://kostlinux.github.io/Portfolio",
         "picture": "./resources/img/members/christofher.jpg"
     },
     {
         "name": "Martin Sidorov",
-        "profession": "Co-Founder, Fullstack Developer",
-        "email": "martin.sidorov27@gmail.com",
+        "profession": "Co-Founder, Chief Technology Officer",
+        "email": "martin.sidorov@lookinlabs.com",
         "portfolio": "https://martinsidorov.com/",
         "picture": "./resources/img/members/martin.jpg"
     },
     {
-        "name": "Daniel Mogilnyi",
-        "profession": "Co-Founder, Frontend Developer & UI / UX Designer",
-        "email": "daniel.mogilny322@gmail.com",
+        "name": "Daniel Laks",
+        "profession": "Co-Founder, Technical Lead",
+        "email": "daniel.laks@lookinlabs.com",
         "portfolio": "https://www.linkedin.com/in/daniel-mogilny/",
         "picture": "./resources/img/members/daniel.jpg"
     }
