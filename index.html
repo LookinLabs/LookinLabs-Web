@@ -367,10 +367,21 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="flex items-center justify-center p-4">
-      <a href="#"
-        class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200">Contact
-        Us</a>
+    <section id="contact" class="flex flex-col items-center justify-center p-4">
+      <a href="#" id="contactButton"
+          class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200">Contact
+          Us</a>
+      <form id="contactForm" action="/submitForm" method="post" class="space-y-4 w-full max-w-md mt-4 hidden">
+        <input type="text" id="username" name="username" placeholder="Username" required class="w-full p-2 border border-gray-300 rounded text-black">
+        <input type="email" id="email" name="email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded text-black">
+        <input type="text" id="title" name="title" placeholder="Title of the Idea" required class="w-full p-2 border border-gray-300 rounded text-black">
+        <label class="inline-flex items-center mt-3">
+          <input type="checkbox" id="researchCheckbox" class="form-checkbox h-5 w-5 text-blue-600" checked="false"><span class="ml-2 text-white">I have my own competitive research of project</span>
+        </label>
+        <input type="url" id="link" name="link" placeholder="Link to pdf file" style="display: none;" pattern="https?://.+" class="w-full p-2 border border-gray-300 rounded mx-auto text-black">
+        <textarea id="description" name="description" placeholder="Description" required rows="10" cols="35" class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
+        <button type="submit" class="p-2 bg-green-500 text-white rounded block mx-auto">Send</button>
+      </form>
     </section>
   </main>
   <div class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-32">

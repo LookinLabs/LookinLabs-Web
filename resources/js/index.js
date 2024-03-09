@@ -5,12 +5,12 @@ const carousel = document.getElementById("carousel");
 const buttons = [leftCarouselButton, rightCarouselButton];
 
 // Event Listeners
-document.getElementById('nav-toggle').addEventListener('click', toggleMenu);
+document.getElementById("nav-toggle").addEventListener("click", toggleMenu);
 leftCarouselButton.addEventListener("click", scrollCarouselLeft);
 rightCarouselButton.addEventListener("click", scrollCarouselRight);
 carousel.addEventListener("mouseover", stopCarouselScroll);
 carousel.addEventListener("mouseout", startCarouselScroll);
-buttons.forEach(button => {
+buttons.forEach((button) => {
   button.addEventListener("mouseover", stopCarouselScroll);
   button.addEventListener("mouseout", startCarouselScroll);
   button.addEventListener("click", stopCarouselScroll);
@@ -24,56 +24,56 @@ window.onload = function () {
 
 // Functions
 function toggleMenu() {
-  var menuItemsContainer = document.getElementById('menu-items');
-  menuItemsContainer.classList.toggle('hidden');
-  if (!menuItemsContainer.classList.contains('hidden')) {
-      var menuItems = document.querySelectorAll('#menu-items .menu-item');
-      menuItems.forEach(function(menuItem, index) {
-          setTimeout(function() {
-              menuItem.classList.remove('opacity-0');
-              menuItem.classList.remove('translate-y-3');
-              menuItem.classList.add('opacity-100');
-              menuItem.classList.add('translate-y-0');
-          }, index * 70); // 100ms delay between each item
-      });
+  var menuItemsContainer = document.getElementById("menu-items");
+  menuItemsContainer.classList.toggle("hidden");
+  if (!menuItemsContainer.classList.contains("hidden")) {
+    var menuItems = document.querySelectorAll("#menu-items .menu-item");
+    menuItems.forEach(function (menuItem, index) {
+      setTimeout(function () {
+        menuItem.classList.remove("opacity-0");
+        menuItem.classList.remove("translate-y-3");
+        menuItem.classList.add("opacity-100");
+        menuItem.classList.add("translate-y-0");
+      }, index * 70); // 100ms delay between each item
+    });
   } else {
-      var menuItems = document.querySelectorAll('#menu-items .menu-item');
-      menuItems.forEach(function(menuItem, index) {
-          menuItem.classList.add('opacity-0');
-          menuItem.classList.add('translate-y-3');
-          menuItem.classList.remove('opacity-100');
-          menuItem.classList.remove('translate-y-0');
-      });
+    var menuItems = document.querySelectorAll("#menu-items .menu-item");
+    menuItems.forEach(function (menuItem, index) {
+      menuItem.classList.add("opacity-0");
+      menuItem.classList.add("translate-y-3");
+      menuItem.classList.remove("opacity-100");
+      menuItem.classList.remove("translate-y-0");
+    });
   }
 }
 
-var menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener('click', function(event) {
-        // Remove active class from all menu items
-        menuItems.forEach(function(otherMenuItem) {
-            otherMenuItem.classList.remove('active');
-        });
-
-        // Add active class to clicked menu item
-        event.target.classList.add('active');
-
-        // Close the navbar
-        toggleMenu();
+var menuItems = document.querySelectorAll(".menu-item");
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener("click", function (event) {
+    // Remove active class from all menu items
+    menuItems.forEach(function (otherMenuItem) {
+      otherMenuItem.classList.remove("active");
     });
+
+    // Add active class to clicked menu item
+    event.target.classList.add("active");
+
+    // Close the navbar
+    toggleMenu();
+  });
 });
 
-var menuItems = document.querySelectorAll('.menu-item');
-menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener('click', function(event) {
-        // Remove active class from all menu items
-        menuItems.forEach(function(otherMenuItem) {
-            otherMenuItem.classList.remove('active');
-        });
-
-        // Add active class to clicked menu item
-        event.target.classList.add('active');
+var menuItems = document.querySelectorAll(".menu-item");
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener("click", function (event) {
+    // Remove active class from all menu items
+    menuItems.forEach(function (otherMenuItem) {
+      otherMenuItem.classList.remove("active");
     });
+
+    // Add active class to clicked menu item
+    event.target.classList.add("active");
+  });
 });
 
 function scrollCarouselLeft() {
@@ -94,11 +94,14 @@ let scrollTimer;
 function setCarouselScrollTimer() {
   scrollTimer = setInterval(() => {
     carousel.scrollLeft += 1;
-    if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth - 1) {
-      carousel.classList.add('fade-out');
+    if (
+      carousel.scrollLeft >=
+      carousel.scrollWidth - carousel.clientWidth - 1
+    ) {
+      carousel.classList.add("fade-out");
       setTimeout(() => {
         carousel.scrollLeft = 0;
-        carousel.classList.remove('fade-out');
+        carousel.classList.remove("fade-out");
       }, 250);
     }
   }, 20);
@@ -112,7 +115,7 @@ function startCarouselScroll() {
 }
 
 function setCarouselGradient() {
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.innerHTML = `
     .carousel-container::before {
       position: absolute;
@@ -133,13 +136,13 @@ function setCarouselGradient() {
 }
 
 // Fetch and populate carousel
-fetch('projects.json')
-  .then(response => response.json())
-  .then(data => populateCarousel(data))
-  .catch(error => console.error('Error:', error));
+fetch("projects.json")
+  .then((response) => response.json())
+  .then((data) => populateCarousel(data))
+  .catch((error) => console.error("Error:", error));
 
 function populateCarousel(data) {
-  data.forEach(project => {
+  data.forEach((project) => {
     const carouselItem = createCarouselItem(project);
     carousel.appendChild(carouselItem);
   });
@@ -150,15 +153,15 @@ function populateCarousel(data) {
 }
 
 function createCarouselItem(project) {
-  const carouselItem = document.createElement('div');
-  carouselItem.className = 'max-w-xs flex-shrink-0 mr-8 text-center';
+  const carouselItem = document.createElement("div");
+  carouselItem.className = "max-w-xs flex-shrink-0 mr-8 text-center";
 
-  const link = document.createElement('a');
-  link.className = 'group block h-full';
+  const link = document.createElement("a");
+  link.className = "group block h-full";
   link.href = project.url;
 
-  const imageContainer = document.createElement('div');
-  imageContainer.className = 'relative w-full h-72 mb-3';
+  const imageContainer = document.createElement("div");
+  imageContainer.className = "relative w-full h-72 mb-3";
 
   const hoverImageContainer = createHoverImageContainer(project);
   imageContainer.appendChild(hoverImageContainer);
@@ -166,8 +169,8 @@ function createCarouselItem(project) {
   const image = createImage(project);
   imageContainer.appendChild(image);
 
-  const projectName = document.createElement('span');
-  projectName.className = 'text-sm';
+  const projectName = document.createElement("span");
+  projectName.className = "text-sm";
   projectName.textContent = project.name;
 
   link.appendChild(imageContainer);
@@ -179,8 +182,9 @@ function createCarouselItem(project) {
 }
 
 function createHoverImageContainer(project) {
-  const hoverImageContainer = document.createElement('div');
-  hoverImageContainer.className = 'hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80';
+  const hoverImageContainer = document.createElement("div");
+  hoverImageContainer.className =
+    "hidden group-hover:flex items-center justify-center absolute top-0 left-0 w-full h-full bg-gray-800 bg-opacity-80";
 
   const hoverImage = createImage(project);
   hoverImageContainer.appendChild(hoverImage);
@@ -189,85 +193,108 @@ function createHoverImageContainer(project) {
 }
 
 function createImage(project) {
-  const image = document.createElement('img');
-  image.className = 'block w-full h-full';
+  const image = document.createElement("img");
+  image.className = "block w-full h-full";
   image.src = project.picture;
-  image.style.width = '300px';
-  image.style.height = '400px';
+  image.style.width = "300px";
+  image.style.height = "400px";
 
   return image;
 }
 
-fetch('members.json')
-  .then(response => response.json())
-  .then(data => populateMembers(data))
-  .catch(error => console.error('Error:', error));
+fetch("members.json")
+  .then((response) => response.json())
+  .then((data) => populateMembers(data))
+  .catch((error) => console.error("Error:", error));
 
 function populateMembers(members) {
   // Sort members so that the CEO is in the center
-  const ceoIndex = members.findIndex(member => member.profession.includes('CEO'));
+  const ceoIndex = members.findIndex((member) =>
+    member.profession.includes("CEO")
+  );
   const ceoMember = members[ceoIndex];
   members.splice(ceoIndex, 1);
   const centerIndex = Math.floor(members.length / 2);
   members.splice(centerIndex, 0, ceoMember);
 
-  const membersDiv = document.getElementById('team-members');
+  const membersDiv = document.getElementById("team-members");
   members.forEach((member, index) => {
-    const memberDiv = document.createElement('div');
-    memberDiv.className = 'w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center';
-    memberDiv.style.boxShadow = '0 4px 8px 0 rgba(0,0,0,0.2)';
-    memberDiv.style.transition = '0.3s';
-    memberDiv.style.borderRadius = '5px'; // Rounded corners
-    memberDiv.style.margin = '0 20px'; // Increase horizontal space between boxes
+    const memberDiv = document.createElement("div");
+    memberDiv.className =
+      "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
+    memberDiv.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)";
+    memberDiv.style.transition = "0.3s";
+    memberDiv.style.borderRadius = "5px"; // Rounded corners
+    memberDiv.style.margin = "0 20px"; // Increase horizontal space between boxes
 
-    const img = document.createElement('img');
-    img.className = 'w-32 h-32 rounded-full mb-4 object-cover'; // Same size for all images
+    const img = document.createElement("img");
+    img.className = "w-32 h-32 rounded-full mb-4 object-cover"; // Same size for all images
     img.src = member.picture;
     img.alt = `${member.name}'s picture`;
-    img.style.width = '150px'; // Set width
-    img.style.height = '150px'; // Set height
-    
-    
-    const name = document.createElement('h2');
-    name.className = 'text-xl font-bold mb-2';
+    img.style.width = "150px"; // Set width
+    img.style.height = "150px"; // Set height
+
+    const name = document.createElement("h2");
+    name.className = "text-xl font-bold mb-2";
     name.textContent = member.name;
 
-    const profession = document.createElement('p');
-    profession.className = 'mb-2';
+    const profession = document.createElement("p");
+    profession.className = "mb-2";
     profession.textContent = member.profession;
 
-    const emailDiv = document.createElement('div'); // Create a new div for the email icon and text
-    emailDiv.className = 'block mb-2';
-    emailDiv.style.display = 'flex'; // Arrange children in a row
-    emailDiv.style.alignItems = 'center'; // Vertically center the children
+    const emailDiv = document.createElement("div"); // Create a new div for the email icon and text
+    emailDiv.className = "block mb-2";
+    emailDiv.style.display = "flex"; // Arrange children in a row
+    emailDiv.style.alignItems = "center"; // Vertically center the children
 
-    const emailIcon = document.createElement('i');
-    emailIcon.className = 'fas fa-envelope';
-    emailIcon.style.marginRight = '10px'; // Space to the right of the icon
+    const emailIcon = document.createElement("i");
+    emailIcon.className = "fas fa-envelope";
+    emailIcon.style.marginRight = "10px"; // Space to the right of the icon
 
-    const email = document.createElement('a');
+    const email = document.createElement("a");
     email.href = `mailto:${member.email}`;
     email.textContent = member.email;
 
-    
-    const portfolio = document.createElement('a');
-    portfolio.className = 'block';
+    const portfolio = document.createElement("a");
+    portfolio.className = "block";
     portfolio.href = member.portfolio;
     portfolio.innerHTML = '<i class="fas fa-briefcase"></i> Portfolio';
-    portfolio.style.color = '#ffffff'; // White color for links
-    
-    memberDiv.style.margin = '0 30px 30px 0'; // Increase space between members
+    portfolio.style.color = "#ffffff"; // White color for links
+
+    memberDiv.style.margin = "0 30px 30px 0"; // Increase space between members
     memberDiv.appendChild(img);
     memberDiv.appendChild(name);
     memberDiv.appendChild(profession);
-    
+
     emailDiv.appendChild(emailIcon);
     emailDiv.appendChild(email);
     memberDiv.appendChild(emailDiv);
 
     memberDiv.appendChild(portfolio);
-    
-    membersDiv.appendChild(memberDiv);
 
+    membersDiv.appendChild(memberDiv);
   });
 }
+
+// Contact us form
+document
+  .getElementById("researchCheckbox")
+  .addEventListener("change", function () {
+    document.getElementById("link").style.display = this.checked
+      ? "block"
+      : "none";
+  });
+
+document
+  .getElementById("contactButton")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    var form = document.getElementById("contactForm");
+    if (form.classList.contains("hidden")) {
+      form.classList.remove("hidden");
+      this.disabled = true;
+    } else {
+      form.classList.add("hidden");
+      this.disabled = false;
+    }
+  });
