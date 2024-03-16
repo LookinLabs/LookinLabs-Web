@@ -5,18 +5,18 @@
         "picture": "./resources/img/projects/dsb.png"
     },
     {
-        "name": "Travelis",
-        "url": "https://github.com/LookinLabs/Travelis-Frontend",
-        "picture": "./resources/img/projects/Travelis.png"
+        "name": "DevOps Engineer Portfolio Website",
+        "url": "https://kostlinux.github.io/Portfolio",
+        "picture": "./resources/img/projects/christofher_kost.jpg"
     },
     {
         "name": "LookinLabs Website",
         "url": "https://github.com/LookinLabs/LookinLabs-Web",
-        "picture": "./resources/img/design.jpg"
+        "picture": "./resources/img/projects/design.jpg"
     },
     {
-        "name": "KostLinux Portfolio",
-        "url": "https://github.com/KostLinux/Portfolio",
-        "picture": "./resources/img/projects/portfolio.jpg"
+        "name": "Software Engineer Portfolio Website",
+        "url": "https://martinsidorov.com/",
+        "picture": "./resources/img/projects/martin_sidorov.jpg"
     }
 ]
