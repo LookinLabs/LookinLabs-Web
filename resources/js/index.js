@@ -298,3 +298,43 @@ document
       this.disabled = false;
     }
   });
+
+// EmailJS
+(function () {
+  emailjs.init("ySaIap3hTf1eHrMKa");
+})();
+
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // create a new FormData object
+    var formData = new FormData(this);
+
+    // get the form data
+    var username = formData.get("username");
+    var email = formData.get("email");
+    var title = formData.get("title");
+    var link = formData.get("link");
+    var description = formData.get("description");
+
+    var templateParams = {
+      username: username,
+      email: email,
+      title: title,
+      link: link,
+      description: description,
+    };
+
+    emailjs
+      .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
+      .then(
+        function () {
+          console.log("Mail sent!");
+        },
+        function (error) {
+          console.log("Mail not sent!", error);
+        }
+      );
+  });

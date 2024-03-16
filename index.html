@@ -23,6 +23,8 @@
   <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js" defer></script>
 
   <script src="resources/js/index.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body class="lookinlabs-body-bg">
@@ -371,7 +373,7 @@
       <a href="#" id="contactButton"
           class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200">Contact
           Us</a>
-      <form id="contactForm" action="/submitForm" method="post" class="space-y-4 w-full max-w-md mt-12 hidden">
+      <form id="contactForm" class="space-y-4 w-full max-w-md mt-12 hidden">
         <input type="text" id="username" name="username" placeholder="Username" required class="w-full p-2 border border-gray-300 rounded text-black">
         <input type="email" id="email" name="email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded text-black">
         <input type="text" id="title" name="title" placeholder="Title of the Idea" required class="w-full p-2 border border-gray-300 rounded text-black">
