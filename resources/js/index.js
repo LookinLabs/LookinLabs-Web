@@ -280,9 +280,7 @@ function populateMembers(members) {
 document
   .getElementById("researchCheckbox")
   .addEventListener("change", function () {
-    document.getElementById("link").style.display = this.checked
-      ? "block"
-      : "none";
+    document.getElementById("link").disabled = !this.checked;
   });
 
 document
