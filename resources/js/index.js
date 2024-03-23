@@ -299,11 +299,7 @@ document
 
 // EmailJS
 (function () {
-  emailjs.init({
-    publicKey: "ySaIap3hTf1eHrMKa",
-    // Do not allow headless browsers
-    blockHeadless: true,
-  });
+  emailjs.init("ySaIap3hTf1eHrMKa");
 })();
 
 document
@@ -311,15 +307,13 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    // create a new FormData object
     var formData = new FormData(this);
-
-    // get the form data
     var username = formData.get("username");
     var email = formData.get("email");
     var title = formData.get("title");
     var link = formData.get("link");
     var description = formData.get("description");
+    var captcha_response = grecaptcha.getResponse();
 
     var templateParams = {
       username: username,
@@ -327,6 +321,7 @@ document
       title: title,
       link: link,
       description: description,
+      "g-recaptcha-response": captcha_response,
     };
 
     emailjs
