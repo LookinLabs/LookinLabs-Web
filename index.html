@@ -1,421 +1,720 @@
 <!DOCTYPE html>
 <html lang="en" class="lookinlabs-body-bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>LookinLabs</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LookinLabs</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="resources/css/main.css" />
 
-  <link rel="stylesheet" href="resources/css/main.css" />
+    <!-- Load Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <!-- Load Google Fonts-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Load Fonts Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
-  <!-- Load Fonts Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- https://tailwindcss.com/docs/installation/play-cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- https://tailwindcss.com/docs/installation/play-cdn -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Elements -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js"
+      defer
+    ></script>
 
-  <!-- Tailwind Elements -->
-  <script src="https://cdn.jsdelivr.net/npm/tw-elements@1.0.0/dist/js/tw-elements.umd.min.js" defer></script>
+    <script src="resources/js/index.js" defer></script>
 
-  <script src="resources/js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Google Captcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
 
-  <!-- Google Captcha-->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-</head>
-
-<body class="lookinlabs-body-bg">
-  <header class="relative mx-auto mb-8">
-    <div class="container">
+  <body class="lookinlabs-body-bg">
+    <header class="relative mx-auto mb-8">
+      <div class="container">
         <nav>
           <div class="px-4 sm:px-8 md:px-16 lg:px-16">
-              <div class="flex justify-between items-center bg-gray-900 bg-opacity-10">
-                  <img src="./resources/img/logo.png" alt="Logo" class="lg:pt-8 lg:w-64 lg:h-64 w-48 h-52 md:w-48 md:h-48" />
-                  <div class="relative pr-10 pt-6">
-                      <button id="nav-toggle">
-                          <i class="material-icons text-white lg:hidden">menu</i>
-                      </button>
-                          <ul id="nav-menu" class="hidden md:flex justify-end list-none">
-                            <li><a href="#about" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">About</a></li>
-                            <li><a href="#why-us" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Why Us?</a></li>
-                            <li><a href="#offer" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">What Do We Offer?</a></li>
-                            <li><a href="#projects" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Our Projects</a></li>
-                            <li><a href="#who-we-are" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Who we are?</a></li>
-                            <li><a href="#prices" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Our Prices</a></li>
-                            <li><a href="#contact" class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            <div id="menu-items" class="hidden transition-all duration-300 ease-in-out lg:hidden w-full text-right flex-col pr-10 pt-0 bg-gray-950 bg-opacity-10 pl-10 list-none">
-              <li id="about-item"><a href="#about" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">About</a></li>
-              <li id="wu-item"><a href="#why-us" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Why Us?</a></li>
-              <li id="offer-item"><a href="#offer" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">What Do We Offer?</a></li>
-              <li id="projects-item"><a href="#projects" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Projects</a></li>
-              <li id="wwa-item"><a href="#who-we-are" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Who we are?</a></li>
-              <li id="prices-item"><a href="#prices" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Our Prices</a></li>
-              <li id="contact-item"><a href="#contact" class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2">Contact Us</a></li>
+            <div
+              class="flex justify-between items-center bg-gray-900 bg-opacity-10"
+            >
+              <img
+                src="./resources/img/logo.png"
+                alt="Logo"
+                class="lg:pt-8 lg:w-64 lg:h-64 w-48 h-52 md:w-48 md:h-48"
+              />
+              <div class="relative pr-10 pt-6">
+                <button id="nav-toggle">
+                  <i class="material-icons text-white lg:hidden">menu</i>
+                </button>
+                <ul id="nav-menu" class="hidden md:flex justify-end list-none">
+                  <li>
+                    <a
+                      href="#about"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#why-us"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >Why Us?</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#offer"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >What Do We Offer?</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#projects"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >Our Projects</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#who-we-are"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >Who we are?</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#prices"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >Our Prices</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#contact"
+                      class="hidden lg:block bg-transparent hover:bg-white-700 border-solid border-2 border-white text-white font-bold py-2 px-4 rounded-full m-2"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="menu-items"
+              class="hidden transition-all duration-300 ease-in-out lg:hidden w-full text-right flex-col pr-10 pt-0 bg-gray-950 bg-opacity-10 pl-10 list-none"
+            >
+              <li id="about-item">
+                <a
+                  href="#about"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >About</a
+                >
+              </li>
+              <li id="wu-item">
+                <a
+                  href="#why-us"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >Why Us?</a
+                >
+              </li>
+              <li id="offer-item">
+                <a
+                  href="#offer"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >What Do We Offer?</a
+                >
+              </li>
+              <li id="projects-item">
+                <a
+                  href="#projects"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >Our Projects</a
+                >
+              </li>
+              <li id="wwa-item">
+                <a
+                  href="#who-we-are"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >Who we are?</a
+                >
+              </li>
+              <li id="prices-item">
+                <a
+                  href="#prices"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >Our Prices</a
+                >
+              </li>
+              <li id="contact-item">
+                <a
+                  href="#contact"
+                  class="menu-item opacity-0 transform translate-y-3 block text-white font-bold mt-2"
+                  >Contact Us</a
+                >
+              </li>
             </div>
           </div>
         </nav>
-    </div>
-  </header>
-  <main class="container mx-auto px-8 md:px-16 lg:px-32 text-white">
-    <section id="about" class="flex flex-col sm:flex-row">
-      <div class="w-full sm:w-1/2 mr-16">
+      </div>
+    </header>
+    <main class="container mx-auto px-8 md:px-16 lg:px-32 text-white">
+      <section id="about" class="flex flex-col sm:flex-row">
+        <div class="w-full sm:w-1/2 mr-16">
           <h1 class="text-2xl font-bold mb-10 underline">About</h1>
           <p class="text-justify leading-6">
-              LookinLabs is an organization dedicated to the development of
-              diverse applications, utilizing best programming practices depending
-              on application needs. Our primary focus is on providing
-              self-development opportunities for individuals and assisting
-              customers in elevating their infrastructure to a higher level.
+            LookinLabs is an organization dedicated to the development of
+            diverse applications, utilizing best programming practices depending
+            on application needs. Our primary focus is on providing
+            self-development opportunities for individuals and assisting
+            customers in elevating their infrastructure to a higher level.
           </p>
-      </div>
-      <div class="w-full sm:w-1/2 flex justify-center items-center mt-4 sm:mt-0">
-          <img class="object-contain" src="resources/img/startup.jpg" alt="Startup"
-              style="box-shadow: 0px 0px 8px 0px #b5d200bf" />
-      </div>
-  </section>
-    <section id="why-us">
-      <h1 class="text-2xl font-bold my-4 underline">Why Us?</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-transparent-400 p-4">
-          <h2 class="font-bold mb-5">Performance</h2>
-          <ul class="list-disc pl-4">
-            <li class="mb-1">Lighting speed Code</li>
-            <li class="mb-1">Efficient Resource utilization</li>
-            <li class="mb-1">Scalability</li>
-            <li class="mb-1">Reliability</li>
-          </ul>
         </div>
-        <div class="bg-transparent-400 p-4">
-          <h2 class="font-bold mb-5">Quality</h2>
-          <ul class="list-disc pl-4">
-            <li class="mb-1">Strigent testing</li>
-            <li class="mb-1">Robust security</li>
-            <li class="mb-1">Compliance and best practices</li>
-            <li class="mb-1">Comprehensive documentation</li>
-          </ul>
+        <div
+          class="w-full sm:w-1/2 flex justify-center items-center mt-4 sm:mt-0"
+        >
+          <img
+            class="object-contain"
+            src="resources/img/startup.jpg"
+            alt="Startup"
+            style="box-shadow: 0px 0px 8px 0px #b5d200bf"
+          />
         </div>
-        <div class="bg-transparent-400 p-4">
-          <h2 class="font-bold mb-5">Technologies and principals</h2>
-          <ul class="list-disc pl-4">
-            <li class="mb-1">Infrastructure as code (IaC)</li>
-            <li class="mb-1">GitOps & DevOps</li>
-            <li class="mb-1">Containerisation (Management included)</li>
-            <li class="mb-1">Efficient Frameworks</li>
-            <li class="mb-1">Cloud Solution (AWS, GCP, VMWare)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section id="offer" class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex flex-wrap">
-      <h1 class="text-2xl font-bold my-6 underline w-full">What Do We Offer?</h1>
-      <p class="w-full text-justify leading-6">
-        LookinLabs offers a range of services spanning from basic software
-        development to extensive cloud infrastructure setups.
-        These services come with varying Service Level Agreements (SLAs) that
-        range from as short as one week to as long as six months. The specific
-        SLA for each service is determined by the size and complexity of the
-        job.
-      </p>
-      <div class="w-full sm:w-1/2 pt-16">
-        <h2 class="text-2xl font-bold mb-6 underline">
-          Software Development
-        </h2>
-        <ul class="list-disc pl-4 leading-4.5">
-          <li class="mb-1">Small/Middle-Scale Web Development</li>
-          <li class="mb-1">Software QA</li>
-        </ul>
-      </div>
-      <div class="w-full sm:w-1/2 pt-16">
-        <h2 class="text-2xl font-bold mb-6 underline">
-          DevOps Solutions
-        </h2>
-        <ul class="list-disc pl-4 leading-4.5">
-          <li class="mb-1">Software Delivery</li>
-          <li class="mb-1">Site Reliability Services</li>
-          <li class="mb-1">Process & Incident Management</li>
-          <li class="mb-1">Consultancy</li>
-        </ul>
-      </div>
-    </section>
-    <section id="projects" class="my-16 relative overflow-hidden">
-      <h1 class="text-2xl font-bold mb-10 underline">Our Projects</h1>
-      <div class="carousel-container mb-8">
-        <div id="carousel" class="flex px-4 overflow-auto">
-
-        </div>
-      </div>
-      <div class="container px-4 mx-auto">
-        <div class="flex items-center justify-center">
-          <button id="left-carousel-button"
-            class="text-black flex mr-4 items-center justify-center w-12 h-12 bg-white rounded-full border border-gray-200 hover:border-orange-900 transition duration-200">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
-          </button>
-          <button id="right-carousel-button"
-            class="text-black flex items-center justify-center w-12 h-12 bg-white rounded-full border border-gray-200 hover:border-orange-900 transition duration-200">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-    <section id="who-we-are" class="flex flex-wrap">
-      <h1 class="text-2xl font-bold my-6 underline w-full">Who We Are</h1>
-      <p class="w-full text-justify leading-6 mb-8">
-        At LookinLabs, we take pride in the quality of our services. Our dedicated team of specialists is not just
-        highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years
-        of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services.
-
-        Our customers are our top priority, and we strive to provide them with the best possible experience. When you
-        choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts
-        committed to your success. We value our customers and work tirelessly to meet their needs and exceed their
-        expectations.
-      </p>
-      <div id="team-members" class="w-full flex flex-wrap justify-center mt-8">
-        <!-- Team members will be inserted here -->
-      </div>
-    </section>
-    <section id="prices" class="bg-transparent text-white">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 class="text-2xl font-bold my-6 underline w-full">Prices designed for creative customer like you</h2>
-          <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at LookinLabs we focus on markets
-            where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
-        </div>
-        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <!-- Pricing Card -->
-          <div 
-          class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-transparent rounded-lg border border-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white">
-          <h3 class="mb-4 text-2xl font-semibold">Web / Application Development</h3>
-            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option to get your dream projects
-              done</p>
-            <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-4xl font-extrabold">$45</span>
-              <span class="text-gray-500 dark:text-gray-400">/hour</span>
-            </div>
-            <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Individual configuration</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Competitive Research</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Software Quality Analysis</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Support on workdays at 9AM till 5PM</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Team size: <span class="font-semibold">3 developers</span></span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>MVP / Production-Ready Code</span>
-              </li>
+      </section>
+      <section id="why-us">
+        <h1 class="text-2xl font-bold my-4 underline">Why Us?</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-transparent-400 p-4">
+            <h2 class="font-bold mb-5">Performance</h2>
+            <ul class="list-disc pl-4">
+              <li class="mb-1">Lighting speed Code</li>
+              <li class="mb-1">Efficient Resource utilization</li>
+              <li class="mb-1">Scalability</li>
+              <li class="mb-1">Reliability</li>
             </ul>
           </div>
-          <!-- Pricing Card -->
-          <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 dark:bg-opacity-50 xl:p-8 dark:bg-gray-800 dark:text-white">
-            <h3 class="mb-4 text-2xl font-semibold">DevOps Solutions</h3>
-            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option to get project into production
-              in a week</p>
-            <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-4xl font-extrabold">$60</span>
-              <span class="text-gray-500 dark:text-gray-400">/hour</span>
-            </div>
-            <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Individual configuration</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Hosting Platform Management</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Software Delivery Automation</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Support on workdays at 9AM till 23PM</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Team size: <span class="font-semibold">3 Developers, 1 Site Reliability Engineer</span></span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>MVP / Production-Ready Code + Platform</span>
-              </li>
+          <div class="bg-transparent-400 p-4">
+            <h2 class="font-bold mb-5">Quality</h2>
+            <ul class="list-disc pl-4">
+              <li class="mb-1">Strigent testing</li>
+              <li class="mb-1">Robust security</li>
+              <li class="mb-1">Compliance and best practices</li>
+              <li class="mb-1">Comprehensive documentation</li>
             </ul>
+          </div>
+          <div class="bg-transparent-400 p-4">
+            <h2 class="font-bold mb-5">Technologies and principals</h2>
+            <ul class="list-disc pl-4">
+              <li class="mb-1">Infrastructure as code (IaC)</li>
+              <li class="mb-1">GitOps & DevOps</li>
+              <li class="mb-1">Containerisation (Management included)</li>
+              <li class="mb-1">Efficient Frameworks</li>
+              <li class="mb-1">Cloud Solution (AWS, GCP, VMWare)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section
+        id="offer"
+        class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex flex-wrap"
+      >
+        <h1 class="text-2xl font-bold my-6 underline w-full">
+          What Do We Offer?
+        </h1>
+        <p class="w-full text-justify leading-6">
+          LookinLabs offers a range of services spanning from basic software
+          development to extensive cloud infrastructure setups. These services
+          come with varying Service Level Agreements (SLAs) that range from as
+          short as one week to as long as six months. The specific SLA for each
+          service is determined by the size and complexity of the job.
+        </p>
+        <div class="w-full sm:w-1/2 pt-16">
+          <h2 class="text-2xl font-bold mb-6 underline">
+            Software Development
+          </h2>
+          <ul class="list-disc pl-4 leading-4.5">
+            <li class="mb-1">Small/Middle-Scale Web Development</li>
+            <li class="mb-1">Software QA</li>
+          </ul>
+        </div>
+        <div class="w-full sm:w-1/2 pt-16">
+          <h2 class="text-2xl font-bold mb-6 underline">DevOps Solutions</h2>
+          <ul class="list-disc pl-4 leading-4.5">
+            <li class="mb-1">Software Delivery</li>
+            <li class="mb-1">Site Reliability Services</li>
+            <li class="mb-1">Process & Incident Management</li>
+            <li class="mb-1">Consultancy</li>
+          </ul>
+        </div>
+      </section>
+      <section id="projects" class="my-16 relative overflow-hidden">
+        <h1 class="text-2xl font-bold mb-10 underline">Our Projects</h1>
+        <div class="carousel-container mb-8">
+          <div id="carousel" class="flex px-4 overflow-auto"></div>
+        </div>
+        <div class="container px-4 mx-auto">
+          <div class="flex items-center justify-center">
+            <button
+              id="left-carousel-button"
+              class="text-black flex mr-4 items-center justify-center w-12 h-12 bg-white rounded-full border border-gray-200 hover:border-orange-900 transition duration-200"
+            >
+              <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button
+              id="right-carousel-button"
+              class="text-black flex items-center justify-center w-12 h-12 bg-white rounded-full border border-gray-200 hover:border-orange-900 transition duration-200"
+            >
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="who-we-are" class="flex flex-wrap">
+        <h1 class="text-2xl font-bold my-6 underline w-full">Who We Are</h1>
+        <p class="w-full text-justify leading-6 mb-8">
+          At LookinLabs, we take pride in the quality of our services. Our
+          dedicated team of specialists is not just highly skilled, but also
+          certified in their respective fields. Each member of our team has a
+          minimum of 3 years of professional experience, ensuring that they have
+          the knowledge and expertise to deliver top-notch services. Our
+          customers are our top priority, and we strive to provide them with the
+          best possible experience. When you choose LookinLabs, you're not just
+          getting a service, you're getting a partnership with a team of experts
+          committed to your success. We value our customers and work tirelessly
+          to meet their needs and exceed their expectations.
+        </p>
+        <div
+          id="team-members"
+          class="w-full flex flex-wrap justify-center mt-8"
+        >
+          <!-- Team members will be inserted here -->
+        </div>
+      </section>
+      <section id="prices" class="bg-transparent text-white">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="text-2xl font-bold my-6 underline w-full">
+              Prices designed for creative customer like you
+            </h2>
+            <p
+              class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400"
+            >
+              Here at LookinLabs we focus on markets where technology,
+              innovation, and capital can unlock long-term value and drive
+              economic growth.
+            </p>
           </div>
           <div
-            class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 dark:bg-opacity-50 xl:p-8 dark:bg-gray-800 dark:text-white">
-            <h3 class="mb-4 text-2xl font-semibold">Site Reliability Consultancy</h3>
-            <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Best option when you need help with your
-              projects</p>
-            <div class="flex justify-center items-baseline my-8">
-              <span class="mr-2 text-4xl font-extrabold">$40</span>
-              <span class="text-gray-500 dark:text-gray-400">/hour</span>
+            class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0"
+          >
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-transparent rounded-lg border border-white shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-semibold">
+                Web / Application Development
+              </h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Best option to get your dream projects done
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-4xl font-extrabold">$45</span>
+                <span class="text-gray-500 dark:text-gray-400">/hour</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Competitive Research</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Software Quality Analysis</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Support on workdays at 9AM till 5PM</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span
+                    >Team size:
+                    <span class="font-semibold">3 developers</span></span
+                  >
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>MVP / Production-Ready Code</span>
+                </li>
+              </ul>
             </div>
-            <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Personal Consultant</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <!-- Icon -->
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Support on workdays at 10AM till 22PM</span>
-              </li>
-              <li class="flex items-center space-x-3">
-                <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span>Team size: <span class="font-semibold">1 Site Reliability Engineer</span></span>
-              </li>
-            </ul>
+            <!-- Pricing Card -->
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 dark:bg-opacity-50 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-semibold">DevOps Solutions</h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Best option to get project into production in a week
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-4xl font-extrabold">$60</span>
+                <span class="text-gray-500 dark:text-gray-400">/hour</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Individual configuration</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Hosting Platform Management</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Software Delivery Automation</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Support on workdays at 9AM till 23PM</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span
+                    >Team size:
+                    <span class="font-semibold"
+                      >3 Developers, 1 Site Reliability Engineer</span
+                    ></span
+                  >
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>MVP / Production-Ready Code + Platform</span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 dark:bg-opacity-50 xl:p-8 dark:bg-gray-800 dark:text-white"
+            >
+              <h3 class="mb-4 text-2xl font-semibold">
+                Site Reliability Consultancy
+              </h3>
+              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                Best option when you need help with your projects
+              </p>
+              <div class="flex justify-center items-baseline my-8">
+                <span class="mr-2 text-4xl font-extrabold">$40</span>
+                <span class="text-gray-500 dark:text-gray-400">/hour</span>
+              </div>
+              <!-- List -->
+              <ul role="list" class="mb-8 space-y-4 text-left">
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Personal Consultant</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <!-- Icon -->
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span>Support on workdays at 10AM till 22PM</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <svg
+                    class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span
+                    >Team size:
+                    <span class="font-semibold"
+                      >1 Site Reliability Engineer</span
+                    ></span
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact" class="flex flex-col items-center justify-center p-4">
-      <a href="#" id="contactButton"
-          class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200">Contact
-          Us</a>
-      <form id="contactForm" class="space-y-4 w-full max-w-md mt-12 hidden">
-        <input type="text" id="username" name="username" placeholder="Username" required class="w-full p-2 border border-gray-300 rounded text-black">
-        <input type="email" id="email" name="email" placeholder="Email" required class="w-full p-2 border border-gray-300 rounded text-black">
-        <input type="text" id="title" name="title" placeholder="Title of the Idea" required class="w-full p-2 border border-gray-300 rounded text-black">
-        <label class="inline-flex items-center mt-3">
-          <input type="checkbox" id="researchCheckbox" class="form-checkbox h-5 w-5 text-blue-600" checked="false"><span class="ml-2 text-white">I have my own competitive research of project</span>
-        </label>
-        <input type="url" id="link" name="link" placeholder="Link to pdf file" pattern="https?://.+" class="w-full p-2 border border-gray-300 rounded mx-auto text-black" disabled>
-        <textarea id="description" name="description" placeholder="Description" required rows="5" class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
-        <div class="g-recaptcha" data-sitekey="6LdudaIpAAAAALhxPfIYn6h-twMj68KEe4gKEPI-"></div>
-        <br/>
-        <button type="submit" class="px-8 py-2 bg-green-500 text-white text-lg rounded block mx-auto">Send</button>
-      </form>
-    </section>
-  </main>
-  <div class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-32">
-    <footer class="text-center text-white">
-      <div class="py-4">
-        If you did or didn’t find the service you’re looking for, feel free to
-        contact us directly.
-      </div>
-      <div class="h-12 text-3xl font-bold">LookinLabs</div>
-      <div class="text-s">support@lookinlabs.com</div>
-      <div class="h-10 flex justify-center space-x-4 text-s">
-        + 372 5686 5405
-      </div>
-      <div class="h-12 flex justify-center space-x-4">
-        <a href="https://github.com/LookinLabs" target="_blank">
-          <i class="fab fa-github fa-2x text-gray-700 hover:text-gray-900"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/lookinlabs" target="_blank">
-          <i class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"></i>
-        </a>
-      </div>
-      <div class="h-14 flex justify-center space-x-4 text-lg">
-        <p>&copy; All rights reserved</p>
-      </div>
-    </footer>
-  </div>
-</body>
-
+      </section>
+      <section
+        id="contact"
+        class="flex flex-col items-center justify-center p-4"
+      >
+        <a
+          href="#"
+          id="contactButton"
+          class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200"
+          >Contact Us</a
+        >
+        <form id="contactForm" class="space-y-4 w-full max-w-md mt-12 hidden">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+            class="w-full p-2 border border-gray-300 rounded text-black"
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+            class="w-full p-2 border border-gray-300 rounded text-black"
+          />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Title of the Idea"
+            required
+            class="w-full p-2 border border-gray-300 rounded text-black"
+          />
+          <label class="inline-flex items-center mt-3">
+            <input
+              type="checkbox"
+              id="researchCheckbox"
+              class="form-checkbox h-5 w-5 text-blue-600"
+              checked="false"
+            /><span class="ml-2 text-white"
+              >I have my own competitive research of project</span
+            >
+          </label>
+          <input
+            type="url"
+            id="link"
+            name="link"
+            placeholder="Link to pdf file"
+            pattern="https?://.+"
+            class="w-full p-2 border border-gray-300 rounded mx-auto text-black"
+            disabled
+          />
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description"
+            required
+            rows="5"
+            class="w-full p-2 border border-gray-300 rounded text-black"
+          ></textarea>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"
+          ></div>
+          <br />
+          <button
+            type="submit"
+            class="px-8 py-2 bg-green-500 text-white text-lg rounded block mx-auto"
+          >
+            Send
+          </button>
+        </form>
+      </section>
+    </main>
+    <div
+      class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-32"
+    >
+      <footer class="text-center text-white">
+        <div class="py-4">
+          If you did or didn’t find the service you’re looking for, feel free to
+          contact us directly.
+        </div>
+        <div class="h-12 text-3xl font-bold">LookinLabs</div>
+        <div class="text-s">support@lookinlabs.com</div>
+        <div class="h-10 flex justify-center space-x-4 text-s">
+          + 372 5686 5405
+        </div>
+        <div class="h-12 flex justify-center space-x-4">
+          <a href="https://github.com/LookinLabs" target="_blank">
+            <i
+              class="fab fa-github fa-2x text-gray-700 hover:text-gray-900"
+            ></i>
+          </a>
+          <a href="https://www.linkedin.com/company/lookinlabs" target="_blank">
+            <i
+              class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"
+            ></i>
+          </a>
+        </div>
+        <div class="h-14 flex justify-center space-x-4 text-lg">
+          <p>&copy; All rights reserved</p>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
