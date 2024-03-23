@@ -299,7 +299,11 @@ document
 
 // EmailJS
 (function () {
-  emailjs.init("ySaIap3hTf1eHrMKa");
+  emailjs.init({
+    publicKey: "ySaIap3hTf1eHrMKa",
+    // Do not allow headless browsers
+    blockHeadless: true,
+  });
 })();
 
 document
