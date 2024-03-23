@@ -25,6 +25,10 @@
   <script src="resources/js/index.js" defer></script>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Google Captcha-->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 
 <body class="lookinlabs-body-bg">
@@ -382,6 +386,8 @@
         </label>
         <input type="url" id="link" name="link" placeholder="Link to pdf file" pattern="https?://.+" class="w-full p-2 border border-gray-300 rounded mx-auto text-black" disabled>
         <textarea id="description" name="description" placeholder="Description" required rows="5" class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
+        <div class="g-recaptcha" data-sitekey="6LdudaIpAAAAALhxPfIYn6h-twMj68KEe4gKEPI-"></div>
+        <br/>
         <button type="submit" class="px-8 py-2 bg-green-500 text-white text-lg rounded block mx-auto">Send</button>
       </form>
     </section>
