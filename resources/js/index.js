@@ -5,7 +5,6 @@ const carousel = document.getElementById("carousel");
 const buttons = [leftCarouselButton, rightCarouselButton];
 
 // Event Listeners
-document.getElementById("nav-toggle").addEventListener("click", toggleMenu);
 leftCarouselButton.addEventListener("click", scrollCarouselLeft);
 rightCarouselButton.addEventListener("click", scrollCarouselRight);
 carousel.addEventListener("mouseover", stopCarouselScroll);
@@ -16,6 +15,27 @@ buttons.forEach((button) => {
   button.addEventListener("click", stopCarouselScroll);
 });
 
+document.querySelector('#navbar-toggler').addEventListener('click', () => {
+  const navLinks = document.querySelector('#navbar-default');
+  navLinks.classList.toggle('hidden');
+  navLinks.classList.toggle('md:flex');
+});
+
+// Get all navigation links
+const navItems = document.querySelectorAll('#navbar-default ul li a');
+
+// Add event listener to each navigation link
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    const navLinks = document.querySelector('#navbar-default');
+    // Check if the screen width is less than 768px (Tailwind's md breakpoint)
+    if (window.innerWidth < 768 && !navLinks.classList.contains('hidden')) {
+      navLinks.classList.add('hidden');
+      navLinks.classList.remove('md:flex');
+    }
+  });
+});
+
 window.onload = function () {
   carousel.scrollLeft = 0;
   setCarouselScrollTimer();
@@ -23,58 +43,6 @@ window.onload = function () {
 };
 
 // Functions
-function toggleMenu() {
-  let menuItemsContainer = document.getElementById("menu-items");
-  menuItemsContainer.classList.toggle("hidden");
-  if (!menuItemsContainer.classList.contains("hidden")) {
-    let menuItems = document.querySelectorAll("#menu-items .menu-item");
-    menuItems.forEach(function (menuItem, index) {
-      setTimeout(function () {
-        menuItem.classList.remove("opacity-0");
-        menuItem.classList.remove("translate-y-3");
-        menuItem.classList.add("opacity-100");
-        menuItem.classList.add("translate-y-0");
-      }, index * 70); // 100ms delay between each item
-    });
-  } else {
-    let menuItems = document.querySelectorAll("#menu-items .menu-item");
-    menuItems.forEach(function (menuItem, index) {
-      menuItem.classList.add("opacity-0");
-      menuItem.classList.add("translate-y-3");
-      menuItem.classList.remove("opacity-100");
-      menuItem.classList.remove("translate-y-0");
-    });
-  }
-}
-
-let menuItems = document.querySelectorAll(".menu-item");
-menuItems.forEach(function (menuItem) {
-  menuItem.addEventListener("click", function (event) {
-    // Remove active class from all menu items
-    menuItems.forEach(function (otherMenuItem) {
-      otherMenuItem.classList.remove("active");
-    });
-
-    // Add active class to clicked menu item
-    event.target.classList.add("active");
-
-    // Close the navbar
-    toggleMenu();
-  });
-});
-
-menuItems.forEach(function (menuItem) {
-  menuItem.addEventListener("click", function (event) {
-    // Remove active class from all menu items
-    menuItems.forEach(function (otherMenuItem) {
-      otherMenuItem.classList.remove("active");
-    });
-
-    // Add active class to clicked menu item
-    event.target.classList.add("active");
-  });
-});
-
 function scrollCarouselLeft() {
   carousel.scrollTo({
     left: carousel.scrollLeft - carousel.clientWidth,
