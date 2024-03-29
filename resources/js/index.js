@@ -24,10 +24,10 @@ window.onload = function () {
 
 // Functions
 function toggleMenu() {
-  var menuItemsContainer = document.getElementById("menu-items");
+  let menuItemsContainer = document.getElementById("menu-items");
   menuItemsContainer.classList.toggle("hidden");
   if (!menuItemsContainer.classList.contains("hidden")) {
-    var menuItems = document.querySelectorAll("#menu-items .menu-item");
+    let menuItems = document.querySelectorAll("#menu-items .menu-item");
     menuItems.forEach(function (menuItem, index) {
       setTimeout(function () {
         menuItem.classList.remove("opacity-0");
@@ -37,7 +37,7 @@ function toggleMenu() {
       }, index * 70); // 100ms delay between each item
     });
   } else {
-    var menuItems = document.querySelectorAll("#menu-items .menu-item");
+    let menuItems = document.querySelectorAll("#menu-items .menu-item");
     menuItems.forEach(function (menuItem, index) {
       menuItem.classList.add("opacity-0");
       menuItem.classList.add("translate-y-3");
@@ -47,7 +47,7 @@ function toggleMenu() {
   }
 }
 
-var menuItems = document.querySelectorAll(".menu-item");
+let menuItems = document.querySelectorAll(".menu-item");
 menuItems.forEach(function (menuItem) {
   menuItem.addEventListener("click", function (event) {
     // Remove active class from all menu items
@@ -63,7 +63,6 @@ menuItems.forEach(function (menuItem) {
   });
 });
 
-var menuItems = document.querySelectorAll(".menu-item");
 menuItems.forEach(function (menuItem) {
   menuItem.addEventListener("click", function (event) {
     // Remove active class from all menu items
@@ -287,7 +286,7 @@ document
   .getElementById("contactButton")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    var form = document.getElementById("contactForm");
+    let form = document.getElementById("contactForm");
     if (form.classList.contains("hidden")) {
       form.classList.remove("hidden");
       this.disabled = true;
@@ -307,15 +306,15 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    var formData = new FormData(this);
-    var username = formData.get("username");
-    var email = formData.get("email");
-    var title = formData.get("title");
-    var link = formData.get("link");
-    var description = formData.get("description");
-    var captcha_response = grecaptcha.getResponse();
+    let formData = new FormData(this);
+    let username = formData.get("username");
+    let email = formData.get("email");
+    let title = formData.get("title");
+    let link = formData.get("link");
+    let description = formData.get("description");
+    let captcha_response = grecaptcha.getResponse();
 
-    var templateParams = {
+    let templateParams = {
       username: username,
       email: email,
       title: title,
@@ -328,10 +327,18 @@ document
       .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
       .then(
         function () {
-          console.log("Mail sent!");
+          let successBanner = document.getElementById("success-banner");
+          successBanner.style.display = "flex";
+          setTimeout(function () {
+            successBanner.style.display = "none";
+          }, 5000); // Hide after 5 seconds
         },
         function (error) {
-          console.log("Mail not sent!", error);
+          let failBanner = document.getElementById("fail-banner");
+          failBanner.style.display = "flex";
+          setTimeout(function () {
+            failBanner.style.display = "none";
+          }, 5000); // Hide after 5 seconds
         }
       );
   });
