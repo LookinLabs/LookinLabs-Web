@@ -274,6 +274,9 @@ document
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // Show loader
+    document.getElementById("loader").classList.remove("hidden");
+
     let formData = new FormData(this);
     let username = formData.get("username");
     let email = formData.get("email");
@@ -295,18 +298,27 @@ document
       .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
       .then(
         function () {
+          // Hide contact form
+          document.getElementById("contactForm").classList.add("hidden");
+
+          // Show success banner
           let successBanner = document.getElementById("success-banner");
-          successBanner.style.display = "flex";
+          successBanner.classList.remove("hidden");
           setTimeout(function () {
-            successBanner.style.display = "none";
+            successBanner.classList.add("hidden");
           }, 5000); // Hide after 5 seconds
         },
         function (error) {
+          // Show fail banner
           let failBanner = document.getElementById("fail-banner");
-          failBanner.style.display = "flex";
+          failBanner.classList.remove("hidden");
           setTimeout(function () {
-            failBanner.style.display = "none";
+            failBanner.classList.add("hidden");
           }, 5000); // Hide after 5 seconds
         }
-      );
+      )
+      .finally(function () {
+        // Hide loader
+        document.getElementById("loader").classList.add("hidden");
+      });
   });
