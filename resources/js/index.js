@@ -304,6 +304,7 @@ document
           // Show success banner
           let successBanner = document.getElementById("success-banner");
           successBanner.classList.remove("hidden");
+          successBanner.classList.add("flex");
           setTimeout(function () {
             successBanner.classList.add("hidden");
           }, 5000); // Hide after 5 seconds
@@ -312,6 +313,7 @@ document
           // Show fail banner
           let failBanner = document.getElementById("fail-banner");
           failBanner.classList.remove("hidden");
+          failBanner.classList.add("flex");
           setTimeout(function () {
             failBanner.classList.add("hidden");
           }, 5000); // Hide after 5 seconds
