@@ -324,3 +324,21 @@ document
         document.getElementById("loader").classList.add("hidden");
       });
   });
+
+// Loader
+// Get the header
+var header = document.querySelector('header');
+
+// Add the class to hide the header
+header.classList.add('loader-active');
+
+// Loader
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    // Hide the loader
+    document.getElementById('refreshLoader').classList.add('hide-loader');
+
+    // Show the header
+    header.classList.remove('loader-active');
+  }, 750);
+});

@@ -71,3 +71,21 @@
   z-index: 2;
   pointer-events: none;
 }
+
+/* Loader */
+#refreshLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* High z-index to ensure it's on top of all other content */
+}
+
+#refreshLoader.hide-loader {
+  display: none;
+}
+
+header.loader-active {
+  display: none;
+}
