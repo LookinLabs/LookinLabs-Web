@@ -336,7 +336,7 @@ header.classList.add('loader-active');
 window.addEventListener('load', function() {
   setTimeout(function() {
     // Hide the loader
-    document.getElementById('Loader').classList.add('hide-loader');
+    document.getElementById('mainloader').classList.add('hide-loader');
 
     // Show the header
     header.classList.remove('loader-active');
