@@ -243,24 +243,6 @@ function populateMembers(members) {
   });
 }
 
-window.onresize = function () {
-  var width = window.innerWidth;
-  var logo = document.querySelector(".logo");
-
-  if (width > 1000) {
-    logo.classList.add("lg:pl-10");
-    logo.classList.remove("lg:pl-0");
-  }
-
-  if (width > 1500) {
-    logo.classList.remove("lg:pl-10");
-    logo.classList.add("lg:pl-0");
-  }
-};
-
-// Call the function once to set the initial state
-window.onresize();
-
 // Contact us form
 document
   .getElementById("researchCheckbox")
