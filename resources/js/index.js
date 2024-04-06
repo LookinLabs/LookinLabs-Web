@@ -15,23 +15,23 @@ buttons.forEach((button) => {
   button.addEventListener("click", stopCarouselScroll);
 });
 
-document.querySelector('#navbar-toggler').addEventListener('click', () => {
-  const navLinks = document.querySelector('#navbar-default');
-  navLinks.classList.toggle('hidden');
-  navLinks.classList.toggle('md:flex');
+document.querySelector("#navbar-toggler").addEventListener("click", () => {
+  const navLinks = document.querySelector("#navbar-default");
+  navLinks.classList.toggle("hidden");
+  navLinks.classList.toggle("md:flex");
 });
 
 // Get all navigation links
-const navItems = document.querySelectorAll('#navbar-default ul li a');
+const navItems = document.querySelectorAll("#navbar-default ul li a");
 
 // Add event listener to each navigation link
-navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const navLinks = document.querySelector('#navbar-default');
+navItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    const navLinks = document.querySelector("#navbar-default");
     // Check if the screen width is less than 768px (Tailwind's md breakpoint)
-    if (window.innerWidth < 768 && !navLinks.classList.contains('hidden')) {
-      navLinks.classList.add('hidden');
-      navLinks.classList.remove('md:flex');
+    if (window.innerWidth < 768 && !navLinks.classList.contains("hidden")) {
+      navLinks.classList.add("hidden");
+      navLinks.classList.remove("md:flex");
     }
   });
 });
@@ -242,6 +242,24 @@ function populateMembers(members) {
     membersDiv.appendChild(memberDiv);
   });
 }
+
+window.onresize = function () {
+  var width = window.innerWidth;
+  var logo = document.querySelector(".logo");
+
+  if (width > 1000) {
+    logo.classList.add("lg:pl-10");
+    logo.classList.remove("lg:pl-0");
+  }
+
+  if (width > 1500) {
+    logo.classList.remove("lg:pl-10");
+    logo.classList.add("lg:pl-0");
+  }
+};
+
+// Call the function once to set the initial state
+window.onresize();
 
 // Contact us form
 document
