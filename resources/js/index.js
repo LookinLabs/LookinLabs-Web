@@ -324,6 +324,7 @@ document
         document.getElementById("loader").classList.add("hidden");
       });
   });
+
 // Loader
 // Get the header
 var header = document.querySelector('header');
