@@ -73,7 +73,7 @@
 }
 
 /* Loader */
-#mainloader {
+#refreshLoader {
   position: fixed;
   top: 0;
   left: 0;
@@ -82,7 +82,7 @@
   z-index: 9999; /* High z-index to ensure it's on top of all other content */
 }
 
-#mainloader.hide-loader {
+#refreshLoader.hide-loader {
   display: none;
 }
 
