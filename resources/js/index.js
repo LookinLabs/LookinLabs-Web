@@ -327,23 +327,40 @@ document
 
 // Loader
 // Get the header
-var header = document.querySelector('header');
+var header = document.querySelector("header");
 
 // Add the class to hide the header
-header.classList.add('loader-active');
+header.classList.add("loader-active");
 
 // Loader
-window.addEventListener('load', function() {
-  setTimeout(function() {
+window.addEventListener("load", function () {
+  setTimeout(function () {
     // Hide the loader
-    document.getElementById('refreshLoader').classList.add('hide-loader');
+    document.getElementById("refreshLoader").classList.add("hide-loader");
 
     // Show the header
-    header.classList.remove('loader-active');
+    header.classList.remove("loader-active");
   }, 750);
 });
 
-window.onload = function() {
-    document.getElementById('refreshLoader').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
+window.onload = function () {
+  document.getElementById("refreshLoader").style.display = "none";
+  document.getElementById("content").style.display = "block";
 };
+
+// Translations JSON
+// Load the JSON file
+fetch("translations/ru.json")
+  .then((response) => response.json())
+  .then((data) => {
+    let translations = data;
+
+    // Select all elements with the data-translation-key attribute
+    const elements = document.querySelectorAll("[data-translation-key]");
+
+    // Replace their text content with the corresponding translation
+    elements.forEach((element) => {
+      const key = element.getAttribute("data-translation-key");
+      element.textContent = translations[key];
+    });
+  });
