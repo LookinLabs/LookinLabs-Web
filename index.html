@@ -71,7 +71,15 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <header class="relative mx-auto mb-8">
+    
+    <!--Terms Banner -->
+    <div id="terms-banner" class="mt-24 hidden fixed top-0 left-1/2 w-3/5 mx-auto max-w-7xl bg-red-500 text-white px-6 py-3 justify-between items-center z-50 rounded transform -translate-x-1/2 flex">
+      <div>Please check out LookinLabs Terms & Conditions and Privacy Policy.</div>
+      <button class="text-white" onclick="this.parentElement.classList.add('hidden')">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <header class="relative mx-auto mb-8">
       <!-- Loader -->
         <div class="container">
           <nav class="fixed top-0 w-full z-50 bg-gray-900 border-gray-200">
@@ -435,7 +443,14 @@
             <input type="checkbox" id="researchCheckbox" class="form-checkbox h-5 w-5 text-blue-600" checked="false"><span class="ml-2 text-white">I have my own competitive research of project</span>
           </label>
           <input type="url" id="link" name="link" placeholder="Link to pdf file" pattern="https?://.+" class="w-full p-2 border border-gray-300 rounded mx-auto text-black" disabled>
-          <textarea id="description" name="description" placeholder="Description" required rows="5" class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
+          <label class="inline-flex items-center mt-3">
+          <input id="termsCheckbox" type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
+          <span class="ml-2 text-white">I agree to
+            <a href="resources/terms/terms_and_conditions.pdf" target="_blank" class="text-blue-500 hover:underline">Terms & Conditions</a> and
+            <a href="resources/terms/privacy_policy.pdf" target="_blank" class="text-blue-500 hover:underline">Privacy Policy</a>
+          </span>
+        </label>
+        <textarea id="description" name="description" placeholder="Description" required rows="5" class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
           <div class="g-recaptcha" data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"></div>
           <br/>
           <button type="submit" class="px-8 py-2 bg-green-500 hover:bg-green-700 text-white text-lg rounded block mx-auto">Send</button>
