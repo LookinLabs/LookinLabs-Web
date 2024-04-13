@@ -275,7 +275,7 @@ document
     event.preventDefault();
 
     // Check if both checkboxes are checked
-    if(document.getElementById('termsCheckbox').checked && document.getElementById('privacyCheckbox').checked) {
+    if(document.getElementById('termsCheckbox').checked) {
       // Show loader
       document.getElementById("loader").classList.remove("hidden");
 
