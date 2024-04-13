@@ -348,3 +348,8 @@ window.addEventListener('load', function() {
     header.classList.remove('loader-active');
   }, 750);
 });
+
+window.onload = function() {
+    document.getElementById('refreshLoader').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+};
