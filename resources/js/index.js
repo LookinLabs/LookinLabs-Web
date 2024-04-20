@@ -349,34 +349,41 @@ window.onload = function () {
 };
 
 // Translations JSON
-// Load the JSON file
-fetch("resources/translations/en.json")
-  .then((response) => response.json())
-  .then((data) => {
-    translations = data;
+const languageSelect = document.getElementById("language-select");
 
-    // Select all elements with the data-translation-key attribute
-    const elements = document.querySelectorAll("[data-translation-key]");
+function loadTranslations() {
+  const selectedLanguage = languageSelect.value;
 
-    // Replace their text content or placeholder with the corresponding translation
-    elements.forEach((element) => {
-      const key = element.getAttribute("data-translation-key");
-      const keys = key.split(/[\[\]]/); // Split the key into array name and index
-      let translation;
-      if (keys.length > 1) {
-        // If the key is an array reference, use the array name and index to get the translation
-        translation = translations[keys[0]][parseInt(keys[1])];
-      } else {
-        // If the key is not an array reference, use it directly to get the translation
-        translation = translations[key];
-      }
+  document.documentElement.lang = selectedLanguage;
 
-      if (element.hasAttribute("placeholder")) {
-        // If the element has a placeholder attribute, replace it
-        element.setAttribute("placeholder", translation);
-      } else {
-        // Otherwise, replace the inner HTML
-        element.innerHTML = translation;
-      }
+  fetch(`resources/translations/${selectedLanguage}.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      translations = data;
+
+      const elements = document.querySelectorAll("[data-translation-key]");
+
+      elements.forEach((element) => {
+        const key = element.getAttribute("data-translation-key");
+        const keys = key.split(/[\[\]]/);
+        let translation;
+        if (keys.length > 1) {
+          translation = translations[keys[0]][parseInt(keys[1])];
+        } else {
+          translation = translations[key];
+        }
+
+        if (element.hasAttribute("placeholder")) {
+          element.setAttribute("placeholder", translation);
+        } else {
+          element.innerHTML = translation;
+        }
+      });
     });
-  });
+}
+
+// Load translations when the page loads
+loadTranslations();
+
+// Reload translations when the selected language changes
+languageSelect.addEventListener("change", loadTranslations);
