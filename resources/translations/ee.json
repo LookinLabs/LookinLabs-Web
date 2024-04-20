@@ -1,117 +1,116 @@
 {
-  "banner_success_email_sent": "Успешно! Письмо отправлено.",
-  "banner_failure_email_sent": "Письмо не было отправлено, пожалуйста, попробуйте еще раз.",
+  "banner_success_email_sent": "Õnnestumine! E-kiri saadeti ära.",
+  "banner_failure_email_sent": "E-kirja ei saadetud, palun proovi uuesti.",
 
-  "navbar_open_menu": "Открыть главное меню",
-  "navbar_about": "О нас",
-  "navbar_why_us": "Почему мы?",
-  "navbar_offer": "Что мы предлагаем?",
-  "navbar_who_we_are": "Кто мы?",
-  "navbar_prices": "Цены",
-  "navbar_contact": "Контакты",
+  "navbar_open_menu": "Ava põhimenüü",
+  "navbar_about": "Meist",
+  "navbar_why_us": "Miks meie?",
+  "navbar_offer": "Mida pakume?",
+  "navbar_who_we_are": "Kes me oleme?",
+  "navbar_prices": "Hinnad",
+  "navbar_contact": "Kontakt",
 
-  "section_about_title": "О нас",
-  "about_description": "LookinLabs - это организация, посвященная разработке разнообразных приложений, используя лучшие практики программирования в зависимости от потребностей приложения. Наш главный фокус - предоставление возможностей для саморазвития для отдельных лиц и помощь клиентам в повышении уровня их инфраструктуры до более высокого уровня.",
+  "section_about_title": "Meist",
+  "about_description": "LookinLabs on organisatsioon, mis on pühendunud mitmekülgsete rakenduste arendamisele, kasutades parimaid programmeerimispraktikaid vastavalt rakenduse vajadustele. Meie peamine fookus on individuaalsete arenguvõimaluste pakkumine inimestele ja klientide abistamine nende infrastruktuuri taseme tõstmisel.",
 
-  "img_alt_startup": "Стартап",
+  "img_alt_startup": "Algus",
 
-  "section_why_us_title": "Почему мы?",
+  "section_why_us_title": "Miks meie?",
 
-  "performance_title": "Производительность",
+  "performance_title": "Jõudlus",
   "performances": [
-    "Сверхбыстрый код",
-    "Эффективное использование ресурсов",
-    "Масштабируемость",
-    "Надежность"
+    "Valguskiiruslik kood",
+    "Tõhus ressursikasutus",
+    "Skalpeeritavus",
+    "Usaldusväärsus"
   ],
 
-  "quality_title": "Качество",
+  "quality_title": "Kvaliteet",
   "qualities": [
-    "Строгие тестирования",
-    "Надежная безопасность",
-    "Соблюдение и лучшие практики",
-    "Полное документирование"
+    "Range testimine",
+    "Tugev turvalisus",
+    "Vastavus ja parimad tavapärased meetodid",
+    "Põhjalik dokumentatsioon"
   ],
 
-  "technologies_principals_title": "Технологии и принципы",
+  "technologies_principals_title": "Tehnoloogiad ja põhimõtted",
   "technologies_principals": [
-    "Инфраструктура как код (IaC)",
-    "GitOps и DevOps",
-    "Контейнеризация (включая управление)",
-    "Эффективные фреймворки",
-    "Облачное решение (AWS, GCP, VMWare)"
+    "Infrastruktuur kui kood (IaC)",
+    "GitOps ja DevOps",
+    "Konteineriseerimine (haldamine kaasas)",
+    "Tõhusad raamistikud",
+    "Pilvelahendus (AWS, GCP, VMWare)"
   ],
 
-  "section_offer_title": "Что мы предлагаем?",
-  "offer_description": "LookinLabs предлагает широкий спектр услуг, начиная от основной разработки программного обеспечения до обширной настройки облачной инфраструктуры. Эти услуги поставляются с различными уровнями сервиса (SLA), которые могут быть как короткими, на одну неделю, так и длинными, до шести месяцев. Конкретный SLA для каждой услуги определяется размером и сложностью работы.",
+  "section_offer_title": "Mida pakume?",
+  "offer_description": "LookinLabs pakub mitmesuguseid teenuseid alates põhiteenuste tarkvaraarendusest kuni ulatuslike pilveinfrastruktuuride seadistusteni. Need teenused on kaasatud erinevatesse Teenustaseme lepingutesse (SLA-desse), mis kestavad alates ühest nädalast kuni kuue kuuni. Iga teenuse konkreetne SLA määratakse töö suuruse ja keerukuse järgi.",
 
-  "offer_software_development_title": "Разработка программного обеспечения",
+  "offer_software_development_title": "Tarkvaraarendus",
   "offer_software_developments": [
-    "Разработка веб-приложений малого/среднего масштаба",
-    "Тестирование программного обеспечения"
+    "Väike/Keskmine veebiarendus",
+    "Tarkvara kvaliteedianalüüs"
   ],
 
-  "offer_devops_solutions_title": "Решения DevOps",
+  "offer_devops_solutions_title": "DevOps lahendused",
   "offer_devops_solutions": [
-    "Доставка программного обеспечения",
-    "Услуги надежности сайта",
-    "Управление процессами и инцидентами",
-    "Консультации"
+    "Tarkvara kohaletoimetamine",
+    "Kodulehe usaldusväärsuse teenused",
+    "Protsessi ja juhtumi haldus",
+    "Konsultatsioon"
   ],
 
-  "section_our_projects_title": "Наши проекты",
+  "section_our_projects_title": "Meie projektid",
 
-  "section_who_we_are_title": "Кто мы?",
-  "who_we_are_description": "В LookinLabs мы гордимся качеством наших услуг. Наша дружная команда специалистов не только высококвалифицирована, но и сертифицирована в своих областях. Каждый член нашей команды имеет не менее 3 лет профессионального опыта, что гарантирует, что у них есть знания и опыт для предоставления первоклассных услуг.\n\nНаши клиенты - наш главный приоритет, и мы стремимся предоставить им наилучший опыт. Когда вы выбираете LookinLabs, вы не просто получаете сервис, вы получаете партнерство с командой экспертов, приверженных вашему успеху. Мы ценим наших клиентов и неустанно работаем, чтобы удовлетворить их потребности и превзойти их ожидания.",
+  "section_who_we_are_title": "Kes me oleme?",
+  "who_we_are_description": "LookinLabsis oleme uhked oma teenuste kvaliteedi üle. Meie pühendunud spetsialistide meeskond on mitte ainult kõrgelt kvalifitseeritud, vaid ka oma vastavates valdkondades sertifitseeritud. Igal meie meeskonnaliikmel on vähemalt 3 aastat professionaalset kogemust, tagades neile teadmised ja ekspertiisi tipptasemel teenuste pakkumiseks.\n\nMeie klientide rahulolu on meie peamine eesmärk ning me püüame pakkuda neile parimat võimalikku kogemust. Valides LookinLabsi, ei saa te lihtsalt teenust, vaid teete koostööd meeskonnaga, kes on pühendunud teie edu saavutamisele. Me väärtustame oma kliente ja töötame väsimatult nende vajaduste rahuldamiseks ja nende ootuste ületamiseks.",
 
-  "section_prices_title": "Цены, разработанные для творческих клиентов, таких как вы",
-  "prices_per_hour": "/в час",
-  "prices_section_description": "Здесь, в LookinLabs, мы фокусируемся на рынках, где технологии, инновации и капитал могут разблокировать долгосрочную ценность и стимулировать экономический рост.",
-  "prices_web_application_development_title": "Разработка веб-приложений / приложений",
-  "prices_web_application_development_description": "Лучший вариант для реализации ваших проектов мечты",
+  "section_prices_title": "Hinnad loodud loovale kliendile nagu sina",
+  "prices_per_hour": "/tunni kohta",
+  "prices_section_description": "LookinLabsis keskendume turgudele, kus tehnoloogia, innovatsioon ja kapital saavad avada pikaajalise väärtuse ja suunata majanduskasvu.",
+  "prices_web_application_development_title": "Veebi/ Rakenduse arendus",
+  "prices_web_application_development_description": "Parim võimalus oma unistuste projektide elluviimiseks",
   "prices_web_application_development_benefits": [
-    "Индивидуальная настройка",
-    "Конкурентный анализ",
-    "Анализ качества программного обеспечения",
-    "Поддержка в будние дни с 9:00 до 17:00",
-    "Размер команды: <span class='font-semibold'>3 разработчика</span>",
-    "MVP / Код готовности к производству"
+    "Individuaalne seadistus",
+    "Konkurentsianalüüs",
+    "Tarkvara kvaliteedianalüüs",
+    "Toetus tööpäevadel kell 9:00 kuni 17:00",
+    "Meeskonna suurus: <span class='font-semibold'>3 arendajat</span>",
+    "MVP/Tootmiseks valmis kood"
   ],
 
-  "prices_devops_solutions_title": "Решения DevOps",
-
-  "prices_devops_solutions_description": "Лучший вариант для внедрения проекта в производство за неделю",
+  "prices_devops_solutions_title": "DevOps lahendused",
+  "prices_devops_solutions_description": "Parim võimalus projekti tootmisse viimiseks nädala jooksul",
   "prices_devops_solutions_benefits": [
-    "Индивидуальная настройка",
-    "Управление платформой хостинга",
-    "Автоматизация доставки программного обеспечения",
-    "Поддержка в будние дни с 9:00 до 23:00",
-    "Размер команды: <span class='font-semibold'>3 разработчика, 1 инженер по надежности сайта</span>",
-    "MVP / Код готовности к производству + Платформа"
+    "Individuaalne seadistus",
+    "Hostimisplatvormi haldamine",
+    "Tarkvara kohaletoimetamise automatiseerimine",
+    "Toetus tööpäevadel kell 9:00 kuni 23:00",
+    "Meeskonna suurus: <span class='font-semibold'>3 arendajat, 1 kodulehe usaldusväärsuse insener</span>",
+    "MVP/Tootmiseks valmis kood + platvorm"
   ],
 
-  "prices_site_reliability_consultancy_title": "Консультации по надежности сайта",
-  "prices_site_reliability_consultancy_description": "Лучший вариант, когда вам нужна помощь с вашими проектами",
+  "prices_site_reliability_consultancy_title": "Kodulehe usaldusväärsuse konsultatsioon",
+  "prices_site_reliability_consultancy_description": "Parim võimalus, kui vajate abi oma projektidega",
   "prices_site_reliability_consultancy_benefits": [
-    "Личный консультант",
-    "Поддержка в будние дни с 10:00 до 22:00",
-    "Размер команды: <span class='font-semibold'>1 инженер по надежности сайта</span>"
+    "Isiklik konsultant",
+    "Toetus tööpäevadel kell 10:00 kuni 22:00",
+    "Meeskonna suurus: <span class='font-semibold'>1 kodulehe usaldusväärsuse insener</span>"
   ],
 
-  "prices_crypto_payment_support": "В LookinLabs мы рады предложить поддержку криптовалютных платежей.",
-  "prices_crypto_payment_discount": "Оплата криптовалютой автоматически снизит стоимость ваших часов на 20% по сравнению с методами оплаты без криптовалюты.",
+  "prices_crypto_payment_support": "LookinLabsis oleme põnevil kriptoraha maksete toetamise üle.",
+  "prices_crypto_payment_discount": "Kriptoraha kasutamisel vähendatakse automaatselt teie tunnihinda 20% võrra võrreldes mittekriptoraha maksemeetoditega.",
 
-  "section_contact_title": "Свяжитесь с нами",
-  "contact_form_username_placeholder": "Имя пользователя",
-  "contact_form_email_placeholder": "Электронная почта",
-  "contact_form_title_placeholder": "Название идеи",
-  "contact_form_research_checkbox_label": "У меня есть свой собственный конкурентный анализ проекта",
-  "contact_form_link_placeholder": "Ссылка на файл PDF",
-  "contact_form_description_placeholder": "Описание",
-  "contact_form_submit_button_text": "Отправить",
-  "contact_form_loader_modal_title": "Отправка письма...",
-  "contact_form_loader_modal_description": "Пожалуйста, подождите... Не нажимайте кнопку отправки второй раз, иначе она не сработает.",
+  "section_contact_title": "Võta meiega ühendust",
+  "contact_form_username_placeholder": "Kasutajanimi",
+  "contact_form_email_placeholder": "E-post",
+  "contact_form_title_placeholder": "Mõtte pealkiri",
+  "contact_form_research_checkbox_label": "Mul on oma projekti konkurentsianalüüs",
+  "contact_form_link_placeholder": "Link pdf-failile",
+  "contact_form_description_placeholder": "Kirjeldus",
+  "contact_form_submit_button_text": "Saada",
+  "contact_form_loader_modal_title": "E-kirja saatmine...",
+  "contact_form_loader_modal_description": "Palun oodake... Ärge vajutage saatmisnuppu teist korda, vastasel juhul see ebaõnnestub.",
 
-  "footer_contact_prompt": "Если вы нашли или не нашли услугу, которую ищете, не стесняйтесь связаться с нами напрямую.",
-  "footer_copyright_statement": "&copy; Все права защищены"
+  "footer_contact_prompt": "Kui leidsite või ei leidnud otsitud teenust, võtke meiega otse ühendust.",
+  "footer_copyright_statement": "&copy; Kõik õigused kaitstud"
 }
