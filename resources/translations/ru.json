@@ -1,6 +1,7 @@
 {
   "banner_success_email_sent": "Успешно! Письмо отправлено.",
   "banner_failure_email_sent": "Письмо не было отправлено, пожалуйста, попробуйте еще раз.",
+  "banner_please_check_terms_and_conditions": "Пожалуйста, ознакомьтесь с Правилами и Условиями и Политикой конфиденциальности LookinLabs.",
 
   "navbar_open_menu": "Открыть главное меню",
   "navbar_about": "О нас",

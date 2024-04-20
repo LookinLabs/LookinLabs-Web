@@ -1,6 +1,7 @@
 {
   "banner_success_email_sent": "Õnnestumine! E-kiri saadeti ära.",
   "banner_failure_email_sent": "E-kirja ei saadetud, palun proovi uuesti.",
+  "banner_please_check_terms_and_conditions": "Palun tutvuge LookinLabsi kasutustingimuste ja privaatsuspoliitikaga.",
 
   "navbar_open_menu": "Ava põhimenüü",
   "navbar_about": "Meist",

@@ -1,6 +1,7 @@
 {
   "banner_success_email_sent": "Success! Email was sent.",
   "banner_failure_email_sent": "Email was not sent, please try again.",
+  "banner_please_check_terms_and_conditions": "Please check out LookinLabs Terms & Conditions and Privacy Policy.",
 
   "navbar_open_menu": "Open main menu",
   "navbar_about": "About",
