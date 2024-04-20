@@ -108,6 +108,7 @@
   "contact_form_research_checkbox_label": "I have my own competitive research of project",
   "contact_form_link_placeholder": "Link to pdf file",
   "contact_form_description_placeholder": "Description",
+  "contact_form_agree_checkbox_label": "I agree to <a href='resources/terms/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Terms & Conditions</a> and <a href='resources/terms/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privacy Policy</a>",
   "contact_form_submit_button_text": "Send",
   "contact_form_loader_modal_title": "Sending email...",
   "contact_form_loader_modal_description": "Please wait... Don't press submit second time, otherwise it will fail.",

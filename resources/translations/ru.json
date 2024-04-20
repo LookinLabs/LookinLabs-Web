@@ -109,6 +109,7 @@
   "contact_form_research_checkbox_label": "У меня есть свой собственный конкурентный анализ проекта",
   "contact_form_link_placeholder": "Ссылка на файл PDF",
   "contact_form_description_placeholder": "Описание",
+  "contact_form_agree_checkbox_label": "Я согласен с <a href='resources/terms/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Правилами и Условиями</a> и <a href='resources/terms/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Политикой конфиденциальности</a>",
   "contact_form_submit_button_text": "Отправить",
   "contact_form_loader_modal_title": "Отправка письма...",
   "contact_form_loader_modal_description": "Пожалуйста, подождите... Не нажимайте кнопку отправки второй раз, иначе она не сработает.",
