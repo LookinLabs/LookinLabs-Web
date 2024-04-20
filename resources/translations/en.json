@@ -1,0 +1,116 @@
+{
+  "banner_success_email_sent": "Success! Email was sent.",
+  "banner_failure_email_sent": "Email was not sent, please try again.",
+
+  "navbar_open_menu": "Open main menu",
+  "navbar_about": "About",
+  "navbar_why_us": "Why Us?",
+  "navbar_offer": "What do we offer?",
+  "navbar_who_we_are": "Who we are?",
+  "navbar_prices": "Prices",
+  "navbar_contact": "Contact",
+
+  "section_about_title": "About",
+  "about_description": "LookinLabs is an organization dedicated to the development of\n  diverse applications, utilizing best programming practices depending\n  on application needs. Our primary focus is on providing\n  self-development opportunities for individuals and assisting\n  customers in elevating their infrastructure to a higher level.",
+
+  "img_alt_startup": "Startup",
+
+  "section_why_us_title": "Why Us?",
+
+  "performance_title": "Performance",
+  "performances": [
+    "Lighting speed Code",
+    "Efficient Resource utilization",
+    "Scalability",
+    "Reliability"
+  ],
+
+  "quality_title": "Quality",
+  "qualities": [
+    "Strigent testing",
+    "Robust security",
+    "Compliance and best practices",
+    "Comprehensive documentation"
+  ],
+
+  "technologies_principals_title": "Technologies and principals",
+  "technologies_principals": [
+    "Infrastructure as code (IaC)",
+    "GitOps & DevOps",
+    "Containerisation (Management included)",
+    "Efficient Frameworks",
+    "Cloud Solution (AWS, GCP, VMWare)"
+  ],
+
+  "section_offer_title": "What Do We Offer?",
+  "offer_description": "LookinLabs offers a range of services spanning from basic software development to extensive cloud infrastructure setups.\nThese services come with varying Service Level Agreements (SLAs) that range from as short as one week to as long as six months. The specific SLA for each service is determined by the size and complexity of the job.",
+
+  "offer_software_development_title": "Software Development",
+  "offer_software_developments": [
+    "Small/Middle-Scale Web Development",
+    "Software QA"
+  ],
+
+  "offer_devops_solutions_title": "DevOps Solutions",
+  "offer_devops_solutions": [
+    "Software Delivery",
+    "Site Reliability Services",
+    "Process & Incident Management",
+    "Consultancy"
+  ],
+
+  "section_our_projects_title": "Our Projects",
+
+  "section_who_we_are_title": "Who We Are?",
+  "who_we_are_description": "At LookinLabs, we take pride in the quality of our services. Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services.\n\nOur customers are our top priority, and we strive to provide them with the best possible experience. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our customers and work tirelessly to meet their needs and exceed their expectations.",
+
+  "section_prices_title": "Prices designed for creative customer like you",
+  "prices_per_hour": "/per hour",
+  "prices_section_description": "Here at LookinLabs we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.",
+  "prices_web_application_development_title": "Web / Application Development",
+  "prices_web_application_development_description": "Best option to get your dream projects done",
+  "prices_web_application_development_benefits": [
+    "Individual configuration",
+    "Competitive Research",
+    "Software Quality Analysis",
+    "Support on workdays at 9AM till 5PM",
+    "Team size: <span class='font-semibold'>3 developers</span>",
+    "MVP / Production-Ready Code"
+  ],
+
+  "prices_devops_solutions_title": "DevOps Solutions",
+  "prices_devops_solutions_description": "Best option to get project into production in a week",
+  "prices_devops_solutions_benefits": [
+    "Individual configuration",
+    "Hosting Platform Management",
+    "Software Delivery Automation",
+    "Support on workdays at 9AM till 11PM",
+    "Team size: <span class='font-semibold'>3 Developers, 1 Site Reliability Engineer</span>",
+    "MVP / Production-Ready Code + Platform"
+  ],
+
+  "prices_site_reliability_consultancy_title": "Site Reliability Consultancy",
+  "prices_site_reliability_consultancy_description": "Best option when you need help with your projects",
+  "prices_site_reliability_consultancy_benefits": [
+    "Personal Consultant",
+    "Support on workdays at 10AM till 10PM",
+    "Team size: <span class='font-semibold'>1 Site Reliability Engineer</span>"
+  ],
+
+  "prices_crypto_payment_support": "At LookinLabs, we're excited to offer support for crypto payments.",
+  "prices_crypto_payment_discount": "Paying with crypto will automatically reduce your hour costs by 20% compared to non-crypto payment methods.",
+
+  "section_contact_title": "Contact Us",
+  "contact_form_username_placeholder": "Username",
+  "contact_form_email_placeholder": "Email",
+  "contact_form_title_placeholder": "Title of the Idea",
+  "contact_form_research_checkbox_label": "I have my own competitive research of project",
+  "contact_form_link_placeholder": "Link to pdf file",
+  "contact_form_description_placeholder": "Description",
+  "contact_form_submit_button_text": "Send",
+  "contact_form_loader_modal_title": "Sending email...",
+  "contact_form_loader_modal_description": "Please wait... Don't press submit second time, otherwise it will fail.",
+
+  "footer_contact_prompt": "If you did or didn’t find the service you’re looking for, feel free to contact us directly.",
+  "footer_copyright_statement": "&copy; All rights reserved"
+}

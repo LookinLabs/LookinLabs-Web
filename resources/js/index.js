@@ -350,17 +350,33 @@ window.onload = function () {
 
 // Translations JSON
 // Load the JSON file
-fetch("translations/ru.json")
+fetch("resources/translations/en.json")
   .then((response) => response.json())
   .then((data) => {
-    let translations = data;
+    translations = data;
 
     // Select all elements with the data-translation-key attribute
     const elements = document.querySelectorAll("[data-translation-key]");
 
-    // Replace their text content with the corresponding translation
+    // Replace their text content or placeholder with the corresponding translation
     elements.forEach((element) => {
       const key = element.getAttribute("data-translation-key");
-      element.textContent = translations[key];
+      const keys = key.split(/[\[\]]/); // Split the key into array name and index
+      let translation;
+      if (keys.length > 1) {
+        // If the key is an array reference, use the array name and index to get the translation
+        translation = translations[keys[0]][parseInt(keys[1])];
+      } else {
+        // If the key is not an array reference, use it directly to get the translation
+        translation = translations[key];
+      }
+
+      if (element.hasAttribute("placeholder")) {
+        // If the element has a placeholder attribute, replace it
+        element.setAttribute("placeholder", translation);
+      } else {
+        // Otherwise, replace the inner HTML
+        element.innerHTML = translation;
+      }
     });
   });
