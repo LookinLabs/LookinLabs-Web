@@ -3,12 +3,11 @@
   "banner_failure_email_sent": "Email was not sent, please try again.",
   "banner_please_check_terms_and_conditions": "Please check out LookinLabs Terms & Conditions and Privacy Policy.",
 
-  "navbar_open_menu": "Open main menu",
+  "navbar_open_menu": "Main Menu",
   "navbar_about": "About",
-  "navbar_why_us": "Why Us?",
   "navbar_offer": "What do we offer?",
   "navbar_who_we_are": "Who we are?",
-  "navbar_prices": "Prices",
+  "navbar_projects": "Projects",
   "navbar_contact": "Contact",
 
   "section_about_title": "About",
@@ -16,54 +15,13 @@
 
   "img_alt_startup": "Startup",
 
-  "section_why_us_title": "Why Us?",
-
-  "performance_title": "Performance",
-  "performances": [
-    "Lighting speed Code",
-    "Efficient Resource utilization",
-    "Scalability",
-    "Reliability"
-  ],
-
-  "quality_title": "Quality",
-  "qualities": [
-    "Strigent testing",
-    "Robust security",
-    "Compliance and best practices",
-    "Comprehensive documentation"
-  ],
-
-  "technologies_principals_title": "Technologies and principals",
-  "technologies_principals": [
-    "Infrastructure as code (IaC)",
-    "GitOps & DevOps",
-    "Containerisation (Management included)",
-    "Efficient Frameworks",
-    "Cloud Solution (AWS, GCP, VMWare)"
-  ],
-
   "section_offer_title": "What Do We Offer?",
   "offer_description": "LookinLabs offers a range of services spanning from basic software development to extensive cloud infrastructure setups.\nThese services come with varying Service Level Agreements (SLAs) that range from as short as one week to as long as six months. The specific SLA for each service is determined by the size and complexity of the job.",
 
-  "offer_software_development_title": "Software Development",
-  "offer_software_developments": [
-    "Small/Middle-Scale Web Development",
-    "Software QA"
-  ],
-
-  "offer_devops_solutions_title": "DevOps Solutions",
-  "offer_devops_solutions": [
-    "Software Delivery",
-    "Site Reliability Services",
-    "Process & Incident Management",
-    "Consultancy"
-  ],
-
-  "section_our_projects_title": "Our Projects",
-
   "section_who_we_are_title": "Who We Are?",
   "who_we_are_description": "At LookinLabs, we take pride in the quality of our services. Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services.\n\nOur customers are our top priority, and we strive to provide them with the best possible experience. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our customers and work tirelessly to meet their needs and exceed their expectations.",
+
+  "section_our_projects_title": "Our Projects",
 
   "section_prices_title": "Prices designed for creative customer like you",
   "prices_per_hour": "/per hour",
