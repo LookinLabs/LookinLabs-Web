@@ -279,7 +279,6 @@ document
       let username = formData.get("username");
       let email = formData.get("email");
       let title = formData.get("title");
-      let link = formData.get("link");
       let description = formData.get("description");
       let captcha_response = grecaptcha.getResponse();
 
@@ -287,7 +286,6 @@ document
         username: username,
         email: email,
         title: title,
-        link: link,
         description: description,
         "g-recaptcha-response": captcha_response,
       };
