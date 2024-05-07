@@ -187,7 +187,7 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="flex flex-col items-center justify-center p-4">
+      <section id="contact" class="flex flex-col items-center justify-center p-4 pt-16">
         <a href="#" id="contactButton"
           class="inline-flex items-center justify-center px-12 py-5 border border-transparent text-2xl font-medium text-center text-gray-900 bg-white rounded-lg border-gray-100 shadow dark:border-gray-600 xl:p-6 dark:bg-gray-800 dark:bg-opacity-50 dark:text-white hover:bg-gray-700 transition duration-200">Contact
           Us</a>
@@ -198,8 +198,8 @@
             class="w-full p-2 border border-gray-300 rounded text-black">
           <input type="text" id="title" name="title" placeholder="Title of the Idea" required
             class="w-full p-2 border border-gray-300 rounded text-black">
-          <input type="url" id="link" name="link" placeholder="Link to pdf file" pattern="https?://.+"
-            class="w-full p-2 border border-gray-300 rounded mx-auto text-black">
+          <textarea id="description" name="description" placeholder="Description" required rows="5"
+            class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
           <label class="inline-flex items-center mt-3">
             <input id="termsCheckbox" type="checkbox" class="form-checkbox h-5 w-5 text-blue-600">
             <span class="ml-2 text-white">I agree to
@@ -209,8 +209,6 @@
                 Policy</a>
             </span>
           </label>
-          <textarea id="description" name="description" placeholder="Description" required rows="5"
-            class="w-full p-2 border border-gray-300 rounded text-black"></textarea>
           <div class="g-recaptcha" data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"></div>
           <br />
           <button type="submit"
