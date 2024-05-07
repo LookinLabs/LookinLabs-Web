@@ -1,69 +1,26 @@
 {
-  "banner_success_email_sent": "Õnnestumine! E-kiri saadeti ära.",
+  "banner_success_email_sent": "E-kiri saadeti edukalt ära!",
   "banner_failure_email_sent": "E-kirja ei saadetud, palun proovi uuesti.",
-  "banner_please_check_terms_and_conditions": "Palun tutvuge LookinLabsi kasutustingimuste ja privaatsuspoliitikaga.",
+  "banner_please_check_terms_and_conditions": "Palun tutvuge LookinLabs kasutustingimuste ja privaatsuspoliitikaga.",
 
-  "navbar_open_menu": "Ava põhimenüü",
-  "navbar_about": "Meist",
-  "navbar_why_us": "Miks meie?",
-  "navbar_offer": "Mida pakume?",
+  "navbar_open_menu": "Põhimenüü",
+  "navbar_about": "Organisatsioon",
   "navbar_who_we_are": "Kes me oleme?",
-  "navbar_prices": "Hinnad",
+  "navbar_offer": "Mida me pakume?",
   "navbar_contact": "Kontakt",
 
-  "section_about_title": "Meist",
-  "about_description": "LookinLabs on organisatsioon, mis on pühendunud mitmekülgsete rakenduste arendamisele, kasutades parimaid programmeerimispraktikaid vastavalt rakenduse vajadustele. Meie peamine fookus on individuaalsete arenguvõimaluste pakkumine inimestele ja klientide abistamine nende infrastruktuuri taseme tõstmisel.",
+  "section_about_title": "Meie Organisatsioon",
+  "about_description": "LookinLabs on mittetulundusühing (MTÜ), mis on pühendunud veebirakenduste arendamisele, kasutades parimaid programmeerimispraktikaid. Meie peamine fookus on luua enesearendamisele keskendunud organisatsioon, mis aitab noortel arendajatel saavutada esimese kogemuse praktiliste projektide kaudu.",
 
   "img_alt_startup": "Algus",
 
-  "section_why_us_title": "Miks meie?",
-
-  "performance_title": "Jõudlus",
-  "performances": [
-    "Valguskiiruslik kood",
-    "Tõhus ressursikasutus",
-    "Skalpeeritavus",
-    "Usaldusväärsus"
-  ],
-
-  "quality_title": "Kvaliteet",
-  "qualities": [
-    "Range testimine",
-    "Tugev turvalisus",
-    "Vastavus ja parimad tavapärased meetodid",
-    "Põhjalik dokumentatsioon"
-  ],
-
-  "technologies_principals_title": "Tehnoloogiad ja põhimõtted",
-  "technologies_principals": [
-    "Infrastruktuur kui kood (IaC)",
-    "GitOps ja DevOps",
-    "Konteineriseerimine (haldamine kaasas)",
-    "Tõhusad raamistikud",
-    "Pilvelahendus (AWS, GCP, VMWare)"
-  ],
+  "section_who_we_are_title": "Kes me oleme?",
+  "who_we_are_description": "Lookinlabsi teenused on kõrgelt kvalifitseeritud. Meie meeskonnas on mitu sertifitseeritud inimest, kes tagavad meie teadmised tipptaseme arengu osutamiseks. LookinLabs organisatsioonis leiate partnerluse teie edule pühendunud ekspertide meeskonnaga. Me väärtustame oma meeskonnakaaslasi ja töötame väsimatult, et nooremad arendajad leiaksid endale töökoha.",
 
   "section_offer_title": "Mida pakume?",
   "offer_description": "LookinLabs pakub mitmesuguseid teenuseid alates põhiteenuste tarkvaraarendusest kuni ulatuslike pilveinfrastruktuuride seadistusteni. Need teenused on kaasatud erinevatesse Teenustaseme lepingutesse (SLA-desse), mis kestavad alates ühest nädalast kuni kuue kuuni. Iga teenuse konkreetne SLA määratakse töö suuruse ja keerukuse järgi.",
 
-  "offer_software_development_title": "Tarkvaraarendus",
-  "offer_software_developments": [
-    "Väike/Keskmine veebiarendus",
-    "Tarkvara kvaliteedianalüüs"
-  ],
-
-  "offer_devops_solutions_title": "DevOps lahendused",
-  "offer_devops_solutions": [
-    "Tarkvara kohaletoimetamine",
-    "Kodulehe usaldusväärsuse teenused",
-    "Protsessi ja juhtumi haldus",
-    "Konsultatsioon"
-  ],
-
   "section_our_projects_title": "Meie projektid",
-
-  "section_who_we_are_title": "Kes me oleme?",
-  "who_we_are_description": "LookinLabsis oleme uhked oma teenuste kvaliteedi üle. Meie pühendunud spetsialistide meeskond on mitte ainult kõrgelt kvalifitseeritud, vaid ka oma vastavates valdkondades sertifitseeritud. Igal meie meeskonnaliikmel on vähemalt 3 aastat professionaalset kogemust, tagades neile teadmised ja ekspertiisi tipptasemel teenuste pakkumiseks.\n\nMeie klientide rahulolu on meie peamine eesmärk ning me püüame pakkuda neile parimat võimalikku kogemust. Valides LookinLabsi, ei saa te lihtsalt teenust, vaid teete koostööd meeskonnaga, kes on pühendunud teie edu saavutamisele. Me väärtustame oma kliente ja töötame väsimatult nende vajaduste rahuldamiseks ja nende ootuste ületamiseks.",
 
   "section_prices_title": "Hinnad loodud loovale kliendile nagu sina",
   "prices_per_hour": "/tunni kohta",
