@@ -246,13 +246,6 @@ function populateMembers(members) {
   });
 }
 
-// Contact us form
-document
-  .getElementById("researchCheckbox")
-  .addEventListener("change", function () {
-    document.getElementById("link").disabled = !this.checked;
-  });
-
 document
   .getElementById("contactButton")
   .addEventListener("click", function (event) {
