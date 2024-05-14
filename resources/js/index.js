@@ -187,6 +187,9 @@ function populateMembers(members) {
   const membersDiv = document.getElementById("team-members");
   members.forEach((member, index) => {
     const memberDiv = document.createElement("div");
+    membersDiv.style.display = "flex";
+    membersDiv.style.flexWrap = "wrap";
+    membersDiv.style.justifyContent = "space-around";
     memberDiv.className =
       "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
     memberDiv.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)";
@@ -228,7 +231,7 @@ function populateMembers(members) {
     portfolio.innerHTML = '<i class="fas fa-briefcase"></i> Portfolio';
     portfolio.style.color = "#ffffff"; // White color for links
 
-    memberDiv.style.margin = "0 30px 30px 0"; // Increase space between members
+    memberDiv.style.margin = "0 35px 0px 30px"; // Increase space between members
     memberDiv.appendChild(img);
     memberDiv.appendChild(name);
     memberDiv.appendChild(profession);
@@ -242,13 +245,6 @@ function populateMembers(members) {
     membersDiv.appendChild(memberDiv);
   });
 }
-
-// Contact us form
-document
-  .getElementById("researchCheckbox")
-  .addEventListener("change", function () {
-    document.getElementById("link").disabled = !this.checked;
-  });
 
 document
   .getElementById("contactButton")
@@ -275,7 +271,7 @@ document
     event.preventDefault();
 
     // Check if both checkboxes are checked
-    if(document.getElementById('termsCheckbox').checked) {
+    if (document.getElementById("termsCheckbox").checked) {
       // Show loader
       document.getElementById("loader").classList.remove("hidden");
 
@@ -283,7 +279,6 @@ document
       let username = formData.get("username");
       let email = formData.get("email");
       let title = formData.get("title");
-      let link = formData.get("link");
       let description = formData.get("description");
       let captcha_response = grecaptcha.getResponse();
 
@@ -291,7 +286,6 @@ document
         username: username,
         email: email,
         title: title,
-        link: link,
         description: description,
         "g-recaptcha-response": captcha_response,
       };
@@ -327,7 +321,7 @@ document
         });
     } else {
       // One or both checkboxes are not checked, show an error message
-      document.getElementById("terms-banner").classList.remove("hidden")
+      document.getElementById("terms-banner").classList.remove("hidden");
     }
   });
 

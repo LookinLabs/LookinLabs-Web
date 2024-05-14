@@ -1,8 +1,8 @@
 [
     {
-        "name": "Digital Service Book",
-        "url": "https://github.com/LookinLabs/DSB",
-        "picture": "./resources/img/projects/dsb.png"
+        "name": "GoBlitz Documentation Page",
+        "url": "https://docs.goblitz.org/",
+        "picture": "./resources/img/projects/GoBlitz Documentation Page.png"
     },
     {
         "name": "DevOps Engineer Portfolio Website",
