@@ -89,3 +89,16 @@
 header.loader-active {
   display: none;
 }
+
+/* Styles for small screens (phones) */
+@media (max-width: 767px) {
+  #navbar-default {
+    position: relative;
+  }
+  
+  #language-changer {
+    position: fixed;
+    right: 65px; 
+    top: 5px; 
+  }
+}
