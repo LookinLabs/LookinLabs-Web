@@ -29,7 +29,7 @@ navItems.forEach((item) => {
   item.addEventListener("click", () => {
     const navLinks = document.querySelector("#navbar-default");
     // Check if the screen width is less than 768px (Tailwind's md breakpoint)
-    if (window.innerWidth < 768 && !navLinks.classList.contains("hidden")) {
+    if (window.innerWidth < 758 && !navLinks.classList.contains("hidden")) {
       navLinks.classList.add("hidden");
       navLinks.classList.remove("md:flex");
     }
