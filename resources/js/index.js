@@ -373,10 +373,17 @@ languageButton.addEventListener("click", function () {
 
 languageOptionsChildren.forEach(function (option) {
   option.addEventListener("click", function () {
-    document.getElementById("selected-language").textContent =
-      option.dataset.value;
+    // Get the selected language and flag
+    const language = option.dataset.value;
+    const flag = option.querySelector(".flag-icon").className;
+
+    // Update the selected language and flag
+    document.getElementById("selected-language").innerHTML =
+      language + " <span class='" + flag + " mr-2'></span>";
+
+    // Hide the language options and load the translations
     languageOptions.classList.add("hidden");
-    loadTranslations(option.dataset.value);
+    loadTranslations(language);
   });
 });
 
