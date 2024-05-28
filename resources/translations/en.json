@@ -1,0 +1,38 @@
+{
+  "banner_success_email_sent": "Success! Email was sent.",
+  "banner_failure_email_sent": "Email was not sent, please try again.",
+  "banner_please_check_terms_and_conditions": "Please check out LookinLabs Terms & Conditions and Privacy Policy.",
+
+  "navbar_open_menu": "Main Menu",
+  "navbar_about": "About",
+  "navbar_who_we_are": "Who we are?",
+  "navbar_offer": "What do we offer?",
+  "navbar_projects": "Projects",
+  "navbar_contact": "Contact",
+
+  "section_about_title": "About",
+  "about_description": "LookinLabs is an organization dedicated to developing diverse applications, utilizing best programming practices tailored to the needs of each application. Our primary focus is on creating a self-development organization that helps junior developers gain their first knowledge and experience through hands-on projects.",
+
+  "img_alt_startup": "Startup",
+
+  "section_who_we_are_title": "Who We Are?",
+  "who_we_are_description": "Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our teammates and work tirelessly to meet their needs and exceed their expectations.",
+
+  "section_offer_title": "What Do We Offer?",
+  "offer_description": "LookinLabs is a self-development organization primarily targeting junior to mid-level developers, providing them with the opportunity to learn through a project-based learning approach. During projects, developers have the opportunity to acquire all the necessary skills for a career path in software engineering.",
+
+  "section_our_projects_title": "Our Projects",
+
+  "section_contact_title": "Contact Us",
+  "contact_form_username_placeholder": "Username",
+  "contact_form_email_placeholder": "Email",
+  "contact_form_title_placeholder": "Title of the Idea",
+  "contact_form_description_placeholder": "Description",
+  "contact_form_agree_checkbox_label": "I agree to <a href='resources/terms/en/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Terms & Conditions</a> and <a href='resources/terms/en/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privacy Policy</a>",
+  "contact_form_submit_button_text": "Send",
+  "contact_form_loader_modal_title": "Sending email...",
+  "contact_form_loader_modal_description": "Please wait... Don't press submit second time, otherwise it will fail.",
+
+  "footer_contact_prompt": "Feel free to contact us directly.",
+  "footer_copyright_statement": "&copy; All rights reserved"
+}
