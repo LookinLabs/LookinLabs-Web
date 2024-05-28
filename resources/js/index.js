@@ -36,6 +36,19 @@ navItems.forEach((item) => {
   });
 });
 
+//Scroll Animation
+navItems.forEach((link) => {
+  link.addEventListener("click", (event) => {
+
+    event.preventDefault();
+    
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    targetSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
 window.onload = function () {
   carousel.scrollLeft = 0;
   setCarouselScrollTimer();
@@ -128,7 +141,7 @@ function createCarouselItem(project) {
   link.href = project.url;
 
   const imageContainer = document.createElement("div");
-  imageContainer.className = "relative w-full h-72 mb-3";
+  imageContainer.className = "relative w-full h-72 mb-6";
 
   const hoverImageContainer = createHoverImageContainer(project);
   imageContainer.appendChild(hoverImageContainer);
@@ -161,10 +174,10 @@ function createHoverImageContainer(project) {
 
 function createImage(project) {
   const image = document.createElement("img");
-  image.className = "block w-full h-full";
+  image.className = "carousel-image block w-full h-full";
   image.src = project.picture;
   image.style.width = "300px";
-  image.style.height = "400px";
+  image.style.height = "290px";
 
   return image;
 }

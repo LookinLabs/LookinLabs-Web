@@ -72,6 +72,15 @@
   pointer-events: none;
 }
 
+/* Animation */
+.carousel-image {
+  transition: transform 0.3s ease; 
+}
+
+.carousel-image:hover {
+  transform: scale(1.08); 
+}
+
 /* Loader */
 #refreshLoader {
   position: fixed;
