@@ -39,15 +39,17 @@ navItems.forEach((item) => {
 //Scroll Animation
 navItems.forEach((link) => {
   link.addEventListener("click", (event) => {
-
     event.preventDefault();
-    
+
+    stopCarouselScroll();
+
     const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
 
     targetSection.scrollIntoView({ behavior: "smooth" });
   });
 });
+
 
 window.onload = function () {
   carousel.scrollLeft = 0;
