@@ -50,7 +50,6 @@ navItems.forEach((link) => {
   });
 });
 
-
 window.onload = function () {
   carousel.scrollLeft = 0;
   setCarouselScrollTimer();
@@ -364,18 +363,30 @@ window.onload = function () {
 };
 
 // Translations JSON
-const languageSelect = document.getElementById("language-select");
+const languageButton = document.getElementById("language-button");
+const languageOptions = document.getElementById("language-options");
+const languageOptionsChildren = Array.from(languageOptions.children);
 
-function loadTranslations() {
-  const selectedLanguage = languageSelect.value;
+languageButton.addEventListener("click", function () {
+  languageOptions.classList.toggle("hidden");
+});
 
-  document.documentElement.lang = selectedLanguage;
+languageOptionsChildren.forEach(function (option) {
+  option.addEventListener("click", function () {
+    document.getElementById("selected-language").textContent =
+      option.dataset.value;
+    languageOptions.classList.add("hidden");
+    loadTranslations(option.dataset.value);
+  });
+});
 
-  fetch(`resources/translations/${selectedLanguage}.json`)
+function loadTranslations(language) {
+  document.documentElement.lang = language;
+
+  fetch(`resources/translations/${language}.json`)
     .then((response) => response.json())
     .then((data) => {
-      translations = data;
-
+      const translations = data;
       const elements = document.querySelectorAll("[data-translation-key]");
 
       elements.forEach((element) => {
@@ -398,7 +409,4 @@ function loadTranslations() {
 }
 
 // Load translations when the page loads
-loadTranslations();
-
-// Reload translations when the selected language changes
-languageSelect.addEventListener("change", loadTranslations);
+loadTranslations("en"); // Default language

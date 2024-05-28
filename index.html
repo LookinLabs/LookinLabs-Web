@@ -22,6 +22,9 @@
   <!-- Load Fonts Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
+  <!-- Load Flag Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
   <!-- https://tailwindcss.com/docs/installation/play-cdn -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -131,13 +134,16 @@
             </div>
             <div id="language-changer" class="p-5">
               <div class="relative inline-flex items-center">
-                <i class="fas fa-globe text-white mr-2"></i>
-                <select id="language-select"
-                  class="text-sm border border-gray-300 rounded-full text-gray-600 h-8 pl-2 pr-3 bg-white hover:border-gray-400 focus:outline-none appearance-none cursor-pointer">
-                  <option value="en">EN</option>
-                  <option value="ee">EE</option>
-                  <option value="ru">RU</option>
-                </select>
+                <button id="language-button" class="flex items-center">
+                  <i class="fas fa-globe text-white mr-2"></i>
+                  <span id="selected-language" class="text-sm text-white">EN</span>
+                  <i class="fas fa-caret-down text-white ml-2"></i>
+                </button>
+                <div id="language-options" class="hidden absolute bg-white text-gray-600 rounded mt-2 w-32 right-0 top-full">
+                  <button class="p-2 flex items-center w-full text-left hover:bg-blue-500 hover:text-white" data-value="EN"><span class="flag-icon flag-icon-gb mr-2"></span>EN</button>
+                  <button class="p-2 flex items-center w-full text-left hover:bg-blue-500 hover:text-white" data-value="EE"><span class="flag-icon flag-icon-ee mr-2"></span>EE</button>
+                  <button class="p-2 flex items-center w-full text-left hover:bg-blue-500 hover:text-white" data-value="RU"><span class="flag-icon flag-icon-ru mr-2"></span>RU</button>
+                </div>
               </div>
             </div>
           </div>
