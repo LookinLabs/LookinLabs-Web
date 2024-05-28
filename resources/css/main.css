@@ -108,5 +108,6 @@ header.loader-active {
   #language-changer {
     position: fixed;
     right: 65px; 
+    top: 8px;
   }
 }
