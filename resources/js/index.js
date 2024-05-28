@@ -374,7 +374,7 @@ languageButton.addEventListener("click", function () {
 languageOptionsChildren.forEach(function (option) {
   option.addEventListener("click", function () {
     // Get the selected language and flag
-    const language = option.dataset.value;
+    const language = option.dataset.value.toUpperCase();
     const flag = option.querySelector(".flag-icon").className;
 
     // Update the selected language and flag
@@ -399,6 +399,7 @@ document.addEventListener("click", function (event) {
 });
 
 function loadTranslations(language) {
+  language = language.toLowerCase();
   document.documentElement.lang = language;
 
   fetch(`resources/translations/${language}.json`)
