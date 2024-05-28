@@ -5,8 +5,8 @@
 
   "navbar_open_menu": "Main Menu",
   "navbar_about": "About",
-  "navbar_offer": "What do we offer?",
   "navbar_who_we_are": "Who we are?",
+  "navbar_offer": "What do we offer?",
   "navbar_projects": "Projects",
   "navbar_contact": "Contact",
 
@@ -27,8 +27,6 @@
   "contact_form_username_placeholder": "Username",
   "contact_form_email_placeholder": "Email",
   "contact_form_title_placeholder": "Title of the Idea",
-  "contact_form_research_checkbox_label": "I have my own competitive research of project",
-  "contact_form_link_placeholder": "Link to pdf file",
   "contact_form_description_placeholder": "Description",
   "contact_form_agree_checkbox_label": "I agree to <a href='resources/terms/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Terms & Conditions</a> and <a href='resources/terms/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privacy Policy</a>",
   "contact_form_submit_button_text": "Send",
