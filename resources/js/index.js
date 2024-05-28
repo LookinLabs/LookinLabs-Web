@@ -387,6 +387,17 @@ languageOptionsChildren.forEach(function (option) {
   });
 });
 
+document.addEventListener("click", function (event) {
+  let isClickInside = document
+    .getElementById("language-changer")
+    .contains(event.target);
+
+  if (!isClickInside) {
+    // The click was outside the #language-changer element, hide the dropdown
+    document.getElementById("language-options").classList.add("hidden");
+  }
+});
+
 function loadTranslations(language) {
   document.documentElement.lang = language;
 
