@@ -25,13 +25,21 @@ document.querySelector("#navbar-toggler").addEventListener("click", () => {
 const navItems = document.querySelectorAll("#navbar-default ul li a");
 
 // Add event listener to each navigation link
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const navLinks = document.querySelector("#navbar-default");
-    // Check if the screen width is less than 768px (Tailwind's md breakpoint)
-    if (window.innerWidth < 758 && !navLinks.classList.contains("hidden")) {
-      navLinks.classList.add("hidden");
-      navLinks.classList.remove("md:flex");
+//Scroll Animation
+navItems.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    stopCarouselScroll();
+
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If there's no element with the target ID, navigate to the URL in the href attribute
+      window.location.href = link.getAttribute("href");
     }
   });
 });
