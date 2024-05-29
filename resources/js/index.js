@@ -29,10 +29,24 @@ navItems.forEach((item) => {
   item.addEventListener("click", () => {
     const navLinks = document.querySelector("#navbar-default");
     // Check if the screen width is less than 768px (Tailwind's md breakpoint)
-    if (window.innerWidth < 768 && !navLinks.classList.contains("hidden")) {
+    if (window.innerWidth < 758 && !navLinks.classList.contains("hidden")) {
       navLinks.classList.add("hidden");
       navLinks.classList.remove("md:flex");
     }
+  });
+});
+
+//Scroll Animation
+navItems.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    stopCarouselScroll();
+
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    targetSection.scrollIntoView({ behavior: "smooth" });
   });
 });
 
@@ -128,7 +142,7 @@ function createCarouselItem(project) {
   link.href = project.url;
 
   const imageContainer = document.createElement("div");
-  imageContainer.className = "relative w-full h-72 mb-3";
+  imageContainer.className = "relative w-full h-72 mb-6";
 
   const hoverImageContainer = createHoverImageContainer(project);
   imageContainer.appendChild(hoverImageContainer);
@@ -161,10 +175,10 @@ function createHoverImageContainer(project) {
 
 function createImage(project) {
   const image = document.createElement("img");
-  image.className = "block w-full h-full";
+  image.className = "carousel-image block w-full h-full";
   image.src = project.picture;
   image.style.width = "300px";
-  image.style.height = "400px";
+  image.style.height = "290px";
 
   return image;
 }
@@ -347,3 +361,71 @@ window.onload = function () {
   document.getElementById("refreshLoader").style.display = "none";
   document.getElementById("content").style.display = "block";
 };
+
+// Translations JSON
+const languageButton = document.getElementById("language-button");
+const languageOptions = document.getElementById("language-options");
+const languageOptionsChildren = Array.from(languageOptions.children);
+
+languageButton.addEventListener("click", function () {
+  languageOptions.classList.toggle("hidden");
+});
+
+languageOptionsChildren.forEach(function (option) {
+  option.addEventListener("click", function () {
+    // Get the selected language and flag
+    const language = option.dataset.value.toUpperCase();
+    const flag = option.querySelector(".flag-icon").className;
+
+    // Update the selected language and flag
+    document.getElementById("selected-language").innerHTML =
+      language + " <span class='" + flag + " mr-2'></span>";
+
+    // Hide the language options and load the translations
+    languageOptions.classList.add("hidden");
+    loadTranslations(language);
+  });
+});
+
+document.addEventListener("click", function (event) {
+  let isClickInside = document
+    .getElementById("language-changer")
+    .contains(event.target);
+
+  if (!isClickInside) {
+    // The click was outside the #language-changer element, hide the dropdown
+    document.getElementById("language-options").classList.add("hidden");
+  }
+});
+
+function loadTranslations(language) {
+  language = language.toLowerCase();
+  document.documentElement.lang = language;
+
+  fetch(`resources/translations/${language}.json`)
+    .then((response) => response.json())
+    .then((data) => {
+      const translations = data;
+      const elements = document.querySelectorAll("[data-translation-key]");
+
+      elements.forEach((element) => {
+        const key = element.getAttribute("data-translation-key");
+        const keys = key.split(/[\[\]]/);
+        let translation;
+        if (keys.length > 1) {
+          translation = translations[keys[0]][parseInt(keys[1])];
+        } else {
+          translation = translations[key];
+        }
+
+        if (element.hasAttribute("placeholder")) {
+          element.setAttribute("placeholder", translation);
+        } else {
+          element.innerHTML = translation;
+        }
+      });
+    });
+}
+
+// Load translations when the page loads
+loadTranslations("en"); // Default language

@@ -72,6 +72,15 @@
   pointer-events: none;
 }
 
+/* Animation */
+.carousel-image {
+  transition: transform 0.3s ease; 
+}
+
+.carousel-image:hover {
+  transform: scale(1.08); 
+}
+
 /* Loader */
 #refreshLoader {
   position: fixed;
@@ -88,4 +97,17 @@
 
 header.loader-active {
   display: none;
+}
+
+/* Styles for small screens (phones) */
+@media (max-width: 767px) {
+  #navbar-default {
+    position: relative;
+  }
+  
+  #language-changer {
+    position: fixed;
+    right: 65px; 
+    top: 8px;
+  }
 }
