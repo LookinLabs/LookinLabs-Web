@@ -8,6 +8,7 @@
   "navbar_who_we_are": "Kes me oleme?",
   "navbar_offer": "Mida me pakume?",
   "navbar_projects": "Projektid",
+  "navbar_partners": "Partnerid",
   "navbar_contact": "Kontakt",
 
   "section_about_title": "Meie Organisatsioon",
@@ -22,6 +23,8 @@
   "offer_description": "LookinLabs on enesearengu organisatsioon, mis on suunatud peamiselt noorematele ja keskastme arendajatele, pakkudes neile võimalust õppida projektipõhise õppe kaudu. Projektide käigus on arendajatel võimalus omandada kõik vajalikud oskused, mis on vajalikud tarkvaraarenduse karjääri arendamiseks.",
 
   "section_our_projects_title": "Meie projektid",
+
+  "section_partners_title": "Meie partnerid",
 
   "section_contact_title": "Võta meiega ühendust",
   "contact_form_username_placeholder": "Kasutajanimi",
