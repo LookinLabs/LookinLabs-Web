@@ -8,6 +8,7 @@
   "navbar_who_we_are": "Who we are?",
   "navbar_offer": "What do we offer?",
   "navbar_projects": "Projects",
+  "navbar_partners": "Partners",
   "navbar_contact": "Contact",
 
   "section_about_title": "About",
@@ -22,6 +23,8 @@
   "offer_description": "LookinLabs is a self-development organization primarily targeting junior to mid-level developers, providing them with the opportunity to learn through a project-based learning approach. During projects, developers have the opportunity to acquire all the necessary skills for a career path in software engineering.",
 
   "section_our_projects_title": "Our Projects",
+
+  "section_partners_title": "Our Partners",
 
   "section_contact_title": "Contact Us",
   "contact_form_username_placeholder": "Username",
