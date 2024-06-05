@@ -3,16 +3,6 @@
   emailjs.init("ySaIap3hTf1eHrMKa");
 })();
 
-// Navbar Toggler
-document.getElementById('navbar-toggler').addEventListener('click', function () {
-  var menu = document.getElementById('mobile-menu');
-  if (menu.classList.contains('hidden')) {
-    menu.classList.remove('hidden');
-  } else {
-    menu.classList.add('hidden');
-  }
-});
-
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
@@ -62,7 +52,7 @@ document
               failBanner.classList.add("hidden");
             }, 5000); // Hide after 5 seconds
           }
-        )
+        ) 
         .finally(function () {
           // Hide loader
           document.getElementById("loader").classList.add("hidden");
@@ -72,4 +62,3 @@ document
       document.getElementById("terms-banner").classList.remove("hidden");
     }
   });
-
