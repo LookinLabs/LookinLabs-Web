@@ -3,22 +3,15 @@
   emailjs.init("ySaIap3hTf1eHrMKa");
 })();
 
-
-// Deleted functionality : NO "CONTACT US" BUTTON ANYMORE; THUS NO NEED IN HIDING THE FORM
-
-// document
-//   .getElementById("contactButton")
-//   .addEventListener("click", function (event) {
-//     event.preventDefault();
-//     let form = document.getElementById("contactForm");
-//     if (form.classList.contains("hidden")) {
-//       form.classList.remove("hidden");
-//       this.disabled = true;
-//     } else {
-//       form.classList.add("hidden");
-//       this.disabled = false;
-//     }
-//   });
+// Navbar Toggler
+document.getElementById('navbar-toggler').addEventListener('click', function () {
+  var menu = document.getElementById('mobile-menu');
+  if (menu.classList.contains('hidden')) {
+    menu.classList.remove('hidden');
+  } else {
+    menu.classList.add('hidden');
+  }
+});
 
 document
   .getElementById("contactForm")
@@ -80,4 +73,3 @@ document
     }
   });
 
-  
