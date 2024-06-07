@@ -33,7 +33,7 @@ document
         .then(
           function () {
             // Hide contact form
-            document.getElementById("contactForm").classList.add("hidden");
+            document.getElementById("contactForm").reset();
 
             // Show success banner
             let successBanner = document.getElementById("success-banner");
