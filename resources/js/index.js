@@ -1,3 +1,5 @@
+//Home Page Script
+
 // DOM Elements
 const leftCarouselButton = document.getElementById("left-carousel-button");
 const rightCarouselButton = document.getElementById("right-carousel-button");

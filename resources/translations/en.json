@@ -10,6 +10,7 @@
   "navbar_projects": "Projects",
   "navbar_contact": "Contact",
   "navbar_join": "Join Us",
+  "navbar_back": "Home",
 
   "section_about_title": "About",
   "about_description": "LookinLabs is an organization dedicated to developing diverse applications, utilizing best programming practices tailored to the needs of each application. Our primary focus is on creating a self-development organization that helps junior developers gain their first knowledge and experience through hands-on projects.",
@@ -28,13 +29,47 @@
   "section_joinus_title": "Join Us",
   "contact_form_username_placeholder": "Username",
   "contact_form_email_placeholder": "Email",
-  "contact_form_title_placeholder": "Title of the Idea",
+  "contact_form_role_placeholder": "Your role (e.g Software Engineer, DevOps Engineer etc)",
   "contact_form_description_placeholder": "Description",
   "contact_form_agree_checkbox_label": "I agree to <a href='resources/terms/en/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Terms & Conditions</a> and <a href='resources/terms/en/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privacy Policy</a>",
-  "contact_form_submit_button_text": "Send",
+  "contact_form_submit_button_text": "Submit",
   "contact_form_loader_modal_title": "Sending email...",
   "contact_form_loader_modal_description": "Please wait... Don't press submit second time, otherwise it will fail.",
 
   "footer_contact_prompt": "Feel free to contact us directly.",
-  "footer_copyright_statement": "&copy; All rights reserved"
+  "footer_copyright_statement": "&copy; All rights reserved",
+
+  "elevate_it_skills_title": "Elevate Your IT Skills with LookinLabs! 🚀",
+  "elevate_it_skills_paragraph_1": "Are you a junior developer eager to dive into the world of IT?",
+  "elevate_it_skills_paragraph_2": "🌐 LookinLabs is your launchpad to a thriving career in software engineering and beyond!",
+  "why_choose_lookinlabs_title": "Why Choose LookinLabs? 🌟",
+  "why_choose_lookinlabs_paragraph": "At LookinLabs, we’re dedicated to helping you develop diverse applications using the best programming practices. Our project-based learning approach is designed to give you hands-on experience, making sure you gain the skills and confidence needed to excel in your career. 📈",
+  "what_we_offer_title": "What We Offer:",
+
+  "what_we_offer_list_1_strong": "Project-Based Learning:",
+  "what_we_offer_list_1": "Work on real projects and learn by doing. 🛠️",
+  "what_we_offer_list_2_strong": "Expert Guidance:",
+  "what_we_offer_list_2": "Learn from a team of highly skilled, certified professionals with a minimum of 3 years of experience. 🧠",
+  "what_we_offer_list_3_strong": "Diverse Tech Stack:",
+  "what_we_offer_list_3": "Master Go, React + JS, Python, PostgreSQL, AWS, and more! 💻",
+  "what_we_offer_list_4_strong": "DevOps & IT Infrastructure:",
+  "what_we_offer_list_4": "Interested in DevOps? We’ve got you covered with our AWS partnership. ☁️",
+  "what_we_offer_list_5_strong": "Flexible Participation:",
+  "what_we_offer_list_5": "Join our community without needing to code for us. Be part of a supportive network that helps you in your life and career. 🤝",
+  "what_we_offer_list_6_strong": "Lifetime Access to Your Code:",
+  "what_we_offer_list_6": "Keep your code even after leaving the project or organization. 📂",
+  "what_we_offer_list_7_strong": "Supportive Community:",
+  "what_we_offer_list_7": "Join a network of like-minded developers and grow together. 🌐",
+  "what_we_offer_list_8_strong": "Microtasks for Flexibility:",
+  "what_we_offer_list_8": "Tasks are split into manageable microtasks, each with a 1-week deadline, allowing you to balance learning with other commitments. ⏰",
+
+  "requirements_title": "Requirements",
+
+  "requirements_list_1": "Basic knowledge of Git 🧰",
+  "requirements_list_2": "A laptop (Mac/Linux preferred) 💻",
+  
+  "ready_to_transform_title": "Ready to Transform Your Career?",
+  "ready_to_transform_paragraph": "Don’t miss this opportunity to learn, grow, and succeed with LookinLabs. Join us and be part of a community that values your development and success. 🌟",
+  "learn_build_succeed_title": "Learn. Build. Succeed. 🔧",
+  "learn_build_succeed_paragraph": "Your future in IT starts here."
 }

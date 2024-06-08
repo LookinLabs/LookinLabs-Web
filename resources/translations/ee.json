@@ -10,6 +10,7 @@
   "navbar_projects": "Projektid",
   "navbar_contact": "Kontakt",
   "navbar_join": "Liitu meiega",
+  "navbar_back": "Kodu",
 
   "section_about_title": "Meie Organisatsioon",
   "about_description": "LookinLabs on mittetulundusühing (MTÜ), mis on pühendunud veebirakenduste arendamisele, kasutades parimaid programmeerimispraktikaid. Meie peamine fookus on luua enesearendamisele keskendunud organisatsioon, mis aitab noortel arendajatel saavutada esimese kogemuse praktiliste projektide kaudu.",
@@ -28,7 +29,7 @@
   "section_joinus_title": "Liituge meiega",
   "contact_form_username_placeholder": "Kasutajanimi",
   "contact_form_email_placeholder": "E-post",
-  "contact_form_title_placeholder": "Idee pealkiri",
+  "contact_form_role_placeholder": "Teie roll (nt tarkvaraarendaja, DevOps-i insener jne)",
   "contact_form_description_placeholder": "Kirjeldus",
   "contact_form_agree_checkbox_label": "Nõustun <a href='resources/terms/ee/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Kasutustingimustega</a> ja <a href='resources/terms/ee/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privaatsuspoliitikaga</a>",
   "contact_form_submit_button_text": "Saada",
@@ -36,5 +37,39 @@
   "contact_form_loader_modal_description": "Palun oodake... Ärge vajutage saatmisnuppu teist korda, vastasel juhul see ebaõnnestub.",
 
   "footer_contact_prompt": "Võtke julgelt meiega otse ühendust.",
-  "footer_copyright_statement": "&copy; Kõik õigused reserveeritud"
+  "footer_copyright_statement": "&copy; Kõik õigused reserveeritud",
+
+  "elevate_it_skills_title": "Tõsta oma IT-oskused LookinLabsiga! 🚀",
+  "elevate_it_skills_paragraph_1": "Kas olete algajast arendaja, kes on valmis sukelduma IT-maailma?",
+  "elevate_it_skills_paragraph_2": "🌐 LookinLabs on teie stardipunkt edukaks karjääriks tarkvaraarenduses ja mujal!",
+  "why_choose_lookinlabs_title": "Miks valida LookinLabs? 🌟",
+  "why_choose_lookinlabs_paragraph": "LookinLabsis pühendume teie abistamisele erinevate rakenduste arendamisel parimate programmeerimistavade abil. Meie projektipõhine õppemeetod on loodud selleks, et anda teile praktilist kogemust, tagades, et omandate vajalikud oskused ja enesekindluse, et oma karjääris edukalt hakkama saada. 📈",
+  "what_we_offer_title": "Mida me pakume:",
+
+  "what_we_offer_list_1_strong": "Projektipõhine õpe:",
+  "what_we_offer_list_1": "Töötage reaalsete projektide kallal ja õppige tegutsedes. 🛠️",
+  "what_we_offer_list_2_strong": "Ekspertide juhendamine:",
+  "what_we_offer_list_2": "Õppige kõrgelt kvalifitseeritud ja sertifitseeritud spetsialistide meeskonnalt, kellel on vähemalt 3-aastane kogemus. 🧠",
+  "what_we_offer_list_3_strong": "Mitmekesine tehnoloogiakomplekt:",
+  "what_we_offer_list_3": "Valdage Go, React + JS, Python, PostgreSQL, AWS ja palju muud! 💻",
+  "what_we_offer_list_4_strong": "DevOps ja IT-infrastruktuur:",
+  "what_we_offer_list_4": "Huvitatud DevOpsist? Oleme teie eest hoolitsenud meie AWS-i partnerluse kaudu. ☁️",
+  "what_we_offer_list_5_strong": "Paindlik osalemine:",
+  "what_we_offer_list_5": "Liituge meiega ilma vajaduseta meie jaoks koodi kirjutada. Olge toetavas võrgustikus osa, mis aitab teil elus ja karjääris edeneda. 🤝",
+  "what_we_offer_list_6_strong": "Eluaegne juurdepääs teie koodile:",
+  "what_we_offer_list_6": "Hoidke oma koodi isegi pärast projekti või organisatsioonist lahkumist. 📂",
+  "what_we_offer_list_7_strong": "Toetav kogukond:",
+  "what_we_offer_list_7": "Liituge sarnaste huvidega arendajate võrgustikuga ja kasvage koos. 🌐",
+  "what_we_offer_list_8_strong": "Mikrotegevused paindlikkuse tagamiseks:",
+  "what_we_offer_list_8": "Ülesanded on jaotatud hallatavateks mikrotegevusteks, igaüks 1-nädalase tähtajaga, võimaldades teil tasakaalustada õppimist muude kohustustega. ⏰",
+  
+  "requirements_title": "Nõuded",
+  
+  "requirements_list_1": "Põhiteadmised Gitist 🧰",
+  "requirements_list_2": "Sülearvuti (eelistatavalt Mac/Linux) 💻",
+  
+  "ready_to_transform_title": "Kas olete valmis oma karjääri muutma?",
+  "ready_to_transform_paragraph": "Ärge jätke kasutamata seda võimalust õppida, kasvada ja edu saavutada koos LookinLabsiga. Liituge meiega ja olge osa kogukonnast, mis hindab teie arengut ja edu. 🌟",
+  "learn_build_succeed_title": "Õpi. Ehita. Eduka. 🔧",
+  "learn_build_succeed_paragraph": "Teie tulevik IT-s algab siin."
 }
