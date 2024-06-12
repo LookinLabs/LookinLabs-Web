@@ -188,22 +188,30 @@
         <textarea id="description" name="description" placeholder="Description" required rows="5"
           class="w-full p-3 border border-gray-600 rounded text-white dark:text-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           data-translation-key="contact_form_description_placeholder"></textarea>
-        <label class="inline-flex items-center mt-3">
-          <input id="termsCheckbox" type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 dark:text-white">
-          <span class="ml-2 text-white dark:text-white" data-translation-key="contact_form_agree_checkbox_label">
-            I agree to
-            <a href="/resources/terms/en/terms_and_conditions.pdf" target="_blank" class="text-blue-500 hover:underline">Terms
-              &
-              Conditions</a>
-            and
-            <a href="/resources/terms/en/privacy_policy.pdf" target="_blank" class="text-blue-500 hover:underline">Privacy
-              Policy</a>
-          </span>
-        </label>
-        <div class="g-recaptcha" data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"></div>
-        <button type="submit"
-          class="p-3 bg-green-500 hover:bg-green-600 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-400"
-          data-translation-key="contact_form_submit_button_text">Submit</button>
+        <div class="flex justify-center">
+          <label class="inline-flex items-center mt-3">
+            <input id="termsCheckbox" type="checkbox" class="form-checkbox h-5 w-5 text-blue-500 dark:text-white">
+            <span class="ml-2 text-white dark:text-white" data-translation-key="contact_form_agree_checkbox_label">
+              I agree to
+              <a href="/resources/terms/en/terms_and_conditions.pdf" target="_blank" class="text-blue-500 hover:underline">Terms
+                &
+                Conditions</a>
+              and
+              <a href="/resources/terms/en/privacy_policy.pdf" target="_blank" class="text-blue-500 hover:underline">Privacy
+                Policy</a>
+            </span>
+          </label>
+        </div>
+        <div class="flex justify-center">
+          <div class="g-recaptcha" data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"></div>
+        </div>
+        <div class="flex justify-center">
+          <button type="submit"
+            class="p-3 bg-green-500 hover:bg-green-600 text-white rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+            data-translation-key="contact_form_submit_button_text">
+            Submit
+          </button>
+        </div>
         <div id="loader" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="modal-title" role="dialog"
           aria-modal="true">
           <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
