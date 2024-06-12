@@ -1,3 +1,5 @@
+//Home Page Script
+
 // DOM Elements
 const leftCarouselButton = document.getElementById("left-carousel-button");
 const rightCarouselButton = document.getElementById("right-carousel-button");
@@ -25,13 +27,21 @@ document.querySelector("#navbar-toggler").addEventListener("click", () => {
 const navItems = document.querySelectorAll("#navbar-default ul li a");
 
 // Add event listener to each navigation link
-navItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const navLinks = document.querySelector("#navbar-default");
-    // Check if the screen width is less than 768px (Tailwind's md breakpoint)
-    if (window.innerWidth < 758 && !navLinks.classList.contains("hidden")) {
-      navLinks.classList.add("hidden");
-      navLinks.classList.remove("md:flex");
+//Scroll Animation
+navItems.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    stopCarouselScroll();
+
+    const targetId = link.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If there's no element with the target ID, navigate to the URL in the href attribute
+      window.location.href = link.getAttribute("href");
     }
   });
 });
@@ -259,85 +269,6 @@ function populateMembers(members) {
     membersDiv.appendChild(memberDiv);
   });
 }
-
-document
-  .getElementById("contactButton")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    let form = document.getElementById("contactForm");
-    if (form.classList.contains("hidden")) {
-      form.classList.remove("hidden");
-      this.disabled = true;
-    } else {
-      form.classList.add("hidden");
-      this.disabled = false;
-    }
-  });
-
-// EmailJS
-(function () {
-  emailjs.init("ySaIap3hTf1eHrMKa");
-})();
-
-document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    // Check if both checkboxes are checked
-    if (document.getElementById("termsCheckbox").checked) {
-      // Show loader
-      document.getElementById("loader").classList.remove("hidden");
-
-      let formData = new FormData(this);
-      let username = formData.get("username");
-      let email = formData.get("email");
-      let title = formData.get("title");
-      let description = formData.get("description");
-      let captcha_response = grecaptcha.getResponse();
-
-      let templateParams = {
-        username: username,
-        email: email,
-        title: title,
-        description: description,
-        "g-recaptcha-response": captcha_response,
-      };
-
-      emailjs
-        .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
-        .then(
-          function () {
-            // Hide contact form
-            document.getElementById("contactForm").classList.add("hidden");
-
-            // Show success banner
-            let successBanner = document.getElementById("success-banner");
-            successBanner.classList.remove("hidden");
-            successBanner.classList.add("flex");
-            setTimeout(function () {
-              successBanner.classList.add("hidden");
-            }, 5000); // Hide after 5 seconds
-          },
-          function (error) {
-            // Show fail banner
-            let failBanner = document.getElementById("fail-banner");
-            failBanner.classList.remove("hidden");
-            failBanner.classList.add("flex");
-            setTimeout(function () {
-              failBanner.classList.add("hidden");
-            }, 5000); // Hide after 5 seconds
-          }
-        )
-        .finally(function () {
-          // Hide loader
-          document.getElementById("loader").classList.add("hidden");
-        });
-    } else {
-      // One or both checkboxes are not checked, show an error message
-      document.getElementById("terms-banner").classList.remove("hidden");
-    }
-  });
 
 // Loader
 // Get the header

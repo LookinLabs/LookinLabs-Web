@@ -1,24 +1,20 @@
 .lookinlabs-body-bg {
   height: 100%;
   margin: 0;
-  background: linear-gradient(
-    156deg,
-    #02181d 13.54%,
-    #000312 36.46%,
-    rgba(23, 1, 37, 1) 68.23%
-  );
+  background: linear-gradient(156deg,
+      #02181d 13.54%,
+      #000312 36.46%,
+      rgba(23, 1, 37, 1) 68.23%);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 .button-gradient {
-  background: linear-gradient(
-    156deg,
-    #02181d 13.54%,
-    #000312 36.46%,
-    rgba(23, 1, 37, 1) 68.23%
-  );
+  background: linear-gradient(156deg,
+      #02181d 13.54%,
+      #000312 36.46%,
+      rgba(23, 1, 37, 1) 68.23%);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -27,12 +23,10 @@
 }
 
 .button-gradient:hover {
-  background: linear-gradient(
-    156deg,
-    #02181d 33.54%,
-    #000312 56.46%,
-    rgba(23, 1, 37, 1) 88.23%
-  );
+  background: linear-gradient(156deg,
+      #02181d 33.54%,
+      #000312 56.46%,
+      rgba(23, 1, 37, 1) 88.23%);
 }
 
 #carousel::-webkit-scrollbar {
@@ -40,8 +34,10 @@
 }
 
 #carousel {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   position: relative;
   padding: 0 50px;
 }
@@ -74,11 +70,11 @@
 
 /* Animation */
 .carousel-image {
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .carousel-image:hover {
-  transform: scale(1.08); 
+  transform: scale(1.08);
 }
 
 /* Loader */
@@ -104,10 +100,40 @@ header.loader-active {
   #navbar-default {
     position: relative;
   }
-  
   #language-changer {
     position: fixed;
-    right: 65px; 
+    right: 65px;
     top: 8px;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styles for small screens (g-recaptcha) */
+.g-recaptcha {
+  transform: scale(1);
+  transform-origin: 0 0;
+}
+
+@media (max-width: 768px) {
+  .g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .g-recaptcha {
+    transform: scale(0.75);
+    transform-origin: 0 0;
   }
 }
