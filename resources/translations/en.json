@@ -9,7 +9,6 @@
   "navbar_offer": "What do we offer?",
   "navbar_projects": "Projects",
   "navbar_partners": "Partners",
-  "navbar_contact": "Contact",
   "navbar_join": "Join Us",
   "navbar_back": "Home",
 
@@ -28,7 +27,6 @@
 
   "section_partners_title": "Our Partners",
 
-  "section_contact_title": "Contact Us",
   "section_joinus_title": "Join Us",
   "contact_form_username_placeholder": "Username",
   "contact_form_email_placeholder": "Email",
@@ -70,7 +68,7 @@
 
   "requirements_list_1": "Basic knowledge of Git 🧰",
   "requirements_list_2": "A laptop (Mac/Linux preferred) 💻",
-  
+
   "ready_to_transform_title": "Ready to Transform Your Career?",
   "ready_to_transform_paragraph": "Don’t miss this opportunity to learn, grow, and succeed with LookinLabs. Join us and be part of a community that values your development and success. 🌟",
   "learn_build_succeed_title": "Learn. Build. Succeed. 🔧",

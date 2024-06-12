@@ -9,7 +9,6 @@
   "navbar_offer": "Mida me pakume?",
   "navbar_projects": "Projektid",
   "navbar_partners": "Partnerid",
-  "navbar_contact": "Kontakt",
   "navbar_join": "Liitu meiega",
   "navbar_back": "Kodu",
 
@@ -28,7 +27,6 @@
 
   "section_partners_title": "Meie partnerid",
 
-  "section_contact_title": "Võta meiega ühendust",
   "section_joinus_title": "Liituge meiega",
   "contact_form_username_placeholder": "Kasutajanimi",
   "contact_form_email_placeholder": "E-post",
@@ -65,12 +63,12 @@
   "what_we_offer_list_7": "Liituge sarnaste huvidega arendajate võrgustikuga ja kasvage koos. 🌐",
   "what_we_offer_list_8_strong": "Mikrotegevused paindlikkuse tagamiseks:",
   "what_we_offer_list_8": "Ülesanded on jaotatud hallatavateks mikrotegevusteks, igaüks 1-nädalase tähtajaga, võimaldades teil tasakaalustada õppimist muude kohustustega. ⏰",
-  
+
   "requirements_title": "Nõuded",
-  
+
   "requirements_list_1": "Põhiteadmised Gitist 🧰",
   "requirements_list_2": "Sülearvuti (eelistatavalt Mac/Linux) 💻",
-  
+
   "ready_to_transform_title": "Kas olete valmis oma karjääri muutma?",
   "ready_to_transform_paragraph": "Ärge jätke kasutamata seda võimalust õppida, kasvada ja edu saavutada koos LookinLabsiga. Liituge meiega ja olge osa kogukonnast, mis hindab teie arengut ja edu. 🌟",
   "learn_build_succeed_title": "Õpi. Ehita. Eduka. 🔧",
