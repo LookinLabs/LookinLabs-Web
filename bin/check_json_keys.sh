@@ -40,9 +40,18 @@ echo "" > validation_report.log
 for key in $JSON_KEYS_ALL
 do
   echo "Validating whether the key $key is used..." >> validation_report.log
-  if ! grep -q $key index.html resources/*/*.html
+  if ! grep -qw $key index.html resources/*/*.html
   then
-    echo "Key $key not found in index.html or join-us.html" >> validation_report.log
+    # Check which JSON file(s) the key is in
+    key_in_files=""
+    for file in resources/translations/ee.json resources/translations/ru.json resources/translations/en.json
+    do
+      if grep -qw $key $file; then
+        key_in_files+=" $file"
+      fi
+    done
+
+    echo "Key $key not found in index.html or join-us.html. Remove it from$key_in_files" >> validation_report.log
   fi
   sleep 0.23
 done
