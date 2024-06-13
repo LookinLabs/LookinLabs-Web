@@ -37,6 +37,14 @@ An static website of LookinLabs organization built on TailwindCSS, JS & HTML
 3. Right-click on the `index.html` file and select "Open with Five Server".
 4. Access the application at `http://localhost:5500`.
 
+### Validating the translation keys
+
+1. Validate the translation keys before pushing to remote:
+
+```bash
+make
+```
+
 # Contribute
 
 Please read [CONTRIBUTE.md](CONTRIBUTE.md) for details on our code of conduct, and the process for submitting pull requests to us.
