@@ -2,41 +2,52 @@
 
 # Function to stop the spinner
 stop_spinner() {
-  kill $SPINNER_PID
+  if [ -z "$GITHUB_ACTIONS" ]; then
+    kill $SPINNER_PID
+  fi
   exit 1
 }
 
 # Handle SIGINT
 trap stop_spinner SIGINT
 
-JSON_KEYS_EE=$(cat resources/translations/ee.json | cut -d '"' -f2 | sed -n 's/{//g; s/}//g; /./p')
-JSON_KEYS_EN=$(cat resources/translations/en.json | cut -d '"' -f2 | sed -n 's/{//g; s/}//g; /./p')
-JSON_KEYS_RU=$(cat resources/translations/ru.json | cut -d '"' -f2 | sed -n 's/{//g; s/}//g; /./p')
+# Extract JSON keys from each file
+extract_json_keys() {
+  cat $1 | cut -d '"' -f2 | sed -n 's/{//g; s/}//g; /./p'
+}
 
+JSON_KEYS_EE=$(extract_json_keys resources/translations/ee.json)
+JSON_KEYS_EN=$(extract_json_keys resources/translations/en.json)
+JSON_KEYS_RU=$(extract_json_keys resources/translations/ru.json)
+
+# Combine and sort all keys
 JSON_KEYS_ALL=$(echo "$JSON_KEYS_EE $JSON_KEYS_EN $JSON_KEYS_RU" | tr ' ' '\n' | sort | uniq)
 
 # Print the static message
 echo -n "Validating keys..."
 
 # Start the spinner in the background
-(
-  spinner="/|\\-/|\\-"
-  while :
-  do
-    for i in `seq 0 7`
+if [ -z "$GITHUB_ACTIONS" ]; then
+  (
+    spinner="/|\\-/|\\-"
+    while true
     do
-      echo -ne "\r\033[K"  # Move to the beginning of the line and clear it
-      echo -n "Validating keys..."
-      echo -n "${spinner:$i:1}"
-      sleep 0.1
+      for i in `seq 0 7`
+      do
+        echo -ne "\r\033[K"  # Move to the beginning of the line and clear it
+        echo -n "Validating keys..."
+        echo -n "${spinner:$i:1}"
+        sleep 0.1
+      done
     done
-  done
-) & # Send the spinner to the background
-SPINNER_PID=$!
+  ) & # Send the spinner to the background
+  SPINNER_PID=$!
+fi
+
+# Initialize validation report
+echo "" > validation_report.log
 
 # Validate JSON Keys
-echo "" > validation_report.log
-# Run your loop
 for key in $JSON_KEYS_ALL
 do
   echo "Validating whether the key $key is used..." >> validation_report.log
@@ -56,6 +67,7 @@ do
   sleep 0.23
 done
 
+# Check if any key was not found
 KEY_NOT_FOUND=0
 while read -r line
 do
@@ -63,6 +75,7 @@ do
     KEY_NOT_FOUND=1
 done < <(grep 'not found' validation_report.log)
 
+# If any key was not found, stop the spinner and exit
 if [ $KEY_NOT_FOUND -eq 1 ]; then
     echo -ne "\nValidation failed."
     stop_spinner
@@ -72,4 +85,6 @@ fi
 echo -ne "\nValidation complete."
 
 # Stop the spinner
-kill $SPINNER_PID
+if [ -z "$GITHUB_ACTIONS" ]; then
+  kill $SPINNER_PID
+fi
