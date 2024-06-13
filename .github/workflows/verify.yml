@@ -1,0 +1,25 @@
+name: Check JSON Keys
+
+on:
+  push:
+    branches:
+        - feature/*
+        - hotfix/*
+        - release/*
+        - bugfix/*
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run check_json_keys.sh
+      run: |
+        chmod +x ./bin/check_json_keys.sh
+        ./bin/check_json_keys.sh
