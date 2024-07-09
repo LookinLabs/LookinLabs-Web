@@ -7,10 +7,8 @@ on:
         - hotfix/*
         - release/*
         - bugfix/*
-  pull_request:
-    branches:
-      - main
-
+        - main
+  
 jobs:
   verify_json_keys:
     runs-on: ubuntu-latest
