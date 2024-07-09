@@ -43,10 +43,11 @@
   "elevate_it_skills_title": "Elevate Your IT Skills with LookinLabs! 🚀",
   "elevate_it_skills_paragraph_1": "Are you a junior developer eager to dive into the world of IT?",
   "elevate_it_skills_paragraph_2": "🌐 LookinLabs is your launchpad to a thriving career in software engineering and beyond!",
+  
   "why_choose_lookinlabs_title": "Why Choose LookinLabs? 🌟",
   "why_choose_lookinlabs_paragraph": "At LookinLabs, we’re dedicated to helping you develop diverse applications using the best programming practices. Our project-based learning approach is designed to give you hands-on experience, making sure you gain the skills and confidence needed to excel in your career. 📈",
-  "what_we_offer_title": "What We Offer:",
 
+  "what_we_offer_title": "What We Offer:",
   "what_we_offer_list_1_strong": "Project-Based Learning:",
   "what_we_offer_list_1": "Work on real projects and learn by doing. 🛠️",
   "what_we_offer_list_2_strong": "Expert Guidance:",
@@ -65,7 +66,6 @@
   "what_we_offer_list_8": "Tasks are split into manageable microtasks, each with a 1-week deadline, allowing you to balance learning with other commitments. ⏰",
 
   "requirements_title": "Requirements",
-
   "requirements_list_1": "Basic knowledge of Git 🧰",
   "requirements_list_2": "A laptop (Mac/Linux preferred) 💻",
 

@@ -1,0 +1,29 @@
+name: Check JSON Keys
+
+on:
+  push:
+    branches:
+        - feature/*
+        - hotfix/*
+        - release/*
+        - bugfix/*
+        - main
+  
+jobs:
+  verify_json_keys:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Run check_json_keys.sh
+      run: |
+        chmod +x ./bin/check_json_keys.sh
+        ./bin/check_json_keys.sh
+
+    - name: Create artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: validation-report
+        path: validation_report.log
