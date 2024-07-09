@@ -16,6 +16,23 @@ extract_json_keys() {
   cat $1 | cut -d '"' -f2 | sed -n 's/{//g; s/}//g; /./p'
 }
 
+compare_keys() {
+  local lang1_keys="$1"
+  local lang2="$2"
+  local lang2_keys="$3"
+  echo -e "\nComparing keys in en.json with $lang2.json..."
+  local missing_keys=$(comm -23 <(echo "$lang1_keys") <(echo "$lang2_keys"))
+
+  if [ ! -z "$missing_keys" ]; then
+    echo ""
+    echo "Keys in en.json but not in $lang2.json:"
+    echo "$missing_keys"
+    echo ""
+  else
+    echo "All keys in en.json are present in $lang2.json."
+  fi
+}
+
 JSON_KEYS_EE=$(extract_json_keys resources/translations/ee.json)
 JSON_KEYS_EN=$(extract_json_keys resources/translations/en.json)
 JSON_KEYS_RU=$(extract_json_keys resources/translations/ru.json)
@@ -63,6 +80,7 @@ do
     done
 
     echo "Key $key not found in index.html or join-us.html. Remove it from$key_in_files" >> validation_report.log
+    echo "" >> validation_report.log
   fi
   sleep 0.23
 done
@@ -77,8 +95,10 @@ done < <(grep 'not found' validation_report.log)
 
 # If any key was not found, stop the spinner and exit
 if [ $KEY_NOT_FOUND -eq 1 ]; then
-    echo -ne "\nValidation failed."
+    compare_keys "$JSON_KEYS_EN" "ru" "$JSON_KEYS_RU"
+    compare_keys "$JSON_KEYS_EN" "ee" "$JSON_KEYS_EE"
     stop_spinner
+    echo -ne "\nValidation failed."
     exit 1
 fi
 
