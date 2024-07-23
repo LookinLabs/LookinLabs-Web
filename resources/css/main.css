@@ -1,3 +1,46 @@
+/* Pedro */
+.spinner-bg {
+  background: #161616;
+  margin: 0;
+  display: grid;
+  place-content: center center;
+}
+
+.spinner {
+  background: #f5dad8;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  animation: rotate 6s linear infinite;
+
+  img {
+    display: block;
+    width: 100%;
+    animation: bounce 0.2s linear infinite alternate;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-5%);
+  }
+
+  to {
+    transform: translateY(10%);
+  }
+}
+
+/* LookinLabs */
 .lookinlabs-body-bg {
   height: 100%;
   margin: 0;
