@@ -1,13 +1,5 @@
 /* Pedro */
-.spinner-bg {
-  background: #161616;
-  margin: 0;
-  display: grid;
-  place-content: center center;
-}
-
 .spinner {
-  background: #f5dad8;
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
@@ -32,7 +24,7 @@
 
 @keyframes bounce {
   from {
-    transform: translateY(-5%);
+    transform: translateY(-10%);
   }
 
   to {
