@@ -285,7 +285,7 @@ window.addEventListener("load", function () {
 
     // Show the header
     header.classList.remove("loader-active");
-  }, 750);
+  }, 2000);
 });
 
 window.onload = function () {
