@@ -1,4 +1,8 @@
 /* Pedro */
+#refreshLoader.hide-loader {
+  display: none;
+}
+
 .spinner {
   border-radius: 50%;
   overflow: hidden;

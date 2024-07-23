@@ -271,27 +271,11 @@ function populateMembers(members) {
 }
 
 // Loader
-// Get the header
-var header = document.querySelector("header");
-
-// Add the class to hide the header
-header.classList.add("loader-active");
-
-// Loader
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    // Hide the loader
-    document.getElementById("refreshLoader").classList.add("hide-loader");
-
-    // Show the header
-    header.classList.remove("loader-active");
-  }, 2000);
+window.addEventListener('load', function() {
+  setTimeout(function() {
+      document.getElementById('refreshLoader').classList.add('hide-loader');
+  }, 750);
 });
-
-window.onload = function () {
-  document.getElementById("refreshLoader").style.display = "none";
-  document.getElementById("content").style.display = "block";
-};
 
 // Translations JSON
 const languageButton = document.getElementById("language-button");
