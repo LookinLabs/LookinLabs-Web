@@ -10,6 +10,7 @@
   "navbar_projects": "Projects",
   "navbar_partners": "Partners",
   "navbar_join": "Join Us",
+  "navbar_support": "Support Us",
   "navbar_back": "Home",
 
   "section_about_title": "About",
@@ -27,7 +28,6 @@
 
   "section_partners_title": "Our Partners",
 
-  "section_joinus_title": "Join Us",
   "contact_form_username_placeholder": "Username",
   "contact_form_email_placeholder": "Email",
   "contact_form_role_placeholder": "Your role (e.g Software Engineer, DevOps Engineer etc)",
