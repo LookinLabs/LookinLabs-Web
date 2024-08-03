@@ -10,6 +10,7 @@
   "navbar_projects": "Projektid",
   "navbar_partners": "Partnerid",
   "navbar_join": "Liitu meiega",
+  "navbar_support": "Meie toetus",
   "navbar_back": "Kodu",
 
   "section_about_title": "Meie Organisatsioon",
@@ -27,7 +28,6 @@
 
   "section_partners_title": "Meie partnerid",
 
-  "section_joinus_title": "Liituge meiega",
   "contact_form_username_placeholder": "Kasutajanimi",
   "contact_form_email_placeholder": "E-post",
   "contact_form_role_placeholder": "Teie roll (nt tarkvaraarendaja, DevOps-i insener jne)",

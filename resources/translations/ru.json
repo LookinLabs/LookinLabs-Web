@@ -10,6 +10,7 @@
   "navbar_projects": "Проекты",
   "navbar_partners": "Партнеры",
   "navbar_join": "Присоединиться к нам",
+  "navbar_support": "Поддержать нас",
   "navbar_back": "Домой",
 
   "section_about_title": "О нас",
@@ -27,7 +28,6 @@
 
   "section_partners_title": "Наши партнеры",
 
-  "section_joinus_title": "Присоединитесь к нам",
   "contact_form_username_placeholder": "Имя пользователя",
   "contact_form_email_placeholder": "Электронная почта",
   "contact_form_role_placeholder": "Ваша роль (например, инженер по программному обеспечению, инженер DevOps и т. д.)",
