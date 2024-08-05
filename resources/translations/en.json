@@ -14,7 +14,9 @@
   "navbar_back": "Home",
 
   "section_about_title": "About",
-  "about_description": "LookinLabs is an organization dedicated to developing diverse applications, utilizing best programming practices tailored to the needs of each application. Our primary focus is on creating a self-development organization that helps junior developers gain their first knowledge and experience through hands-on projects.",
+
+  "about_description": "LookinLabs is an IT community, dedicated to providing junior developers with their primary hands-on work experience by participating in the real-world projects right after their educational studies. By utilizing best programming practices, we help potential future developers to gain knowledge and experience to get their first job.",
+  // Additionally, our partner companies benefit by hiring these engineers and significantly reducing the 3-4 months typically needed for junior engineers to become net positive contributors to their teams.
 
   "img_alt_startup": "Startup",
 
