@@ -69,6 +69,14 @@
   "requirements_list_1": "Basic knowledge of Git 🧰",
   "requirements_list_2": "A laptop (Mac/Linux preferred) 💻",
 
+  "prices_title": "Prices",
+  "prices_description": "Students at LookinLabs can choose between time-based payments or an Income Sharing Agreement (ISA).",
+  "prices_description_2": "For time-based payments, students pay:",
+  "prices_monthly": "100€ Monthly",
+  "prices_quarterly": "265€ Weekly",
+  "prices_yearly": "1050€ Yearly",
+  "isa_description": "The ISA requires students to start paying once they earn at least 1.25 times the Estonian average income, with a minimum payment of €150 per month until a total of €1500 per year is paid.",
+
   "ready_to_transform_title": "Ready to Transform Your Career?",
   "ready_to_transform_paragraph": "Don’t miss this opportunity to learn, grow, and succeed with LookinLabs. Join us and be part of a community that values your development and success. 🌟",
   "learn_build_succeed_title": "Learn. Build. Succeed. 🔧",
