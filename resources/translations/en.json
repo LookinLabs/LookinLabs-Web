@@ -16,7 +16,6 @@
   "section_about_title": "About",
 
   "about_description": "LookinLabs is an IT community, dedicated to providing junior developers with their primary hands-on work experience by participating in the real-world projects right after their educational studies. By utilizing best programming practices, we help potential future developers to gain knowledge and experience to get their first job.",
-  // Additionally, our partner companies benefit by hiring these engineers and significantly reducing the 3-4 months typically needed for junior engineers to become net positive contributors to their teams.
 
   "img_alt_startup": "Startup",
 
@@ -24,7 +23,7 @@
   "who_we_are_description": "Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our teammates and work tirelessly to meet their needs and exceed their expectations.",
 
   "section_offer_title": "What Do We Offer?",
-  "offer_description": "LookinLabs is a self-development organization primarily targeting junior to mid-level developers, providing them with the opportunity to learn through a project-based learning approach. During projects, developers have the opportunity to acquire all the necessary skills for a career path in software engineering.",
+  "offer_description": "LookinLabs is a self-development organization primarily targeting junior to mid-level developers, providing them with the opportunity to learn through a project-based learning approach. During projects, developers have the opportunity to acquire all the necessary skills for a career path in software engineering. We also practice apprenticeship, giving more experienced developers the opportunity to mentor and share their knowledge.",
 
   "section_our_projects_title": "Our Projects",
 
