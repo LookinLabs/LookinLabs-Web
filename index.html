@@ -41,13 +41,13 @@
 
 <body class="lookinlabs-body-bg">
   <!-- Modals -->
-  <div id="joinUsModal" class="fixed inset-0 bg-black bg-opacity-50 items-center justify-center hidden">
-    <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3">
-      <div class="flex justify-end p-2">
-        <button id="closeJoinUsModal" class="text-gray-500 hover:text-gray-700">&times;</button>
+  <div id="joinUsModal" class="fixed inset-0 bg-black bg-opacity-50 join-us-modal items-center justify-center joinusmodal hidden z-50">
+    <div id="modalContent" class="bg-gray-800 shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-full overflow-hidden resize rounded-lg" style="min-width: 300px; min-height: 200px;">
+      <div class="flex justify-end p-2 border-b border-gray-300">
+        <button id="closeJoinUsModal" class="text-white hover:text-gray-300">&times;</button>
       </div>
-      <div class="p-4">
-        <iframe src="./resources/pages/join-us.html" class="w-full h-96"></iframe>
+      <div class="p-4 h-full flex flex-col">
+        <iframe src="./resources/pages/join-us.html" class="w-full flex-grow"></iframe>
       </div>
     </div>
   </div>
@@ -105,11 +105,6 @@
                   <a href="#partners"
                     class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-white md:dark:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                     data-translation-key="navbar_partners">Partners</a>
-                </li>
-                <li>
-                  <a href="./resources/pages/join-us/"
-                    class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-white md:dark:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
-                    data-translation-key="navbar_join">Join Us</a>
                 </li>
                 <li>
                   <a href="https://buymeacoffee.com/lookinlabs"
@@ -229,11 +224,10 @@
           </div>
       </section>
       <section id="join-us" class="flex flex-col items-center justify-center pt-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Join Us</h2>
-        <button id="openJoinUsModal" class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-700">
+        <button id="openJoinUsModal" class="text-2xl bg-gray-800 text-white px-6 py-6 rounded hover:bg-gray-700">
           Join Us
         </button>
-      </section>
+      </section>    
     </main>
     <div class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-4">
       <footer class="w-full mt-20 p-2 bg-gray-900 border-gray-200 text-center text-white">

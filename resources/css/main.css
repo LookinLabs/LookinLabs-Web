@@ -141,7 +141,7 @@ header.loader-active {
   }
   #language-changer {
     position: fixed;
-    right: 65px;
+    right: 1px;
     top: 8px;
   }
 }
@@ -155,6 +155,27 @@ header.loader-active {
   to {
     opacity: 1;
   }
+}
+
+/* Styles for the reCAPTCHA container */
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Styles for the reCAPTCHA error message */
+.g-recaptcha-error {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1000 !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  color: white !important;
+  padding: 20px !important;
+  border-radius: 10px !important;
+  text-align: center !important;
 }
 
 /* Styles for small screens (g-recaptcha) */
@@ -175,4 +196,17 @@ header.loader-active {
     transform: scale(0.75);
     transform-origin: 0 0;
   }
+}
+
+header {
+  z-index: 10; /* Ensure the header has a lower z-index */
+  position: relative; /* Ensure the header is positioned correctly */
+}
+
+.join-us-modal {
+  display: flex;
+}
+
+#join-us-modal .resize {
+  border-radius: 0.5rem; /* Same as rounded-lg */
 }

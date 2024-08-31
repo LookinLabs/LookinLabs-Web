@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
   <!-- Google Captcha -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="../js/join-us.js"></script>
 </head>
 
 <body class="lookinlabs-body-bg text-white">
@@ -58,12 +58,6 @@
             <img src="../img/logo.png" class="ml-8 lg:ml-0 h-20" alt="LookinLabs" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap text-white"></span>
           </a>
-          <button>
-            <a href="../../index.html"
-              class="font-bold block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-blue-500 md:p-0 text-white md:dark:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
-              data-translation-key="navbar_back">Home
-            </a>
-          </button>
           <div id="language-changer" class="p-5">
             <div class="relative inline-flex items-center">
               <button id="language-button" class="flex items-center">
@@ -203,7 +197,7 @@
           </label>
         </div>
         <div class="flex justify-center">
-          <div class="g-recaptcha" data-sitekey="6LdxhqIpAAAAACETruL2Z0WJmCi0hcNo9k6wCk_-"></div>
+          <div id="recaptcha-container"></div>
         </div>
         <div class="flex justify-center">
           <button type="submit"
@@ -253,27 +247,11 @@
   </div>
   <footer class="w-full mt-20 p-2 bg-gray-900 border-gray-200 text-center text-white">
     <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="py-2" data-translation-key="footer_contact_prompt">Feel free to contact us directly.</div>
-      <div class="h-12 text-3xl font-bold">LookinLabs</div>
-      <div class="text-sm">support@lookinlabs.com</div>
-      <div class="h-10 flex justify-center space-x-4 text-sm">
-        + 372 5686 5405
-      </div>
-      <div class="h-12 flex justify-center space-x-4">
-        <a href="https://github.com/LookinLabs" target="_blank">
-          <i class="fab fa-github fa-2x text-white hover:text-gray-900"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/lookinlabs" target="_blank">
-          <i class="fab fa-linkedin fa-2x text-blue-700 hover:text-blue-900"></i>
-        </a>
-      </div>
-      <hr class="my-2 mx-auto bg-gray-900 border-gray-200 shadow-lg">
       <div class=" flex justify-center space-x-4 text-lg" data-translation-key="footer_copyright_statement">©
-        All rights reserved</div>
+        All rights reserved
+      </div>
     </div>
   </footer>
 </body>
-
-<script src="../js/join-us.js"></script>
 
 </html>

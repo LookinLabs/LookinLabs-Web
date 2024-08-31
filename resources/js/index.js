@@ -1,15 +1,39 @@
-// Model
-document.getElementById('openJoinUsModal').addEventListener('click', function() {
-  document.getElementById('joinUsModal').classList.remove('hidden');
+document.addEventListener("DOMContentLoaded", function () {
+  // Join Us Modal
+  document.getElementById('openJoinUsModal').addEventListener('click', function() {
+    document.getElementById('joinUsModal').classList.remove('hidden');
+  });
+
+  document.getElementById('closeJoinUsModal').addEventListener('click', function() {
+    document.getElementById('joinUsModal').classList.add('hidden');
+  });
+
+  const openJoinUsModalButton = document.getElementById("openJoinUsModal");
+  const closeJoinUsModalButton = document.getElementById("closeJoinUsModal");
+  const joinUsModal = document.getElementById("joinUsModal");
+  const modalContent = document.getElementById("modalContent");
+
+  if (openJoinUsModalButton && closeJoinUsModalButton && joinUsModal && modalContent) {
+    openJoinUsModalButton.addEventListener("click", function () {
+      joinUsModal.classList.remove("hidden");
+      modalContent.style.width = "80%";
+      modalContent.style.height = "80%";
+    });
+
+    closeJoinUsModalButton.addEventListener("click", function () {
+      joinUsModal.classList.add("hidden");
+    });
+
+    // Close the modal when clicking outside of it
+    joinUsModal.addEventListener("click", function (event) {
+      if (event.target === joinUsModal) {
+        joinUsModal.classList.add("hidden");
+      }
+    });
+  }
 });
 
-document.getElementById('closeJoinUsModal').addEventListener('click', function() {
-  document.getElementById('joinUsModal').classList.add('hidden');
-});
-
-//Home Page Script
-
-// DOM Elements
+// Carousel
 const leftCarouselButton = document.getElementById("left-carousel-button");
 const rightCarouselButton = document.getElementById("right-carousel-button");
 const carousel = document.getElementById("carousel");
