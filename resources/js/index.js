@@ -1,3 +1,12 @@
+// Model
+document.getElementById('openJoinUsModal').addEventListener('click', function() {
+  document.getElementById('joinUsModal').classList.remove('hidden');
+});
+
+document.getElementById('closeJoinUsModal').addEventListener('click', function() {
+  document.getElementById('joinUsModal').classList.add('hidden');
+});
+
 //Home Page Script
 
 // DOM Elements
