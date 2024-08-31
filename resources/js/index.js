@@ -236,19 +236,6 @@ function populateMembers(members) {
     profession.className = "mb-2";
     profession.textContent = member.profession;
 
-    const emailDiv = document.createElement("div"); // Create a new div for the email icon and text
-    emailDiv.className = "block mb-2";
-    emailDiv.style.display = "flex"; // Arrange children in a row
-    emailDiv.style.alignItems = "center"; // Vertically center the children
-
-    const emailIcon = document.createElement("i");
-    emailIcon.className = "fas fa-envelope";
-    emailIcon.style.marginRight = "10px"; // Space to the right of the icon
-
-    const email = document.createElement("a");
-    email.href = `mailto:${member.email}`;
-    email.textContent = member.email;
-
     const portfolio = document.createElement("a");
     portfolio.className = "block";
     portfolio.href = member.portfolio;
@@ -259,10 +246,6 @@ function populateMembers(members) {
     memberDiv.appendChild(img);
     memberDiv.appendChild(name);
     memberDiv.appendChild(profession);
-
-    emailDiv.appendChild(emailIcon);
-    emailDiv.appendChild(email);
-    memberDiv.appendChild(emailDiv);
 
     memberDiv.appendChild(portfolio);
 
