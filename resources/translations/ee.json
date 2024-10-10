@@ -8,7 +8,6 @@
   "navbar_who_we_are": "Kes me oleme?",
   "navbar_offer": "Mida me pakume?",
   "navbar_contact": "Liitu Meiega",
-  "navbar_back": "Kodu",
 
   "section_about_title": "Meie Organisatsioon",
   "about_description": "LookinLabs on IT-kogukond, mis on pühendunud noorematele arendajatele esmase praktilise töökogemuse osaledes reaalsetes projektides pärast õppimist. Kasutades parimaid programmeerimistavasid, aitame potentsiaalsetel tulevastel arendajatel omandada teadmisi ja kogemusi esimese töökoha saamiseks.",
@@ -19,7 +18,6 @@
   "who_we_are_description": "Lookinlabs organisatsiooni meeskond koosneb mitmest sertifitseeritud spetsialistist, kes tagavad meie teadmised tipptaseme arengu osutamiseks. LookinLabs organisatsioonis leiate partnerluse teie edule pühendunud ekspertide meeskonnaga. Me väärtustame oma meeskonnakaaslasi ja töötame väsimatult, et nooremad arendajad leiaksid endale töökoha.",
 
   "section_offer_title": "Mida me pakume",
-  "offer_description": "LookinLabs on enesearengu organisatsioon, mis on suunatud peamiselt noorematele ja keskastme arendajatele, pakkudes neile võimalust õppida projektipõhise õppe kaudu. Projektide käigus on arendajatel võimalus omandada kõik vajalikud oskused, mis on vajalikud tarkvaraarenduse karjääri arendamiseks. Me praktiseerime ka õpikoda, andes kogenud arendajatele võimaluse juhendada ja jagada oma teadmisi.",
   
   "what_do_we_offer_book_icon": "Terviklikud Teadmised",
   "what_do_we_offer_book_icon_description": "Omanda nõutavaid oskusi erinevates tehnoloogiates",
