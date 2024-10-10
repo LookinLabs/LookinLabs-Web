@@ -10,74 +10,86 @@ document.addEventListener("DOMContentLoaded", function () {
   const failBanner = document.getElementById("fail-banner");
   const termsBanner = document.getElementById("terms-banner");
 
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    // Check if the terms checkbox is checked
-    if (document.getElementById("termsCheckbox").checked) {
-      // Show loader
-      loader.classList.remove("hidden");
+      // Check if the terms checkbox is checked
+      const termsCheckbox = document.getElementById("termsCheckbox");
+      if (termsCheckbox && termsCheckbox.checked) {
+        // Show loader
+        if (loader) loader.classList.remove("hidden");
 
-      let formData = new FormData(this);
-      let username = formData.get("username");
-      let email = formData.get("email");
-      let title = formData.get("title");
-      let description = formData.get("description");
-      let captcha_response = grecaptcha.getResponse();
+        let formData = new FormData(this);
+        let username = formData.get("username");
+        let email = formData.get("email");
+        let title = formData.get("title");
+        let description = formData.get("description");
+        let captcha_response = grecaptcha.getResponse();
 
-      let templateParams = {
-        username: username,
-        email: email,
-        title: title,
-        description: description,
-        "g-recaptcha-response": captcha_response,
-      };
+        let templateParams = {
+          username: username,
+          email: email,
+          title: title,
+          description: description,
+          "g-recaptcha-response": captcha_response,
+        };
 
-      emailjs
-        .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
-        .then(
-          function () {
-            // Hide contact form
-            contactForm.reset();
+        emailjs
+          .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
+          .then(
+            function () {
+              // Hide contact form
+              contactForm.reset();
 
-            // Show success banner
-            successBanner.classList.remove("hidden");
-            successBanner.classList.add("flex");
-            setTimeout(function () {
-              successBanner.classList.add("hidden");
-              successBanner.classList.remove("flex");
-            }, 3000); // Hide after 5 seconds
-          },
-          function (error) {
-            // Show fail banner
-            failBanner.classList.remove("hidden");
-            failBanner.classList.add("flex");
-            setTimeout(function () {
-              failBanner.classList.add("hidden");
-              failBanner.classList.remove("flex");
-            }, 3000); // Hide after 5 seconds
-          }
-        )
-        .finally(function () {
-          // Hide loader
-          loader.classList.add("hidden");
-        });
-    } else {
-      // Show terms banner
-      termsBanner.classList.remove("hidden");
-      termsBanner.classList.add("flex");
-      setTimeout(function () {
-        termsBanner.classList.add("hidden");
-        termsBanner.classList.remove("flex");
-      }, 3000); // Hide after 5 seconds
-    }
-  });
+              // Show success banner
+              if (successBanner) {
+                successBanner.classList.remove("hidden");
+                successBanner.classList.add("flex");
+                setTimeout(function () {
+                  successBanner.classList.add("hidden");
+                  successBanner.classList.remove("flex");
+                }, 5000); // Hide after 5 seconds
+              }
+            },
+            function (error) {
+              // Show fail banner
+              if (failBanner) {
+                failBanner.classList.remove("hidden");
+                failBanner.classList.add("flex");
+                setTimeout(function () {
+                  failBanner.classList.add("hidden");
+                  failBanner.classList.remove("flex");
+                }, 5000); // Hide after 5 seconds
+              }
+            }
+          )
+          .finally(function () {
+            // Hide loader
+            if (loader) loader.classList.add("hidden");
+          });
+      } else {
+        // Show terms banner
+        if (termsBanner) {
+          termsBanner.classList.remove("hidden");
+          termsBanner.classList.add("flex");
+          setTimeout(function () {
+            termsBanner.classList.add("hidden");
+            termsBanner.classList.remove("flex");
+          }, 5000); // Hide after 5 seconds
+        }
+      }
+    });
+  }
 
   // Add event listeners to close buttons on banners
   document.querySelectorAll(".banner-close").forEach(function (button) {
     button.addEventListener("click", function () {
-      this.parentElement.classList.add("hidden");
-      this.parentElement.classList.remove("flex");
+      const banner = this.closest("div");
+      if (banner) {
+        banner.classList.add("hidden");
+        banner.classList.remove("flex");
+      }
     });
   });
 

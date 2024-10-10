@@ -7,6 +7,7 @@
   "navbar_about": "Organisatsioon",
   "navbar_who_we_are": "Kes me oleme?",
   "navbar_offer": "Mida me pakume?",
+  "navbar_contact": "Liitu Meiega",
   "navbar_back": "Kodu",
 
   "section_about_title": "Meie Organisatsioon",
@@ -40,7 +41,7 @@
   "contact_form_username_placeholder": "Kasutajanimi",
   "contact_form_email_placeholder": "E-post",
   "contact_form_role_placeholder": "Teie roll (nt tarkvaraarendaja, DevOps-i insener jne)",
-  "contact_form_description_placeholder": "Kirjeldus",
+  "contact_form_description_placeholder": "Mida olete seni õppinud või mis projektiga töötanud?",
   "contact_form_agree_checkbox_label": "Nõustun <a href='../terms/ee/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Kasutustingimustega</a> ja <a href='../terms/ee/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Privaatsuspoliitikaga</a>",
   "contact_form_submit_button_text": "Liitu Meiega!",
   "contact_form_loader_modal_title": "E-kirja saatmine...",

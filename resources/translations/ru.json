@@ -7,6 +7,7 @@
   "navbar_about": "О нас",
   "navbar_who_we_are": "Кто мы?",
   "navbar_offer": "Что мы предлагаем?",
+  "navbar_contact": "Присоединиться к нам",
   "navbar_back": "Домой",
 
   "section_about_title": "О нас",
@@ -40,7 +41,7 @@
   "contact_form_username_placeholder": "Имя пользователя",
   "contact_form_email_placeholder": "Электронная почта",
   "contact_form_role_placeholder": "Ваша роль (например, инженер по программному обеспечению, инженер DevOps и т. д.)",
-  "contact_form_description_placeholder": "Описание",
+  "contact_form_description_placeholder": "Что вы изучаете или над чем работаете на данный момент?",
   "contact_form_agree_checkbox_label": "Я согласен с <a href='/resources/terms/ru/terms_and_conditions.pdf' target='_blank' class='text-blue-500 hover:underline'>Правилами и Условиями</a> и <a href='/resources/terms/ru/privacy_policy.pdf' target='_blank' class='text-blue-500 hover:underline'>Политикой конфиденциальности</a>",
   "contact_form_submit_button_text": "Присоединиться к нам!",
   "contact_form_loader_modal_title": "Отправка письма...",
