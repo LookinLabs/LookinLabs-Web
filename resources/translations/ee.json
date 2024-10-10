@@ -17,7 +17,7 @@
   "section_who_we_are_title": "Kes me oleme?",
   "who_we_are_description": "Lookinlabs organisatsiooni meeskond koosneb mitmest sertifitseeritud spetsialistist, kes tagavad meie teadmised tipptaseme arengu osutamiseks. LookinLabs organisatsioonis leiate partnerluse teie edule pühendunud ekspertide meeskonnaga. Me väärtustame oma meeskonnakaaslasi ja töötame väsimatult, et nooremad arendajad leiaksid endale töökoha.",
 
-  "section_offer_title": "Mida pakume?",
+  "section_offer_title": "Mida me pakume",
   "offer_description": "LookinLabs on enesearengu organisatsioon, mis on suunatud peamiselt noorematele ja keskastme arendajatele, pakkudes neile võimalust õppida projektipõhise õppe kaudu. Projektide käigus on arendajatel võimalus omandada kõik vajalikud oskused, mis on vajalikud tarkvaraarenduse karjääri arendamiseks. Me praktiseerime ka õpikoda, andes kogenud arendajatele võimaluse juhendada ja jagada oma teadmisi.",
   
   "what_do_we_offer_book_icon": "Terviklikud Teadmised",
@@ -28,7 +28,13 @@
 
   "what_do_we_offer_tools_icon": "Projekti Põhine Õppeprogramm",
   "what_do_we_offer_tools_icon_description": "Arendage reaalseid projekte ja õppige tehes",
-  
+
+  "what_do_we_offer_infinity_icon": "Koodi eluaegne ligipääs",
+  "what_do_we_offer_infinity_icon_description": "Säilitage oma kood ka pärast projektist või organisatsioonist lahkumist",
+
+  "what_do_we_offer_laptop_icon": "Kaasaegsed tehnoloogiad",
+  "what_do_we_offer_laptop_icon_description": "Õpi kõige populaarsemaid tehnoloogiaid ja tööriistu",
+
   "section_partners_title": "Meie partnerid",
 
   "contact_form_username_placeholder": "Kasutajanimi",

@@ -6,7 +6,7 @@
   "navbar_open_menu": "Main Menu",
   "navbar_about": "About",
   "navbar_who_we_are": "Who we are?",
-  "navbar_offer": "What do we offer?",
+  "navbar_offer": "What we offer?",
   "navbar_back": "Home",
 
   "section_about_title": "About",
@@ -18,7 +18,7 @@
   "section_who_we_are_title": "Who We Are?",
   "who_we_are_description": "Our dedicated team of specialists is not just highly skilled, but also certified in their respective fields. Each member of our team has a minimum of 3 years of professional experience, ensuring that they have the knowledge and expertise to deliver top-notch services. When you choose LookinLabs, you're not just getting a service, you're getting a partnership with a team of experts committed to your success. We value our teammates and work tirelessly to meet their needs and exceed their expectations.",
 
-  "section_offer_title": "What Do We Offer?",
+  "section_offer_title": "What We Offer?",
   "offer_description": "LookinLabs is a self-development organization primarily targeting junior to mid-level developers, providing them with the opportunity to learn through a project-based learning approach. During projects, developers have the opportunity to acquire all the necessary skills for a career path in software engineering. We also practice apprenticeship, giving more experienced developers the opportunity to mentor and share their knowledge.",
 
   "what_do_we_offer_book_icon": "Comprehensive Knowledge",
@@ -30,6 +30,12 @@
   "what_do_we_offer_tools_icon": "Project Based Learning",
   "what_do_we_offer_tools_icon_description": "Develop real projects and learn by doing",
   
+  "what_do_we_offer_infinity_icon": "Code Lifetime Access",
+  "what_do_we_offer_infinity_icon_description": "Keep your code even after leaving the project or organization",
+
+  "what_do_we_offer_laptop_icon": "Modern Tech Stack",
+  "what_do_we_offer_laptop_icon_description": "Work with the most popular technologies and tools",
+
   "section_partners_title": "Our Partners",
 
   "contact_form_username_placeholder": "Username",
