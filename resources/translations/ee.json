@@ -7,6 +7,7 @@
   "navbar_about": "Organisatsioon",
   "navbar_who_we_are": "Kes me oleme?",
   "navbar_offer": "Mida me pakume?",
+  "navbar_pricing": "Hinnakiri",
   "navbar_contact": "Liitu Meiega",
 
   "section_about_title": "Meie Organisatsioon",
@@ -34,7 +35,20 @@
   "what_do_we_offer_laptop_icon": "Kaasaegsed tehnoloogiad",
   "what_do_we_offer_laptop_icon_description": "Õpi kõige populaarsemaid tehnoloogiaid ja tööriistu",
 
+  "what_do_we_offer_affordable_icon": "Taskukohane hinnakujundus",
+  "what_do_we_offer_affordable_icon_description": "Saage kvaliteetseid teadmisi murdosa hinnaga võrreldes teiste organisatsioonidega.",
+
   "section_partners_title": "Meie partnerid",
+
+  "pricing_section_title": "Hinnakiri",
+  "pricing_section_description": "Valige sobiv plaan ja täitke allpool olev vorm",
+  "pricing_monthly_title": "Kuuplaan",
+  "pricing_monthly_duration": "kuus",
+  "pricing_quarterly_title": "Kvartaliplaan",
+  "pricing_quarterly_duration": "kvartalis",
+  "pricing_yearly_title": "Aastaplaan",
+  "pricing_yearly_duration": "aastas",
+  "pricing_yearly_discount": "Maksa 10% vähem!",
 
   "section_contact_title": "Liitu Meiega",
   "contact_form_username_placeholder": "Kasutajanimi",

@@ -7,6 +7,7 @@
   "navbar_about": "About",
   "navbar_who_we_are": "Who we are?",
   "navbar_offer": "What we offer?",
+  "navbar_pricing": "Pricing",
   "navbar_contact": "Join Us",
 
   "section_about_title": "About",
@@ -34,8 +35,22 @@
 
   "what_do_we_offer_laptop_icon": "Modern Tech Stack",
   "what_do_we_offer_laptop_icon_description": "Work with the most popular technologies and tools",
+  
+  "what_do_we_offer_affordable_icon": "Affordable Pricing",
+  "what_do_we_offer_affordable_icon_description": "Get top-quality knowledge at a fraction of the cost compared to other organizations.",
 
   "section_partners_title": "Our Partners",
+
+  
+  "pricing_section_title": "Pricing",
+  "pricing_section_description": "Choose the plan that best suits and fill the form below",
+  "pricing_monthly_title": "Monthly Plan",
+  "pricing_monthly_duration": "per month",
+  "pricing_quarterly_title": "Quarterly Plan",
+  "pricing_quarterly_duration": "per quarter",
+  "pricing_yearly_title": "Yearly Plan",
+  "pricing_yearly_duration": "per year",
+  "pricing_yearly_discount": "Pay 10% less!",
 
   "section_contact_title": "Join Us",
   "contact_form_username_placeholder": "Username",

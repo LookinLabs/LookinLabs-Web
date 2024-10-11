@@ -7,6 +7,7 @@
   "navbar_about": "О нас",
   "navbar_who_we_are": "Кто мы?",
   "navbar_offer": "Что мы предлагаем?",
+  "navbar_pricing": "Цены",
   "navbar_contact": "Присоединиться к нам",
 
   "section_about_title": "О нас",
@@ -34,7 +35,20 @@
   "what_do_we_offer_laptop_icon": "Современные Технологии",
   "what_do_we_offer_laptop_icon_description": "Работайте с самыми популярными технологиями и инструментами",
 
+  "what_do_we_offer_affordable_icon": "Доступные Цены",
+  "what_do_we_offer_affordable_icon_description": "Получите знания высочайшего качества за долю стоимости по сравнению с другими организациями.",
+
   "section_partners_title": "Наши партнеры",
+
+  "pricing_section_title": "Цены",
+  "pricing_section_description": "Выберите подходящий план и заполните форму ниже",
+  "pricing_monthly_title": "Ежемесячный План",
+  "pricing_monthly_duration": "в месяц",
+  "pricing_quarterly_title": "Квартальный План",
+  "pricing_quarterly_duration": "в квартал",
+  "pricing_yearly_title": "Годовой План",
+  "pricing_yearly_duration": "в год",
+  "pricing_yearly_discount": "Оплатите на 10% меньше!",
 
   "section_contact_title": "Присоединиться к нам",
   "contact_form_username_placeholder": "Имя пользователя",
