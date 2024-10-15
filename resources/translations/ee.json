@@ -43,10 +43,18 @@
   "pricing_section_title": "Hinnakiri",
   "pricing_section_description": "Valige sobiv plaan ja täitke allpool olev vorm",
   "pricing_section_description2": "Koge parimat meie 14-päevase tasuta prooviversiooniga. Liituge meiega täna ja avage oma potentsiaal!",
+  
+  "pricing_early_bird_title": "Varajane lind",
+  "pricing_early_bird_description": "Ole üks esimene 20st liitujast!",
+  "pricing_early_bird_discount": "Maksa 40% vähem!",
+  "pricing_early_bird_duration": "kuus",
+  
   "pricing_monthly_title": "Kuuplaan",
   "pricing_monthly_duration": "kuus",
+  
   "pricing_quarterly_title": "Kvartaliplaan",
   "pricing_quarterly_duration": "kvartalis",
+  
   "pricing_yearly_title": "Aastaplaan",
   "pricing_yearly_duration": "aastas",
   "pricing_yearly_discount": "Maksa 10% vähem!",

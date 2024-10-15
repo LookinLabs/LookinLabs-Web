@@ -45,10 +45,18 @@
   "pricing_section_title": "Pricing",
   "pricing_section_description": "Choose the plan that best suits and fill the form below",
   "pricing_section_description2": "Experience the best with our 14-day free trial. Join us today and unlock your potential!",
+  
+  "pricing_early_bird_title": "Early Bird",
+  "pricing_early_bird_description": "Be one of the first 20 newcomers!",
+  "pricing_early_bird_discount": "Pay 40% less!",
+  "pricing_early_bird_duration": "per month",
+ 
   "pricing_monthly_title": "Monthly Plan",
   "pricing_monthly_duration": "per month",
+  
   "pricing_quarterly_title": "Quarterly Plan",
   "pricing_quarterly_duration": "per quarter",
+  
   "pricing_yearly_title": "Yearly Plan",
   "pricing_yearly_duration": "per year",
   "pricing_yearly_discount": "Pay 10% less!",

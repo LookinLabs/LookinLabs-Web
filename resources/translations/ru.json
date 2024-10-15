@@ -41,12 +41,21 @@
   "section_partners_title": "Наши партнеры",
 
   "pricing_section_title": "Цены",
+  
   "pricing_section_description": "Выберите подходящий план и заполните форму ниже",
   "pricing_section_description2": "Опробуйте лучшее с нашей 14-дневной бесплатной пробной версией. Присоединяйтесь к нам сегодня и разблокируйте свой потенциал!",
+ 
+  "pricing_early_bird_title": "Ранняя Пташка",
+  "pricing_early_bird_description": "Будьте одним из первых 20ти новичков!",
+  "pricing_early_bird_discount": "Оплатите на 40% меньше!",
+  "pricing_early_bird_duration": "в месяц",
+
   "pricing_monthly_title": "Ежемесячный План",
   "pricing_monthly_duration": "в месяц",
+  
   "pricing_quarterly_title": "Квартальный План",
   "pricing_quarterly_duration": "в квартал",
+  
   "pricing_yearly_title": "Годовой План",
   "pricing_yearly_duration": "в год",
   "pricing_yearly_discount": "Оплатите на 10% меньше!",
