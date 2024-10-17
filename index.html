@@ -109,6 +109,11 @@
                     we offer?</a>
                 </li>
                 <li>
+                  <a href="#pricing"
+                    class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
+                    data-translation-key="navbar_pricing">Pricing</a>
+                </li>
+                <li>
                   <a href="#contact"
                     class="block py-2 px-3 md:hover:bg-transparent md:border-0 md:hover:text-purple-400 md:p-0 text-white md:dark:hover:text-purple-400 hover:bg-gray-700 hover:text-white md:dark:hover:bg-transparent"
                     data-translation-key="navbar_contact">Join Us</a>
@@ -226,23 +231,55 @@
                 <p data-translation-key="what_do_we_offer_infinity_icon_description" class="text-gray-600">Earn certificates to showcase your skills</p>
               </div>
             </div>
+            <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8 sm:mb-0">
+              <div class="text-center">
+                <i class="fas fa-hand-holding-usd text-6xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-indigo-700 to-purple-900 mb-4"></i>
+                <h3 data-translation-key="what_do_we_offer_affordable_icon" class="text-xl font-semibold mb-2">Affordable Pricing</h3>
+                <p data-translation-key="what_do_we_offer_affordable_icon_description" class="text-gray-600">Get top-quality education at a fraction of the cost compared to other organizations.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section id="partners" class="flex flex-col items-center justify-center p-4 pt-16">
-          <h1 class="text-2xl font-bold my-6 underline w-full text-center" data-translation-key="section_partners_title">Our Partners</h1>
-          <div class="flex flex-col md:flex-row w-full items-center mt-12 md:mt-6 mb-12 px-4">
-              <div class="flex flex-1 justify-center md:justify-end pr-2 md:pr-8">
-                  <a href="https://aws.amazon.com/what-is-cloud-computing">
-                      <img class="w-40" src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS">
-                  </a>
-              </div>
-              <div class="flex flex-1 justify-center md:justify-start pl-2 md:pl-8 mt-8 md:mt-0">
-                  <a href="https://kood.tech/">
-                      <img class="w-80" src="./resources/img/kood_johvi.png" alt="Powered By Kood Jõhvi">
-                  </a>
-              </div>
+      <section id="pricing" class="py-16 bg-gray-900 dark:bg-gray-900 bg-opacity-0 dark:bg-opacity-0">
+        <div class="container mx-auto px-6">
+          <h1 class="text-2xl font-bold my-6 underline w-full text-center" data-translation-key="pricing_section_title">Pricing</h1>
+          <p class="text-center text-gray-600 dark:text-gray-400" data-translation-key="pricing_section_description">Choose the plan that best suits and fill the form below</p>
+          <p class="text-center text-gray-600 dark:text-gray-400 mb-12" data-translation-key="pricing_section_description2">Experience the best with our 14-day free trial. Join us today and unlock your potential!</p>
+          <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
+            <!-- Early Bird -->
+            <div class="flex flex-col items-center bg-gray-900 bg-opacity-30 border-yellow-400 rounded-lg shadow-lg p-4 w-full md:w-1/4 text-center border-2">
+              <i class="fas fa-gem text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-indigo-700 to-purple-900 mb-4"></i>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2" data-translation-key="pricing_early_bird_title">Early Bird Prices</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4" data-translation-key="pricing_early_bird_description">Become one of the 10 newcomers</p>
+              <p class="text-purple-500 dark:text-purple-400 font-semibold mb-4" data-translation-key="pricing_early_bird_discount">Pay 40% less!</p>
+              <div class="text-2xl font-bold text-gray-800 dark:text-white mb-2">60€</div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4" data-translation-key="pricing_early_bird_duration">per month</p>
+            </div>
+            <!-- Monthly Plan -->
+            <div class="flex flex-col items-center bg-gray-900 bg-opacity-30 border border-gray-600 rounded-lg shadow-lg p-4 w-full md:w-1/4 text-center">
+              <i class="fas fa-gem text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-indigo-700 to-purple-900 mb-4"></i>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2" data-translation-key="pricing_monthly_title">Monthly Plan</h3>
+              <div class="text-2xl font-bold text-gray-800 dark:text-white mb-2">100€</div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4" data-translation-key="pricing_monthly_duration">per month</p>
+            </div>
+            <!-- Quarterly Plan -->
+            <div class="flex flex-col items-center bg-gray-900 bg-opacity-30 border border-gray-600 rounded-lg shadow-lg p-4 w-full md:w-1/4 text-center">
+              <i class="fas fa-gem text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-indigo-700 to-purple-900 mb-4"></i>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2" data-translation-key="pricing_quarterly_title">Quarterly Plan</h3>
+              <div class="text-2xl font-bold text-gray-800 dark:text-white mb-2">300€</div>
+              <p class="text-gray-600 dark:text-gray-400 mb-4" data-translation-key="pricing_quarterly_duration">per quarter</p>
+            </div>
+            <!-- Yearly Plan -->
+            <div class="flex flex-col items-center bg-gray-900 bg-opacity-30 border border-gray-600 rounded-lg shadow-lg p-4 w-full md:w-1/4 text-center">
+              <i class="fas fa-gem text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-700 via-indigo-700 to-purple-900 mb-4"></i>
+              <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2" data-translation-key="pricing_yearly_title">Yearly Plan</h3>
+              <div class="text-2xl font-bold text-gray-800 dark:text-white mb-2">1080€</div>
+              <p class="text-gray-600 dark:text-gray-400 mb-2" data-translation-key="pricing_yearly_duration">per year</p>
+              <p class="text-purple-500 dark:text-purple-400 font-semibold mb-4" data-translation-key="pricing_yearly_discount">Pay 10% less!</p>
+            </div>
           </div>
+        </div>
       </section>
       <section id="contact" class="flex flex-col items-center justify-center pt-24">
         <h1 class="text-2xl font-bold my-6 underline w-full text-center" data-translation-key="section_contact_title">Join
@@ -325,6 +362,21 @@
           </div>
         </div>
       </section>
+      <section id="partners" class="flex flex-col items-center justify-center p-4 pt-16">
+        <h1 class="text-2xl font-bold my-6 underline w-full text-center" data-translation-key="section_partners_title">Our Partners</h1>
+        <div class="flex flex-col md:flex-row w-full items-center mt-12 md:mt-6 mb-12 px-4">
+            <div class="flex flex-1 justify-center md:justify-end pr-2 md:pr-8">
+                <a href="https://aws.amazon.com/what-is-cloud-computing">
+                    <img class="w-40" src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" alt="Powered by AWS">
+                </a>
+            </div>
+            <div class="flex flex-1 justify-center md:justify-start pl-2 md:pl-8 mt-8 md:mt-0">
+                <a href="https://kood.tech/">
+                    <img class="w-80" src="./resources/img/kood_johvi.png" alt="Powered By Kood Jõhvi">
+                </a>
+            </div>
+        </div>
+    </section>
     </main>
     <div class="sm:w-auto md:w-auto lg:w-auto xl:w-auto flex justify-center mt-4">
       <footer class="w-full mt-20 p-2 bg-gray-900 border-gray-200 text-center text-white">
