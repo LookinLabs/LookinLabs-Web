@@ -2,21 +2,21 @@
     {
         "name": "GoBlitz Documentation Page",
         "url": "https://docs.goblitz.org/",
-        "picture": "./resources/img/projects/GoBlitz Documentation Page.png"
+        "picture": "./resources/img/projects/GoBlitz Documentation Page.webp"
     },
     {
         "name": "DevOps Engineer Portfolio Website",
         "url": "https://kostlinux.github.io/Portfolio",
-        "picture": "./resources/img/projects/christofher_kost.jpg"
+        "picture": "./resources/img/projects/christofher_kost.webp"
     },
     {
         "name": "LookinLabs Website",
         "url": "https://github.com/LookinLabs/LookinLabs-Web",
-        "picture": "./resources/img/projects/design.jpg"
+        "picture": "./resources/img/projects/design.webp"
     },
     {
         "name": "Software Engineer Portfolio Website",
         "url": "https://martinsidorov.com/",
-        "picture": "./resources/img/projects/martin_sidorov.jpg"
+        "picture": "./resources/img/projects/martin_sidorov.webp"
     }
 ]

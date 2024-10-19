@@ -1,2 +1,5 @@
 .env
 validation_report.log
+
+# Node Modules come when using compress images js
+node_modules
