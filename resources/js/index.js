@@ -206,8 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get the selected language and flag
       const language = option.dataset.value.toUpperCase();
       // Update the selected language and flag
-      document.getElementById("selected-language").innerHTML =
-        language + "<span class='" + "'></span>";
+      document.getElementById("selected-language").innerHTML = language
 
       // Hide the language options and load the translations
       languageOptions.classList.add("hidden");
