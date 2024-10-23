@@ -1,9 +1,7 @@
-// EmailJS
-(function () {
-  emailjs.init("ySaIap3hTf1eHrMKa");
-})();
-
 document.addEventListener("DOMContentLoaded", function () {
+  // Initialize EmailJS
+  emailjs.init("ySaIap3hTf1eHrMKa");
+
   const contactForm = document.getElementById("contactForm");
   const loader = document.getElementById("loader");
   const successBanner = document.getElementById("success-banner");
@@ -14,76 +12,48 @@ document.addEventListener("DOMContentLoaded", function () {
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      // Check if the terms checkbox is checked
       const termsCheckbox = document.getElementById("termsCheckbox");
       if (termsCheckbox && termsCheckbox.checked) {
-        // Show loader
         if (loader) loader.classList.remove("hidden");
 
-        let formData = new FormData(this);
-        let username = formData.get("username");
-        let email = formData.get("email");
-        let title = formData.get("title");
-        let description = formData.get("description");
-        let captcha_response = grecaptcha.getResponse();
-
-        let templateParams = {
-          username: username,
-          email: email,
-          title: title,
-          description: description,
-          "g-recaptcha-response": captcha_response,
+        const formData = new FormData(this);
+        const templateParams = {
+          username: formData.get("username"),
+          email: formData.get("email"),
+          title: formData.get("title"),
+          description: formData.get("description"),
+          "g-recaptcha-response": grecaptcha.getResponse(),
         };
 
-        emailjs
-          .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
-          .then(
-            function () {
-              // Hide contact form
-              contactForm.reset();
-
-              // Show success banner
-              if (successBanner) {
-                successBanner.classList.remove("hidden");
-                successBanner.classList.add("flex");
-                setTimeout(function () {
-                  successBanner.classList.add("hidden");
-                  successBanner.classList.remove("flex");
-                }, 5000); // Hide after 5 seconds
-              }
-            },
-            function (error) {
-              // Show fail banner
-              if (failBanner) {
-                failBanner.classList.remove("hidden");
-                failBanner.classList.add("flex");
-                setTimeout(function () {
-                  failBanner.classList.add("hidden");
-                  failBanner.classList.remove("flex");
-                }, 5000); // Hide after 5 seconds
-              }
-            }
-          )
-          .finally(function () {
-            // Hide loader
+        emailjs.send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
+          .then(() => {
+            contactForm.reset();
+            showBanner(successBanner);
+          })
+          .catch(() => {
+            showBanner(failBanner);
+          })
+          .finally(() => {
             if (loader) loader.classList.add("hidden");
           });
       } else {
-        // Show terms banner
-        if (termsBanner) {
-          termsBanner.classList.remove("hidden");
-          termsBanner.classList.add("flex");
-          setTimeout(function () {
-            termsBanner.classList.add("hidden");
-            termsBanner.classList.remove("flex");
-          }, 5000); // Hide after 5 seconds
-        }
+        showBanner(termsBanner);
       }
     });
   }
 
-  // Add event listeners to close buttons on banners
-  document.querySelectorAll(".banner-close").forEach(function (button) {
+  function showBanner(banner) {
+    if (banner) {
+      banner.classList.remove("hidden");
+      banner.classList.add("flex");
+      setTimeout(() => {
+        banner.classList.add("hidden");
+        banner.classList.remove("flex");
+      }, 5000);
+    }
+  }
+
+  document.querySelectorAll(".banner-close").forEach(button => {
     button.addEventListener("click", function () {
       const banner = this.closest("div");
       if (banner) {
@@ -98,67 +68,72 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("hidden");
   });
 
-  // Get all navigation links
-  const navItems = document.querySelectorAll("#navbar-default ul li a");
-
-  // Add event listener to each navigation link
-  // Scroll Animation
-  navItems.forEach((link) => {
+  document.querySelectorAll("#navbar-default ul li a").forEach(link => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-
       const targetId = link.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
-
       if (targetSection) {
         targetSection.scrollIntoView({ behavior: "smooth" });
-
-        // Hide the navbar after scrolling if in mobile or tablet view
-        if (window.innerWidth < 768) { // 768px is the breakpoint for md in Tailwind CSS
-          const navLinks = document.querySelector("#navbar-default");
-          navLinks.classList.add("hidden");
+        if (window.innerWidth < 768) {
+          document.querySelector("#navbar-default").classList.add("hidden");
         }
       } else {
-        // If there's no element with the target ID, navigate to the URL in the href attribute
         window.location.href = link.getAttribute("href");
       }
     });
   });
 
-  fetch("members.json")
-    .then((response) => response.json())
-    .then((data) => populateMembers(data))
-    .catch((error) => console.error("Error:", error));
+  // Static members data
+  const members = [
+    {
+      name: "Christofher Köst",
+      profession: "CEO, Site Reliability Engineer",
+      portfolio: "https://kostlinux.github.io/Portfolio",
+      picture: "./resources/img/members/christofher.webp"
+    },
+    {
+      name: "Martin Sidorov",
+      profession: "Co-Founder, Software Engineer",
+      portfolio: "https://martinsidorov.com/",
+      picture: "./resources/img/members/martin.webp"
+    },
+    {
+      name: "Daniel Laks",
+      profession: "Co-Founder, Software Engineer",
+      portfolio: "https://www.linkedin.com/in/daniel-luxx/",
+      picture: "./resources/img/members/daniel.webp"
+    }
+  ];
+
+  // Populate members
+  populateMembers(members);
 
   function populateMembers(members) {
-    // Sort members so that the CEO is in the center
-    const ceoIndex = members.findIndex((member) =>
-      member.profession.includes("CEO")
-    );
-    const ceoMember = members[ceoIndex];
-    members.splice(ceoIndex, 1);
+    const ceoIndex = members.findIndex(member => member.profession.includes("CEO"));
+    const ceoMember = members.splice(ceoIndex, 1)[0];
     const centerIndex = Math.floor(members.length / 2);
     members.splice(centerIndex, 0, ceoMember);
 
     const membersDiv = document.getElementById("team-members");
-    members.forEach((member, index) => {
+    membersDiv.style.display = "flex";
+    membersDiv.style.flexWrap = "wrap";
+    membersDiv.style.justifyContent = "space-around";
+
+    members.forEach(member => {
       const memberDiv = document.createElement("div");
-      membersDiv.style.display = "flex";
-      membersDiv.style.flexWrap = "wrap";
-      membersDiv.style.justifyContent = "space-around";
-      memberDiv.className =
-        "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
+      memberDiv.className = "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
       memberDiv.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)";
       memberDiv.style.transition = "0.3s";
-      memberDiv.style.borderRadius = "5px"; // Rounded corners
-      memberDiv.style.margin = "0 20px"; // Increase horizontal space between boxes
+      memberDiv.style.borderRadius = "5px";
+      memberDiv.style.margin = "0 20px";
 
       const img = document.createElement("img");
-      img.className = "w-32 h-32 rounded-full mb-4 object-cover"; // Same size for all images
+      img.className = "w-32 h-32 rounded-full mb-4 object-cover";
       img.src = member.picture;
       img.alt = `${member.name}'s picture`;
-      img.style.width = "150px"; // Set width
-      img.style.height = "150px"; // Set height
+      img.style.width = "150px";
+      img.style.height = "150px";
 
       const name = document.createElement("h2");
       name.className = "text-xl font-bold mb-2";
@@ -172,27 +147,19 @@ document.addEventListener("DOMContentLoaded", function () {
       portfolio.className = "block";
       portfolio.href = member.portfolio;
       portfolio.innerHTML = '<i class="fas fa-briefcase"></i> Portfolio';
-      portfolio.style.color = "#ffffff"; // White color for links
+      portfolio.style.color = "#ffffff";
 
-      memberDiv.style.margin = "0 35px 0px 30px"; // Increase space between members
-      memberDiv.appendChild(img);
-      memberDiv.appendChild(name);
-      memberDiv.appendChild(profession);
-
-      memberDiv.appendChild(portfolio);
-
+      memberDiv.append(img, name, profession, portfolio);
       membersDiv.appendChild(memberDiv);
     });
   }
 
-  // Loader
   window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.getElementById('refreshLoader').classList.add('hide-loader');
-    }, 750);
+    setTimeout(() => {
+      document.getElementById('refreshLoader').classList.add('hide-loader');
+    });
   });
 
-  // Translations JSON
   const languageButton = document.getElementById("language-button");
   const languageOptions = document.getElementById("language-options");
   const languageOptionsChildren = Array.from(languageOptions.children);
@@ -201,27 +168,18 @@ document.addEventListener("DOMContentLoaded", function () {
     languageOptions.classList.toggle("hidden");
   });
 
-  languageOptionsChildren.forEach(function (option) {
+  languageOptionsChildren.forEach(option => {
     option.addEventListener("click", function () {
-      // Get the selected language and flag
       const language = option.dataset.value.toUpperCase();
-      // Update the selected language and flag
-      document.getElementById("selected-language").innerHTML = language
-
-      // Hide the language options and load the translations
+      document.getElementById("selected-language").innerHTML = language;
       languageOptions.classList.add("hidden");
       loadTranslations(language);
     });
   });
 
   document.addEventListener("click", function (event) {
-    let isClickInside = document
-      .getElementById("language-changer")
-      .contains(event.target);
-
-    if (!isClickInside) {
-      // The click was outside the #language-changer element, hide the dropdown
-      document.getElementById("language-options").classList.add("hidden");
+    if (!document.getElementById("language-changer").contains(event.target)) {
+      languageOptions.classList.add("hidden");
     }
   });
 
@@ -230,21 +188,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.lang = language;
 
     fetch(`resources/translations/${language}.json`)
-      .then((response) => response.json())
-      .then((data) => {
-        const translations = data;
+      .then(response => response.json())
+      .then(data => {
         const elements = document.querySelectorAll("[data-translation-key]");
-
-        elements.forEach((element) => {
+        elements.forEach(element => {
           const key = element.getAttribute("data-translation-key");
           const keys = key.split(/[\[\]]/);
-          let translation;
-          if (keys.length > 1) {
-            translation = translations[keys[0]][parseInt(keys[1])];
-          } else {
-            translation = translations[key];
-          }
-
+          const translation = keys.length > 1 ? data[keys[0]][parseInt(keys[1])] : data[key];
           if (element.hasAttribute("placeholder")) {
             element.setAttribute("placeholder", translation);
           } else {
@@ -254,6 +204,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // Load translations when the page loads
-  loadTranslations("en"); // Default language
+  loadTranslations("en");
 });
