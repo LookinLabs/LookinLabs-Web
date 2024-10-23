@@ -22,4 +22,4 @@ If you find a bug, please open an issue with a clear description of the problem 
 
 ## Contact
 
-If you have any questions or concerns, please contact us at [lookinlabs@example.com](mailto:lookinlabs@example.com).
+If you have any questions or concerns, please contact us at [support@lookinlabs.com](mailto:support@lookinlabs.com).
