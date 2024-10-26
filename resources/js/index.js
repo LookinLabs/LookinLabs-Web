@@ -66,8 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#navbar-toggler").addEventListener("click", () => {
     const navLinks = document.querySelector("#navbar-default");
     navLinks.classList.toggle("hidden");
+    if (!navLinks.classList.contains("hidden")) {
+      document.querySelectorAll("#navbar-default ul li").forEach((item, index) => {
+        item.classList.add("nav-item");
+      });
+    } else {
+      document.querySelectorAll("#navbar-default ul li").forEach((item) => {
+        item.classList.remove("nav-item");
+      });
+    }
   });
-
+  
   document.querySelectorAll("#navbar-default ul li a").forEach(link => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
