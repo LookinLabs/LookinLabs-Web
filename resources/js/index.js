@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "g-recaptcha-response": grecaptcha.getResponse(),
         };
 
-        emailjs.send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
+        emailjs
+          .send("lookinlabs_zoho", "lookinlabs_template_id", templateParams)
           .then(() => {
             contactForm.reset();
             showBanner(successBanner);
@@ -53,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  document.querySelectorAll(".banner-close").forEach(button => {
+  document.querySelectorAll(".banner-close").forEach((button) => {
     button.addEventListener("click", function () {
       const banner = this.closest("div");
       if (banner) {
@@ -68,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.classList.toggle("hidden");
   });
 
-  document.querySelectorAll("#navbar-default ul li a").forEach(link => {
+  document.querySelectorAll("#navbar-default ul li a").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       const targetId = link.getAttribute("href").substring(1);
@@ -87,42 +88,32 @@ document.addEventListener("DOMContentLoaded", function () {
   // Static members data
   const members = [
     {
-      name: "Christofher Köst",
-      profession: "CEO, Site Reliability Engineer",
-      portfolio: "https://kostlinux.github.io/Portfolio",
-      picture: "./resources/img/members/christofher.webp"
-    },
-    {
       name: "Martin Sidorov",
       profession: "Co-Founder, Software Engineer",
       portfolio: "https://martinsidorov.com/",
-      picture: "./resources/img/members/martin.webp"
+      picture: "./resources/img/members/martin.webp",
     },
     {
       name: "Daniel Laks",
       profession: "Co-Founder, Software Engineer",
       portfolio: "https://www.linkedin.com/in/daniel-luxx/",
-      picture: "./resources/img/members/daniel.webp"
-    }
+      picture: "./resources/img/members/daniel.webp",
+    },
   ];
 
   // Populate members
   populateMembers(members);
 
   function populateMembers(members) {
-    const ceoIndex = members.findIndex(member => member.profession.includes("CEO"));
-    const ceoMember = members.splice(ceoIndex, 1)[0];
-    const centerIndex = Math.floor(members.length / 2);
-    members.splice(centerIndex, 0, ceoMember);
-
     const membersDiv = document.getElementById("team-members");
     membersDiv.style.display = "flex";
     membersDiv.style.flexWrap = "wrap";
     membersDiv.style.justifyContent = "space-around";
 
-    members.forEach(member => {
+    members.forEach((member) => {
       const memberDiv = document.createElement("div");
-      memberDiv.className = "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
+      memberDiv.className =
+        "w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 p-4 flex flex-col items-center text-center";
       memberDiv.style.boxShadow = "0 4px 8px 0 rgba(0,0,0,0.2)";
       memberDiv.style.transition = "0.3s";
       memberDiv.style.borderRadius = "5px";
@@ -154,9 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  window.addEventListener('load', function() {
+  window.addEventListener("load", function () {
     setTimeout(() => {
-      document.getElementById('refreshLoader').classList.add('hide-loader');
+      document.getElementById("refreshLoader").classList.add("hide-loader");
     });
   });
 
@@ -168,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     languageOptions.classList.toggle("hidden");
   });
 
-  languageOptionsChildren.forEach(option => {
+  languageOptionsChildren.forEach((option) => {
     option.addEventListener("click", function () {
       const language = option.dataset.value.toUpperCase();
       document.getElementById("selected-language").innerHTML = language;
@@ -188,13 +179,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.lang = language;
 
     fetch(`resources/translations/${language}.json`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         const elements = document.querySelectorAll("[data-translation-key]");
-        elements.forEach(element => {
+        elements.forEach((element) => {
           const key = element.getAttribute("data-translation-key");
           const keys = key.split(/[\[\]]/);
-          const translation = keys.length > 1 ? data[keys[0]][parseInt(keys[1])] : data[key];
+          const translation =
+            keys.length > 1 ? data[keys[0]][parseInt(keys[1])] : data[key];
           if (element.hasAttribute("placeholder")) {
             element.setAttribute("placeholder", translation);
           } else {
