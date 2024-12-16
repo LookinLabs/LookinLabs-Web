@@ -89,13 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const members = [
     {
       name: "Martin Sidorov",
-      profession: "Co-Founder, Software Engineer",
+      profession: "Co-Founder, Backend Developer",
       portfolio: "https://martinsidorov.com/",
       picture: "./resources/img/members/martin.webp",
     },
     {
       name: "Daniel Laks",
-      profession: "Co-Founder, Software Engineer",
+      profession: "Co-Founder, Frontend Developer",
       portfolio: "https://www.linkedin.com/in/daniel-luxx/",
       picture: "./resources/img/members/daniel.webp",
     },
